@@ -355,6 +355,7 @@ recruit_character = BYG_huonululu
 recruit_character = BYG_xianggelila
 recruit_character = BYG_tikangdeluojia
 recruit_character = BYG_kasabulanka
+recruit_character = BYG_huashengdun
 recruit_character = BYG_youqibing
 recruit_character = BYG_badan
 recruit_character = BYG_dahuangfeng
@@ -373,6 +374,8 @@ recruit_character = BYG_ankeleiqi
 recruit_character = BYG_huayuan
 recruit_character = BYG_huayuan_baby
 recruit_character = BYG_qiershazhi
+recruit_character = BYG_guandao
+recruit_character = BYG_xingzuo
 
 if = {
 	limit = {

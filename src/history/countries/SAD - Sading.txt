@@ -225,6 +225,7 @@ add_ideas = {
 	SAD_junfei_navy1 
 }
 
+
 recruit_character = SAD_weineituo
 recruit_character = SAD_lituoliao
 recruit_character = SAD_zhala
@@ -238,6 +239,10 @@ recruit_character = SAD_tuolichaili
 recruit_character = SAD_abuluqi
 recruit_character = SAD_makeboluo
 recruit_character = SAD_diliyasite
+recruit_character = SAD_pangpeimagenuo
+recruit_character = SAD_daleike
+recruit_character = SAD_diguo
+recruit_character = SAD_diliyasite
 recruit_character = SAD_diguo
 recruit_character = SAD_daleike
 recruit_character = SAD_pangpeimagenuo
@@ -249,6 +254,10 @@ recruit_character = SAD_dafenqi
 recruit_character = SAD_tianying
 recruit_character = SAD_xibeifeng
 recruit_character = SAD_xinanfeng
+recruit_character = SAD_leigeluo
+recruit_character = SAD_geliqiya
+recruit_character = SAD_boerzhanuo
+recruit_character = SAD_duoliya
 if = {
 	limit = {
 		not = { has_dlc = "Man the Guns" }
