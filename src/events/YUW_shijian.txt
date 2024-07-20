@@ -4283,6 +4283,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = "姐妹齐心，其利断金！"
+		set_country_flag = buqujinjun_beizhizhi
 		custom_effect_tooltip = yuwjjz_82lijie
 		hidden_effect = {
 		country_event = { id = YUW_event.124 days = 1 }
@@ -4296,6 +4297,7 @@ country_event = {
 	}
 	option = {
 		name = "审判庭姐妹将作为前锋！"
+		set_country_flag = buqujinjun_beizhizhi
 		custom_effect_tooltip = yuwjjz_xaifei
 		hidden_effect = {
 		country_event = { id = YUW_event.124 days = 1 }
@@ -4309,6 +4311,7 @@ country_event = {
 	}
 	option = {
 		name = "莫加多尔，全靠你了！"
+		set_country_flag = buqujinjun_beizhizhi
 		custom_effect_tooltip = yuwjjz_laomochuzhan
 		hidden_effect = {
 		country_event = { id = YUW_event.124 days = 1 }
@@ -4322,6 +4325,7 @@ country_event = {
 	}
 	option = {
 		name = "大家一起上！"
+		set_country_flag = buqujinjun_beizhizhi
 		hidden_effect = {
 		country_event = { id = YUW_event.124 days = 1 }
 		}
@@ -4559,6 +4563,10 @@ country_event = {
 			}
 			factor = 100
 			}
+			modifier = {
+			has_global_flag = modoption_historicalbossai_on
+			factor = 100
+			}
 		}
 	}
 	option = {
@@ -4577,6 +4585,7 @@ country_event = {
 			}
 		}
 		trigger = {
+		has_country_flag = yuwjjz_flag_laomo
 		not = { has_country_flag = yuwjjz_flag_11 }
 		check_variable = {
 			var = yuw_jjz_win
@@ -4591,6 +4600,10 @@ country_event = {
 				rule = YUW_ai_behavior
 				option = YUW_jiaojuzhe_banerwei
 			}
+			factor = 0
+			}
+			modifier = {
+			has_global_flag = modoption_historicalbossai_on
 			factor = 0
 			}
 		}
