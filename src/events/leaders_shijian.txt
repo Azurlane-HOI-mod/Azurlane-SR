@@ -186,7 +186,6 @@ country_event = {
 		}
 	}
 }
-
 country_event = {
 	id = getzhg_event.11
 	title = getzhg_event.11.t
@@ -540,860 +539,858 @@ country_event = {
 		}
 	}
 }
-#meat方舟
-	country_event = {
-		id = getzhg_event.13 
-		title = getzhg_event.13.t
-		desc = getzhg_event.13.d
-		picture = GFX_aze_meta_fangzhou
-		is_triggered_only = yes
-		immediate = {
-			ROOT = { 
-				set_country_flag = meta_fangzhou_finding 
-				set_country_flag = { flag = meta_fangqixunzhao_cd value = 1 days = 60 }
-			}
-		}
-		option = {
-			name = getzhg_event.13.a
-			ai_chance = {
-				factor = 5
-			}
-			
-			random_state = {
-				limit = {
-					OR = {
-						is_fully_controlled_by = SIR
-						is_fully_controlled_by = SR1
-						is_fully_controlled_by = SR2
-						is_fully_controlled_by = SR3
-						is_fully_controlled_by = SR4
-					}
-				}
-				set_variable = {
-					global.meta_fangzhou_state = THIS
-				}
-				PREV = { 
-					goto_state = PREV
-				}
-				set_state_flag = meta_fangzhou
-			}
+country_event = {
+	id = getzhg_event.13 
+	title = getzhg_event.13.t
+	desc = getzhg_event.13.d
+	picture = GFX_aze_meta_fangzhou
+	is_triggered_only = yes
+	immediate = {
+		ROOT = { 
+			set_country_flag = meta_fangzhou_finding 
+			set_country_flag = { flag = meta_fangqixunzhao_cd value = 1 days = 60 }
 		}
 	}
-	country_event = {
-		id = getzhg_event.1301
-		title = getzhg_event.1301.t
-		desc = getzhg_event.1301.d
-		picture = GFX_aze_meta_fangzhou
-		is_triggered_only = yes
-		option = {
-			name = getzhg_event.1301.a
-			ai_chance = {
-				factor = 5
-			}
-			if = {
-				limit = {
-					date < 1938.6.1
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 1
-					max = 3
-				}
-				round_temp_variable = temp_level
-			}
-			else_if = {
-				limit = {
-					AND = {
-						date > 1938.5.31
-						date < 1941.1.1
-					}
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 2
-					max = 5
-				}
-				round_temp_variable = temp_level
-			}		
-			else_if = {
-				limit = {
-					date > 1940.12.31
-					date < 1942.6.1
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 4
-					max = 7
-				}
-				round_temp_variable = temp_level
-			}
-			else_if = {
-				limit = {
-					date > 1942.5.31
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 5
-					max = 9
-				}
-				round_temp_variable = temp_level
-			}
-			randomize_temp_variable = {
-				var = temp_shuxing1
-				distribution = uniform
-				min = 5
-				max = 8
-			}
-			round_temp_variable = temp_shuxing1
-			randomize_temp_variable = {
-				var = temp_shuxing2
-				distribution = uniform
-				min = 5
-				max = 8
-			}
-			round_temp_variable = temp_shuxing2
-			randomize_temp_variable = {
-				var = temp_shuxing3
-				distribution = uniform
-				min = 5
-				max = 9
-			}
-			round_temp_variable = temp_shuxing3
-			randomize_temp_variable = {
-				var = temp_shuxing4
-				distribution = uniform
-				min = 5
-				max = 9
-			}
-			round_temp_variable = temp_shuxing4
-			hidden_effect = { 
-				TAN = {
-					meta_huangjiafangzhou = {
-						set_nationality = ROOT
-					}
+	option = {
+		name = getzhg_event.13.a
+		ai_chance = {
+			factor = 5
+		}
+		
+		random_state = {
+			limit = {
+				OR = {
+					is_fully_controlled_by = SIR
+					is_fully_controlled_by = SR1
+					is_fully_controlled_by = SR2
+					is_fully_controlled_by = SR3
+					is_fully_controlled_by = SR4
 				}
 			}
-			meta_effect = {
-				text = {
-					add_corps_commander_role = {
-						character =  meta_huangjiafangzhou
-						traits = { hangmu_army trait_yujin xuexixunsu }
-						skill = [level]
-						attack_skill = [shuxing1]
-						defense_skill = [shuxing2]
-						planning_skill = [shuxing3]
-						logistics_skill = [shuxing4]
-					}
-				}
-				level = temp_level
-				shuxing1 = temp_shuxing1
-				shuxing2 = temp_shuxing2
-				shuxing3 = temp_shuxing3
-				shuxing4 = temp_shuxing4
+			set_variable = {
+				global.meta_fangzhou_state = THIS
 			}
-			meta_huangjiafangzhou = {
-				set_character_flag = chushijianniang
+			PREV = { 
+				goto_state = PREV
 			}
+			set_state_flag = meta_fangzhou
 		}
 	}
-#meat飞龙
-	country_event = {
-		id = getzhg_event.14 
-		title = getzhg_event.14.t
-		desc = getzhg_event.14.d
-		picture = GFX_aze_meta_feilong
-		is_triggered_only = yes
-		immediate = {
-			ROOT = { 
-				set_country_flag = meta_feilong_finding
-				set_country_flag = { flag = meta_fangqixunzhao_cd value = 1 days = 60 }
-			}
+}
+country_event = {
+	id = getzhg_event.1301
+	title = getzhg_event.1301.t
+	desc = getzhg_event.1301.d
+	picture = GFX_aze_meta_fangzhou
+	is_triggered_only = yes
+	option = {
+		name = getzhg_event.1301.a
+		ai_chance = {
+			factor = 5
 		}
-		option = {
-			name = getzhg_event.14.a
-			ai_chance = {
-				factor = 5
-			}
-			
-			random_state = {
-				limit = {
-					OR = {
-						is_fully_controlled_by = SIR
-						is_fully_controlled_by = SR1
-						is_fully_controlled_by = SR2
-						is_fully_controlled_by = SR3
-						is_fully_controlled_by = SR4
-					}
-				}
-				set_variable = {
-					global.meta_feilong_state = THIS
-				}
-				PREV = { 
-					goto_state = PREV
-				}
-				set_state_flag = meta_feilong
-			}
-		}
-	}
-	country_event = {
-		id = getzhg_event.1401
-		title = getzhg_event.1401.t
-		desc = getzhg_event.1401.d
-		picture = GFX_aze_meta_feilong
-		is_triggered_only = yes
-		option = {
-			name = getzhg_event.1401.a
-			ai_chance = {
-				factor = 5
-			}
-			if = {
-				limit = {
-					date < 1938.6.1
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 1
-					max = 3
-				}
-				round_temp_variable = temp_level
-			}
-			else_if = {
-				limit = {
-					AND = {
-						date > 1938.5.31
-						date < 1941.1.1
-					}
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 2
-					max = 5
-				}
-				round_temp_variable = temp_level
-			}		
-			else_if = {
-				limit = {
-					date > 1940.12.31
-					date < 1942.6.1
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 4
-					max = 7
-				}
-				round_temp_variable = temp_level
-			}
-			else_if = {
-				limit = {
-					date > 1942.5.31
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 5
-					max = 9
-				}
-				round_temp_variable = temp_level
+		if = {
+			limit = {
+				date < 1938.6.1
 			}
 			randomize_temp_variable = {
-				var = temp_shuxing1
-				distribution = uniform
-				min = 5
-				max = 8
-			}
-			round_temp_variable = temp_shuxing1
-			randomize_temp_variable = {
-				var = temp_shuxing2
-				distribution = uniform
-				min = 5
-				max = 8
-			}
-			round_temp_variable = temp_shuxing2
-			randomize_temp_variable = {
-				var = temp_shuxing3
-				distribution = uniform
-				min = 5
-				max = 9
-			}
-			round_temp_variable = temp_shuxing3
-			randomize_temp_variable = {
-				var = temp_shuxing4
-				distribution = uniform
-				min = 5
-				max = 9
-			}
-			round_temp_variable = temp_shuxing4
-			hidden_effect = { 
-				TAN = {
-					meta_feilong = {
-						set_nationality = ROOT
-					}
-					meta_canglong = {
-						set_nationality = ROOT
-					}
-				}
-			}
-			meta_effect = {
-				text = {
-					add_corps_commander_role = {
-						character = meta_canglong
-						traits = { hangmu_army trait_yujin xuexixunsu }
-						skill = [level]
-						attack_skill = [shuxing1]
-						defense_skill = [shuxing2]
-						planning_skill = [shuxing3]
-						logistics_skill = [shuxing4]
-					}
-					add_corps_commander_role = {
-						character = meta_feilong
-						traits = { hangmu_army trait_yujin xuexixunsu }
-						skill = [level]
-						attack_skill = [shuxing1]
-						defense_skill = [shuxing2]
-						planning_skill = [shuxing3]
-						logistics_skill = [shuxing4]
-					}
-				}
-				level = temp_level
-				shuxing1 = temp_shuxing1
-				shuxing2 = temp_shuxing2
-				shuxing3 = temp_shuxing3
-				shuxing4 = temp_shuxing4
-			}
-			meta_feilong = {
-				set_character_flag = chushijianniang
-			}
-			meta_canglong = {
-				set_character_flag = chushijianniang
-			}
-		}
-	}
-#meat海伦娜
-	country_event = {
-		id = getzhg_event.15 
-		title = getzhg_event.15.t
-		desc = getzhg_event.15.d
-		picture = GFX_aze_meta_hailunna
-		is_triggered_only = yes
-		immediate = {
-			ROOT = { 
-				set_country_flag = meta_hailunna_finding 
-				set_country_flag = { flag = meta_fangqixunzhao_cd value = 1 days = 60 }
-			}
-		}
-		option = {
-			name = getzhg_event.15.a
-			ai_chance = {
-				factor = 5
-			}
-			
-			random_state = {
-				limit = {
-					OR = {
-						is_fully_controlled_by = SIR
-						is_fully_controlled_by = SR1
-						is_fully_controlled_by = SR2
-						is_fully_controlled_by = SR3
-						is_fully_controlled_by = SR4
-					}
-				}
-				set_variable = {
-					global.meta_hailunna_state = THIS
-				}
-				PREV = { 
-					goto_state = PREV
-				}
-				set_state_flag = meta_hailunna
-			}
-		}
-	}
-	country_event = {
-		id = getzhg_event.1501
-		title = getzhg_event.1501.t
-		desc = getzhg_event.1501.d
-		picture = GFX_aze_meta_hailunna
-		is_triggered_only = yes
-		option = {
-			name = getzhg_event.1501.a
-			ai_chance = {
-				factor = 5
-			}
-			if = {
-				limit = {
-					date < 1938.6.1
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 1
-					max = 3
-				}
-				round_temp_variable = temp_level
-			}
-			else_if = {
-				limit = {
-					AND = {
-						date > 1938.5.31
-						date < 1941.1.1
-					}
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 2
-					max = 5
-				}
-				round_temp_variable = temp_level
-			}		
-			else_if = {
-				limit = {
-					date > 1940.12.31
-					date < 1942.6.1
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 4
-					max = 7
-				}
-				round_temp_variable = temp_level
-			}
-			else_if = {
-				limit = {
-					date > 1942.5.31
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 5
-					max = 9
-				}
-				round_temp_variable = temp_level
-			}
-			randomize_temp_variable = {
-				var = temp_shuxing1
-				distribution = uniform
-				min = 5
-				max = 8
-			}
-			round_temp_variable = temp_shuxing1
-			randomize_temp_variable = {
-				var = temp_shuxing2
-				distribution = uniform
-				min = 5
-				max = 8
-			}
-			round_temp_variable = temp_shuxing2
-			randomize_temp_variable = {
-				var = temp_shuxing3
-				distribution = uniform
-				min = 5
-				max = 9
-			}
-			round_temp_variable = temp_shuxing3
-			randomize_temp_variable = {
-				var = temp_shuxing4
-				distribution = uniform
-				min = 5
-				max = 9
-			}
-			round_temp_variable = temp_shuxing4
-			hidden_effect = { 
-				TAN = {
-					meta_hailunna = {
-						set_nationality = ROOT
-					}
-				}
-			}
-			meta_effect = {
-				text = {
-					add_corps_commander_role = {
-						character = meta_hailunna
-						traits = { xunyang_army trait_yujin xuexixunsu }
-						skill = [level]
-						attack_skill = [shuxing1]
-						defense_skill = [shuxing2]
-						planning_skill = [shuxing3]
-						logistics_skill = [shuxing4]
-					}
-				}
-				level = temp_level
-				shuxing1 = temp_shuxing1
-				shuxing2 = temp_shuxing2
-				shuxing3 = temp_shuxing3
-				shuxing4 = temp_shuxing4
-			}
-			meta_hailunna = {
-				set_character_flag = chushijianniang
-			}
-		}
-	}
-#meat飞鹰
-	country_event = {
-		id = getzhg_event.16
-		title = getzhg_event.16.t
-		desc = getzhg_event.16.d
-		picture = GFX_report_event_generic_read_write
-		is_triggered_only = yes
-		immediate = {
-			ROOT = { 
-				set_country_flag = meta_feiying_finding 
-				set_country_flag = { flag = meta_fangqixunzhao_cd value = 1 days = 60 }
-			}
-		}
-		option = {
-			name = getzhg_event.16.a
-			ai_chance = {
-				factor = 5
-			}
-			
-			random_state = {
-				limit = {
-					OR = {
-						is_fully_controlled_by = SIR
-						is_fully_controlled_by = SR1
-						is_fully_controlled_by = SR2
-						is_fully_controlled_by = SR3
-						is_fully_controlled_by = SR4
-					}
-				}
-				set_variable = {
-					global.meta_feiying_state = THIS
-				}
-				PREV = { 
-					goto_state = PREV
-				}
-				set_state_flag = meta_feiying
-			}
-		}
-	}
-	country_event = {
-		id = getzhg_event.1601
-		title = getzhg_event.1601.t
-		desc = getzhg_event.1601.d
-		picture = GFX_report_event_generic_read_write
-		is_triggered_only = yes
-		option = {
-			name = getzhg_event.1601.a
-			ai_chance = {
-				factor = 5
-			}
-			if = {
-				limit = {
-					date < 1938.6.1
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 1
-					max = 3
-				}
-				round_temp_variable = temp_level
-			}
-			else_if = {
-				limit = {
-					AND = {
-						date > 1938.5.31
-						date < 1941.1.1
-					}
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 2
-					max = 5
-				}
-				round_temp_variable = temp_level
-			}		
-			else_if = {
-				limit = {
-					date > 1940.12.31
-					date < 1942.6.1
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 4
-					max = 7
-				}
-				round_temp_variable = temp_level
-			}
-			else_if = {
-				limit = {
-					date > 1942.5.31
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 5
-					max = 9
-				}
-				round_temp_variable = temp_level
-			}
-			randomize_temp_variable = {
-				var = temp_shuxing1
+				var = temp_level
 				distribution = uniform
 				min = 1
-				max = 6
+				max = 3
 			}
-			round_temp_variable = temp_shuxing1
-			randomize_temp_variable = {
-				var = temp_shuxing2
-				distribution = uniform
-				min = 1
-				max = 6
+			round_temp_variable = temp_level
+		}
+		else_if = {
+			limit = {
+				AND = {
+					date > 1938.5.31
+					date < 1941.1.1
+				}
 			}
-			round_temp_variable = temp_shuxing2
 			randomize_temp_variable = {
-				var = temp_shuxing3
+				var = temp_level
 				distribution = uniform
-				min = 1
+				min = 2
+				max = 5
+			}
+			round_temp_variable = temp_level
+		}		
+		else_if = {
+			limit = {
+				date > 1940.12.31
+				date < 1942.6.1
+			}
+			randomize_temp_variable = {
+				var = temp_level
+				distribution = uniform
+				min = 4
 				max = 7
 			}
-			round_temp_variable = temp_shuxing3
+			round_temp_variable = temp_level
+		}
+		else_if = {
+			limit = {
+				date > 1942.5.31
+			}
 			randomize_temp_variable = {
-				var = temp_shuxing4
+				var = temp_level
+				distribution = uniform
+				min = 5
+				max = 9
+			}
+			round_temp_variable = temp_level
+		}
+		randomize_temp_variable = {
+			var = temp_shuxing1
+			distribution = uniform
+			min = 5
+			max = 8
+		}
+		round_temp_variable = temp_shuxing1
+		randomize_temp_variable = {
+			var = temp_shuxing2
+			distribution = uniform
+			min = 5
+			max = 8
+		}
+		round_temp_variable = temp_shuxing2
+		randomize_temp_variable = {
+			var = temp_shuxing3
+			distribution = uniform
+			min = 5
+			max = 9
+		}
+		round_temp_variable = temp_shuxing3
+		randomize_temp_variable = {
+			var = temp_shuxing4
+			distribution = uniform
+			min = 5
+			max = 9
+		}
+		round_temp_variable = temp_shuxing4
+		hidden_effect = { 
+			TAN = {
+				meta_huangjiafangzhou = {
+					set_nationality = ROOT
+				}
+			}
+		}
+		meta_effect = {
+			text = {
+				add_corps_commander_role = {
+					character =  meta_huangjiafangzhou
+					traits = { hangmu_army trait_yujin xuexixunsu }
+					skill = [level]
+					attack_skill = [shuxing1]
+					defense_skill = [shuxing2]
+					planning_skill = [shuxing3]
+					logistics_skill = [shuxing4]
+				}
+			}
+			level = temp_level
+			shuxing1 = temp_shuxing1
+			shuxing2 = temp_shuxing2
+			shuxing3 = temp_shuxing3
+			shuxing4 = temp_shuxing4
+		}
+		meta_huangjiafangzhou = {
+			set_character_flag = chushijianniang
+		}
+	}
+}
+country_event = {
+	id = getzhg_event.14 
+	title = getzhg_event.14.t
+	desc = getzhg_event.14.d
+	picture = GFX_aze_meta_feilong
+	is_triggered_only = yes
+	immediate = {
+		ROOT = { 
+			set_country_flag = meta_feilong_finding
+			set_country_flag = { flag = meta_fangqixunzhao_cd value = 1 days = 60 }
+		}
+	}
+	option = {
+		name = getzhg_event.14.a
+		ai_chance = {
+			factor = 5
+		}
+		
+		random_state = {
+			limit = {
+				OR = {
+					is_fully_controlled_by = SIR
+					is_fully_controlled_by = SR1
+					is_fully_controlled_by = SR2
+					is_fully_controlled_by = SR3
+					is_fully_controlled_by = SR4
+				}
+			}
+			set_variable = {
+				global.meta_feilong_state = THIS
+			}
+			PREV = { 
+				goto_state = PREV
+			}
+			set_state_flag = meta_feilong
+		}
+	}
+}
+country_event = {
+	id = getzhg_event.1401
+	title = getzhg_event.1401.t
+	desc = getzhg_event.1401.d
+	picture = GFX_aze_meta_feilong
+	is_triggered_only = yes
+	option = {
+		name = getzhg_event.1401.a
+		ai_chance = {
+			factor = 5
+		}
+		if = {
+			limit = {
+				date < 1938.6.1
+			}
+			randomize_temp_variable = {
+				var = temp_level
 				distribution = uniform
 				min = 1
+				max = 3
+			}
+			round_temp_variable = temp_level
+		}
+		else_if = {
+			limit = {
+				AND = {
+					date > 1938.5.31
+					date < 1941.1.1
+				}
+			}
+			randomize_temp_variable = {
+				var = temp_level
+				distribution = uniform
+				min = 2
+				max = 5
+			}
+			round_temp_variable = temp_level
+		}		
+		else_if = {
+			limit = {
+				date > 1940.12.31
+				date < 1942.6.1
+			}
+			randomize_temp_variable = {
+				var = temp_level
+				distribution = uniform
+				min = 4
 				max = 7
 			}
-			round_temp_variable = temp_shuxing4
-			hidden_effect = { 
-				TAN = {
-					meta_feiying = {
-						set_nationality = ROOT
-					}
+			round_temp_variable = temp_level
+		}
+		else_if = {
+			limit = {
+				date > 1942.5.31
+			}
+			randomize_temp_variable = {
+				var = temp_level
+				distribution = uniform
+				min = 5
+				max = 9
+			}
+			round_temp_variable = temp_level
+		}
+		randomize_temp_variable = {
+			var = temp_shuxing1
+			distribution = uniform
+			min = 5
+			max = 8
+		}
+		round_temp_variable = temp_shuxing1
+		randomize_temp_variable = {
+			var = temp_shuxing2
+			distribution = uniform
+			min = 5
+			max = 8
+		}
+		round_temp_variable = temp_shuxing2
+		randomize_temp_variable = {
+			var = temp_shuxing3
+			distribution = uniform
+			min = 5
+			max = 9
+		}
+		round_temp_variable = temp_shuxing3
+		randomize_temp_variable = {
+			var = temp_shuxing4
+			distribution = uniform
+			min = 5
+			max = 9
+		}
+		round_temp_variable = temp_shuxing4
+		hidden_effect = { 
+			TAN = {
+				meta_feilong = {
+					set_nationality = ROOT
+				}
+				meta_canglong = {
+					set_nationality = ROOT
 				}
 			}
-			meta_effect = {
-				text = {
-					add_corps_commander_role = {
-						character = meta_feiying
-						traits = { xunyang_army trait_yujin xuexixunsu }
-						skill = [level]
-						attack_skill = [shuxing1]
-						defense_skill = [shuxing2]
-						planning_skill = [shuxing3]
-						logistics_skill = [shuxing4]
-					}
+		}
+		meta_effect = {
+			text = {
+				add_corps_commander_role = {
+					character = meta_canglong
+					traits = { hangmu_army trait_yujin xuexixunsu }
+					skill = [level]
+					attack_skill = [shuxing1]
+					defense_skill = [shuxing2]
+					planning_skill = [shuxing3]
+					logistics_skill = [shuxing4]
 				}
-				level = temp_level
-				shuxing1 = temp_shuxing1
-				shuxing2 = temp_shuxing2
-				shuxing3 = temp_shuxing3
-				shuxing4 = temp_shuxing4
+				add_corps_commander_role = {
+					character = meta_feilong
+					traits = { hangmu_army trait_yujin xuexixunsu }
+					skill = [level]
+					attack_skill = [shuxing1]
+					defense_skill = [shuxing2]
+					planning_skill = [shuxing3]
+					logistics_skill = [shuxing4]
+				}
 			}
-			meta_feiying = {
-				set_character_flag = chushijianniang
-			}
+			level = temp_level
+			shuxing1 = temp_shuxing1
+			shuxing2 = temp_shuxing2
+			shuxing3 = temp_shuxing3
+			shuxing4 = temp_shuxing4
+		}
+		meta_feilong = {
+			set_character_flag = chushijianniang
+		}
+		meta_canglong = {
+			set_character_flag = chushijianniang
 		}
 	}
-#meat扶桑
-	country_event = { 
-		id = getzhg_event.17
-		title = getzhg_event.17.t
-		desc = getzhg_event.17.d
-		picture = GFX_report_event_generic_read_write
-		is_triggered_only = yes
-		immediate = {
-			ROOT = { 
-				set_country_flag = meta_fusang_finding 
-				set_country_flag = { flag = meta_fangqixunzhao_cd value = 1 days = 60 }
-			}
-		}
-		option = {
-			name = getzhg_event.17.a
-			ai_chance = {
-				factor = 5
-			}
-			
-			random_state = {
-				limit = {
-					OR = {
-						is_fully_controlled_by = SIR
-						is_fully_controlled_by = SR1
-						is_fully_controlled_by = SR2
-						is_fully_controlled_by = SR3
-						is_fully_controlled_by = SR4
-					}
-				}
-				set_variable = {
-					global.meta_fusang_state = THIS
-				}
-				PREV = { 
-					goto_state = PREV
-				}
-				set_state_flag = meta_fusang
-			}
+}
+#海伦娜
+country_event = {
+	id = getzhg_event.15 
+	title = getzhg_event.15.t
+	desc = getzhg_event.15.d
+	picture = GFX_aze_meta_hailunna
+	is_triggered_only = yes
+	immediate = {
+		ROOT = { 
+			set_country_flag = meta_hailunna_finding 
+			set_country_flag = { flag = meta_fangqixunzhao_cd value = 1 days = 60 }
 		}
 	}
-	country_event = {
-		id = getzhg_event.1701
-		title = getzhg_event.1701.t
-		desc = getzhg_event.1701.d
-		picture = GFX_report_event_generic_read_write
-		is_triggered_only = yes
-		option = {
-			name = getzhg_event.1701.a
-			ai_chance = {
-				factor = 5
+	option = {
+		name = getzhg_event.15.a
+		ai_chance = {
+			factor = 5
+		}
+		
+		random_state = {
+			limit = {
+				OR = {
+					is_fully_controlled_by = SIR
+					is_fully_controlled_by = SR1
+					is_fully_controlled_by = SR2
+					is_fully_controlled_by = SR3
+					is_fully_controlled_by = SR4
+				}
 			}
-			if = {
-				limit = {
-					date < 1938.6.1
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 1
-					max = 3
-				}
-				round_temp_variable = temp_level
+			set_variable = {
+				global.meta_hailunna_state = THIS
 			}
-			else_if = {
-				limit = {
-					AND = {
-						date > 1938.5.31
-						date < 1941.1.1
-					}
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 2
-					max = 5
-				}
-				round_temp_variable = temp_level
-			}		
-			else_if = {
-				limit = {
-					date > 1940.12.31
-					date < 1942.6.1
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 4
-					max = 7
-				}
-				round_temp_variable = temp_level
+			PREV = { 
+				goto_state = PREV
 			}
-			else_if = {
-				limit = {
-					date > 1942.5.31
-				}
-				randomize_temp_variable = {
-					var = temp_level
-					distribution = uniform
-					min = 5
-					max = 9
-				}
-				round_temp_variable = temp_level
+			set_state_flag = meta_hailunna
+		}
+	}
+}
+country_event = {
+	id = getzhg_event.1501
+	title = getzhg_event.1501.t
+	desc = getzhg_event.1501.d
+	picture = GFX_aze_meta_hailunna
+	is_triggered_only = yes
+	option = {
+		name = getzhg_event.1501.a
+		ai_chance = {
+			factor = 5
+		}
+		if = {
+			limit = {
+				date < 1938.6.1
 			}
 			randomize_temp_variable = {
-				var = temp_shuxing1
+				var = temp_level
 				distribution = uniform
 				min = 1
-				max = 6
+				max = 3
 			}
-			round_temp_variable = temp_shuxing1
-			randomize_temp_variable = {
-				var = temp_shuxing2
-				distribution = uniform
-				min = 1
-				max = 6
+			round_temp_variable = temp_level
+		}
+		else_if = {
+			limit = {
+				AND = {
+					date > 1938.5.31
+					date < 1941.1.1
+				}
 			}
-			round_temp_variable = temp_shuxing2
 			randomize_temp_variable = {
-				var = temp_shuxing3
+				var = temp_level
 				distribution = uniform
-				min = 1
+				min = 2
+				max = 5
+			}
+			round_temp_variable = temp_level
+		}		
+		else_if = {
+			limit = {
+				date > 1940.12.31
+				date < 1942.6.1
+			}
+			randomize_temp_variable = {
+				var = temp_level
+				distribution = uniform
+				min = 4
 				max = 7
 			}
-			round_temp_variable = temp_shuxing3
+			round_temp_variable = temp_level
+		}
+		else_if = {
+			limit = {
+				date > 1942.5.31
+			}
 			randomize_temp_variable = {
-				var = temp_shuxing4
+				var = temp_level
+				distribution = uniform
+				min = 5
+				max = 9
+			}
+			round_temp_variable = temp_level
+		}
+		randomize_temp_variable = {
+			var = temp_shuxing1
+			distribution = uniform
+			min = 5
+			max = 8
+		}
+		round_temp_variable = temp_shuxing1
+		randomize_temp_variable = {
+			var = temp_shuxing2
+			distribution = uniform
+			min = 5
+			max = 8
+		}
+		round_temp_variable = temp_shuxing2
+		randomize_temp_variable = {
+			var = temp_shuxing3
+			distribution = uniform
+			min = 5
+			max = 9
+		}
+		round_temp_variable = temp_shuxing3
+		randomize_temp_variable = {
+			var = temp_shuxing4
+			distribution = uniform
+			min = 5
+			max = 9
+		}
+		round_temp_variable = temp_shuxing4
+		hidden_effect = { 
+			TAN = {
+				meta_hailunna = {
+					set_nationality = ROOT
+				}
+			}
+		}
+		meta_effect = {
+			text = {
+				add_corps_commander_role = {
+					character = meta_hailunna
+					traits = { xunyang_army trait_yujin xuexixunsu }
+					skill = [level]
+					attack_skill = [shuxing1]
+					defense_skill = [shuxing2]
+					planning_skill = [shuxing3]
+					logistics_skill = [shuxing4]
+				}
+			}
+			level = temp_level
+			shuxing1 = temp_shuxing1
+			shuxing2 = temp_shuxing2
+			shuxing3 = temp_shuxing3
+			shuxing4 = temp_shuxing4
+		}
+		meta_hailunna = {
+			set_character_flag = chushijianniang
+		}
+	}
+}
+#飞鹰
+country_event = {
+	id = getzhg_event.16
+	title = getzhg_event.16.t
+	desc = getzhg_event.16.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	immediate = {
+		ROOT = { 
+			set_country_flag = meta_feiying_finding 
+			set_country_flag = { flag = meta_fangqixunzhao_cd value = 1 days = 60 }
+		}
+	}
+	option = {
+		name = getzhg_event.16.a
+		ai_chance = {
+			factor = 5
+		}
+		
+		random_state = {
+			limit = {
+				OR = {
+					is_fully_controlled_by = SIR
+					is_fully_controlled_by = SR1
+					is_fully_controlled_by = SR2
+					is_fully_controlled_by = SR3
+					is_fully_controlled_by = SR4
+				}
+			}
+			set_variable = {
+				global.meta_feiying_state = THIS
+			}
+			PREV = { 
+				goto_state = PREV
+			}
+			set_state_flag = meta_feiying
+		}
+	}
+}
+country_event = {
+	id = getzhg_event.1601
+	title = getzhg_event.1601.t
+	desc = getzhg_event.1601.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = getzhg_event.1601.a
+		ai_chance = {
+			factor = 5
+		}
+		if = {
+			limit = {
+				date < 1938.6.1
+			}
+			randomize_temp_variable = {
+				var = temp_level
 				distribution = uniform
 				min = 1
+				max = 3
+			}
+			round_temp_variable = temp_level
+		}
+		else_if = {
+			limit = {
+				AND = {
+					date > 1938.5.31
+					date < 1941.1.1
+				}
+			}
+			randomize_temp_variable = {
+				var = temp_level
+				distribution = uniform
+				min = 2
+				max = 5
+			}
+			round_temp_variable = temp_level
+		}		
+		else_if = {
+			limit = {
+				date > 1940.12.31
+				date < 1942.6.1
+			}
+			randomize_temp_variable = {
+				var = temp_level
+				distribution = uniform
+				min = 4
 				max = 7
 			}
-			round_temp_variable = temp_shuxing4
-			hidden_effect = { 
-				TAN = {
-					meta_fusang = {
-						set_nationality = ROOT
-					}
+			round_temp_variable = temp_level
+		}
+		else_if = {
+			limit = {
+				date > 1942.5.31
+			}
+			randomize_temp_variable = {
+				var = temp_level
+				distribution = uniform
+				min = 5
+				max = 9
+			}
+			round_temp_variable = temp_level
+		}
+		randomize_temp_variable = {
+			var = temp_shuxing1
+			distribution = uniform
+			min = 1
+			max = 6
+		}
+		round_temp_variable = temp_shuxing1
+		randomize_temp_variable = {
+			var = temp_shuxing2
+			distribution = uniform
+			min = 1
+			max = 6
+		}
+		round_temp_variable = temp_shuxing2
+		randomize_temp_variable = {
+			var = temp_shuxing3
+			distribution = uniform
+			min = 1
+			max = 7
+		}
+		round_temp_variable = temp_shuxing3
+		randomize_temp_variable = {
+			var = temp_shuxing4
+			distribution = uniform
+			min = 1
+			max = 7
+		}
+		round_temp_variable = temp_shuxing4
+		hidden_effect = { 
+			TAN = {
+				meta_feiying = {
+					set_nationality = ROOT
 				}
 			}
-			meta_effect = {
-				text = {
-					add_corps_commander_role = {
-						character = meta_fusang
-						traits = { xunyang_army trait_yujin xuexixunsu }
-						skill = [level]
-						attack_skill = [shuxing1]
-						defense_skill = [shuxing2]
-						planning_skill = [shuxing3]
-						logistics_skill = [shuxing4]
-					}
+		}
+		meta_effect = {
+			text = {
+				add_corps_commander_role = {
+					character = meta_feiying
+					traits = { xunyang_army trait_yujin xuexixunsu }
+					skill = [level]
+					attack_skill = [shuxing1]
+					defense_skill = [shuxing2]
+					planning_skill = [shuxing3]
+					logistics_skill = [shuxing4]
 				}
-				level = temp_level
-				shuxing1 = temp_shuxing1
-				shuxing2 = temp_shuxing2
-				shuxing3 = temp_shuxing3
-				shuxing4 = temp_shuxing4
 			}
-			meta_fusang = {
-				set_character_flag = chushijianniang
-			}
+			level = temp_level
+			shuxing1 = temp_shuxing1
+			shuxing2 = temp_shuxing2
+			shuxing3 = temp_shuxing3
+			shuxing4 = temp_shuxing4
+		}
+		meta_feiying = {
+			set_character_flag = chushijianniang
 		}
 	}
-#meat格奈森瑙沙恩霍斯特
-	country_event = {
-		id = getzhg_event.18
-		title = getzhg_event.18.t
-		desc = getzhg_event.18.d
-		picture = GFX_report_event_generic_read_write
-		is_triggered_only = yes
-		immediate = {
-			ROOT = { 
-				set_country_flag = meta_genaisennao_finding 
-				set_country_flag = { flag = meta_fangqixunzhao_cd value = 1 days = 60 }
-			}
-		}
-		option = {
-			name = getzhg_event.18.a
-			ai_chance = {
-				factor = 5
-			}
-			
-			random_state = {
-				limit = {
-					OR = {
-						is_fully_controlled_by = SIR
-						is_fully_controlled_by = SR1
-						is_fully_controlled_by = SR2
-						is_fully_controlled_by = SR3
-						is_fully_controlled_by = SR4
-					}
-				}
-				set_variable = {
-					global.meta_genaisennao_state = THIS
-				}
-				PREV = { 
-					goto_state = PREV
-				}
-				set_state_flag = meta_genaisennao
-			}
+}
+#扶桑
+country_event = { 
+	id = getzhg_event.17
+	title = getzhg_event.17.t
+	desc = getzhg_event.17.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	immediate = {
+		ROOT = { 
+			set_country_flag = meta_fusang_finding 
+			set_country_flag = { flag = meta_fangqixunzhao_cd value = 1 days = 60 }
 		}
 	}
+	option = {
+		name = getzhg_event.17.a
+		ai_chance = {
+			factor = 5
+		}
+		
+		random_state = {
+			limit = {
+				OR = {
+					is_fully_controlled_by = SIR
+					is_fully_controlled_by = SR1
+					is_fully_controlled_by = SR2
+					is_fully_controlled_by = SR3
+					is_fully_controlled_by = SR4
+				}
+			}
+			set_variable = {
+				global.meta_fusang_state = THIS
+			}
+			PREV = { 
+				goto_state = PREV
+			}
+			set_state_flag = meta_fusang
+		}
+	}
+}
+country_event = {
+	id = getzhg_event.1701
+	title = getzhg_event.1701.t
+	desc = getzhg_event.1701.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	option = {
+		name = getzhg_event.1701.a
+		ai_chance = {
+			factor = 5
+		}
+		if = {
+			limit = {
+				date < 1938.6.1
+			}
+			randomize_temp_variable = {
+				var = temp_level
+				distribution = uniform
+				min = 1
+				max = 3
+			}
+			round_temp_variable = temp_level
+		}
+		else_if = {
+			limit = {
+				AND = {
+					date > 1938.5.31
+					date < 1941.1.1
+				}
+			}
+			randomize_temp_variable = {
+				var = temp_level
+				distribution = uniform
+				min = 2
+				max = 5
+			}
+			round_temp_variable = temp_level
+		}		
+		else_if = {
+			limit = {
+				date > 1940.12.31
+				date < 1942.6.1
+			}
+			randomize_temp_variable = {
+				var = temp_level
+				distribution = uniform
+				min = 4
+				max = 7
+			}
+			round_temp_variable = temp_level
+		}
+		else_if = {
+			limit = {
+				date > 1942.5.31
+			}
+			randomize_temp_variable = {
+				var = temp_level
+				distribution = uniform
+				min = 5
+				max = 9
+			}
+			round_temp_variable = temp_level
+		}
+		randomize_temp_variable = {
+			var = temp_shuxing1
+			distribution = uniform
+			min = 1
+			max = 6
+		}
+		round_temp_variable = temp_shuxing1
+		randomize_temp_variable = {
+			var = temp_shuxing2
+			distribution = uniform
+			min = 1
+			max = 6
+		}
+		round_temp_variable = temp_shuxing2
+		randomize_temp_variable = {
+			var = temp_shuxing3
+			distribution = uniform
+			min = 1
+			max = 7
+		}
+		round_temp_variable = temp_shuxing3
+		randomize_temp_variable = {
+			var = temp_shuxing4
+			distribution = uniform
+			min = 1
+			max = 7
+		}
+		round_temp_variable = temp_shuxing4
+		hidden_effect = { 
+			TAN = {
+				meta_fusang = {
+					set_nationality = ROOT
+				}
+			}
+		}
+		meta_effect = {
+			text = {
+				add_corps_commander_role = {
+					character = meta_fusang
+					traits = { xunyang_army trait_yujin xuexixunsu }
+					skill = [level]
+					attack_skill = [shuxing1]
+					defense_skill = [shuxing2]
+					planning_skill = [shuxing3]
+					logistics_skill = [shuxing4]
+				}
+			}
+			level = temp_level
+			shuxing1 = temp_shuxing1
+			shuxing2 = temp_shuxing2
+			shuxing3 = temp_shuxing3
+			shuxing4 = temp_shuxing4
+		}
+		meta_fusang = {
+			set_character_flag = chushijianniang
+		}
+	}
+}
+#格奈森瑙沙恩霍斯特
+country_event = {
+	id = getzhg_event.18
+	title = getzhg_event.18.t
+	desc = getzhg_event.18.d
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	immediate = {
+		ROOT = { 
+			set_country_flag = meta_genaisennao_finding 
+			set_country_flag = { flag = meta_fangqixunzhao_cd value = 1 days = 60 }
+		}
+	}
+	option = {
+		name = getzhg_event.18.a
+		ai_chance = {
+			factor = 5
+		}
+		
+		random_state = {
+			limit = {
+				OR = {
+					is_fully_controlled_by = SIR
+					is_fully_controlled_by = SR1
+					is_fully_controlled_by = SR2
+					is_fully_controlled_by = SR3
+					is_fully_controlled_by = SR4
+				}
+			}
+			set_variable = {
+				global.meta_genaisennao_state = THIS
+			}
+			PREV = { 
+				goto_state = PREV
+			}
+			set_state_flag = meta_genaisennao
+		}
+	}
+}
 country_event = {
 	id = getzhg_event.1801
 	title = getzhg_event.1801.t
@@ -1814,7 +1811,49 @@ unit_leader_event = {
 	option = {
 		name = "不换了"
 	}
-	
+	#企业
+	option = {
+		name = "huangzhuang_qiye0"
+		trigger = {
+			THIS = {
+				is_character = BYG_qiye
+			}
+		}
+		set_portraits = { 
+			character = THIS  
+			army = { large="gfx/leaders/BYG/qiye.png" } 
+			civilian = { large="gfx/leaders/BYG/qiye.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	option = {
+		name = "行政装"
+		trigger = {
+			THIS = {
+				is_character = BYG_qiye
+			}
+		}
+		set_portraits = { 
+			character = THIS  
+			army = { large="gfx/leaders/BYG/leader_qiye_xz.png" } 
+			civilian = { large="gfx/leaders/BYG/leader_qiye_xz.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	option = {
+		name = "戎装"
+		trigger = {
+			THIS = {
+				is_character = BYG_qiye
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/BYG/leader_qiye_js.png" } 
+			civilian = { large="gfx/leaders/BYG/leader_qiye_js.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
 	#阿芙乐尔
 	option = {
 		name = "睡衣"
@@ -1830,2059 +1869,35 @@ unit_leader_event = {
 		}
 		THIS = { unit_leader_event = getzhg_event.2401 }
 	}
-
-
-#东煌
-	#航母
-		#镇海
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_zhenhai
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/zhenhai.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/zhenhai.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
+	#鞍山
+	option = {
+		name = "打游戏"
+		trigger = {
+			THIS = {
+				is_character = DOH_anshan
 			}
-			option = {
-				name = "旗袍"
-				trigger = {
-					THIS = {
-						is_character = DOH_zhenhai
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/zhenhai1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/zhenhai1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "礼服"
-				trigger = {
-					THIS = {
-						is_character = DOH_zhenhai
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/zhenhai2.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/zhenhai2.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "换装1"
-				trigger = {
-					THIS = {
-						is_character = DOH_zhenhai
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/zhenhai3.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/zhenhai3.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "换装2"
-				trigger = {
-					THIS = {
-						is_character = DOH_zhenhai
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/zhenhai4.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/zhenhai4.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#华甲
-				option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_huajia
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/huajia.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/huajia.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "僵尸"
-				trigger = {
-					THIS = {
-						is_character = DOH_huajia
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/huajia1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/huajia1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-
-	#战列
-		#寰昌
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_huanchang
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/huanchang.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/huanchang.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "换装1"
-				trigger = {
-					THIS = {
-						is_character = DOH_huanchang
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/huanchang1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/huanchang1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-	#巡洋
-		#逸仙
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_yixian
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/yixian.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/yixian.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "逸仙改"
-				trigger = {
-					THIS = {
-						is_character = DOH_yixian
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/yixian1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/yixian1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "汉服"
-				trigger = {
-					THIS = {
-						is_character = DOH_yixian
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/yixian2.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/yixian2.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "婚纱"
-				trigger = {
-					THIS = {
-						is_character = DOH_yixian
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/yixian3.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/yixian3.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "春节"
-				trigger = {
-					THIS = {
-						is_character = DOH_yixian
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/yixian4.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/yixian4.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "情人节"
-				trigger = {
-					THIS = {
-						is_character = DOH_yixian
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/yixian5.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/yixian5.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#平海
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_pinghai
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/pinghai.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/pinghai.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "礼服"
-				trigger = {
-					THIS = {
-						is_character = DOH_pinghai
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/pinghai1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/pinghai1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#宁海
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_ninghai
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/ninghai.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/ninghai.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "礼服"
-				trigger = {
-					THIS = {
-						is_character = DOH_ninghai
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/ninghai1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/ninghai1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#应瑞
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_yingrui
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/yingrui.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/yingrui.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "礼服"
-				trigger = {
-					THIS = {
-						is_character = DOH_yingrui
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/yingrui1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/yingrui1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "旗袍"
-				trigger = {
-					THIS = {
-						is_character = DOH_yingrui
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/yingrui2.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/yingrui2.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "跪坐"
-				trigger = {
-					THIS = {
-						is_character = DOH_yingrui
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/yingrui3.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/yingrui3.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#肇和
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_zhaohe
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/zhaohe.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/zhaohe.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "常服"
-				trigger = {
-					THIS = {
-						is_character = DOH_zhaohe
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/zhaohe1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/zhaohe1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "旗袍"
-				trigger = {
-					THIS = {
-						is_character = DOH_zhaohe
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/zhaohe2.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/zhaohe2.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#海天
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_haitian
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/haitian.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/haitian.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#海圻
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_haiqi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/haiqi.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/haiqi.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#哈尔滨
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_haerbin
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/haerbin.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/haerbin.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}	
-			option = {
-				name = "汉服"
-				trigger = {
-					THIS = {
-						is_character = DOH_haerbin
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/haerbin1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/haerbin1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}	
-			option = {
-				name = "泳装"
-				trigger = {
-					THIS = {
-						is_character = DOH_haerbin
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/haerbin2.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/haerbin2.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#济安
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_jian
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/jian.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/jian.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}	
-
-	#驱逐
-		#鞍山
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_anshan
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/anshan.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/anshan.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "打游戏"
-				trigger = {
-					THIS = {
-						is_character = DOH_anshan
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/anshan1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/anshan1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "鞍山2"
-				trigger = {
-					THIS = {
-						is_character = DOH_anshan
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/anshan2.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/anshan2.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "害羞"
-				trigger = {
-					THIS = {
-						is_character = DOH_anshan
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/anshan3.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/anshan3.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#抚顺
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_fushun
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/fushun.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/fushun.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "看鞍山打游戏"
-				trigger = {
-					THIS = {
-						is_character = DOH_fushun
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/fushun1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/fushun1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "春节"
-				trigger = {
-					THIS = {
-						is_character = DOH_fushun
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/fushun2.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/fushun2.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#长春
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_changchun
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/changchun.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/changchun.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "常服"
-				trigger = {
-					THIS = {
-						is_character = DOH_changchun
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/changchun1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/changchun1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "情人节"
-				trigger = {
-					THIS = {
-						is_character = DOH_changchun
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/changchun2.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/changchun2.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#太原
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_taiyuan
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/taiyuan.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/taiyuan.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "常服"
-				trigger = {
-					THIS = {
-						is_character = DOH_taiyuan
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/taiyuan1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/taiyuan1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#龙武
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_longwu
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/longwu.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/longwu.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "潜水"
-				trigger = {
-					THIS = {
-						is_character = DOH_longwu
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/longwu1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/longwu1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#虎贲
-			option = {
-			name = "原版"
-			trigger = {
-				THIS = {
-					is_character = DOH_huben
-				}
-			}
-			set_portraits = { 
-				character = THIS
-				army = { large="gfx/leaders/huanzhuang/DOH/huben.png" } 
-				civilian = { large="gfx/leaders/huanzhuang/DOH/huben.png" } 
-			}
-			THIS = { unit_leader_event = getzhg_event.2401 }
 		}
-		#飞云
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = DOH_longwu
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/DOH/feiyun.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/DOH/feiyun.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-	#潜艇
-
-	#其他
-		#定安
-			option = {
-			name = "原版"
-			trigger = {
-				THIS = {
-					is_character = DOH_dingan
-				}
-			}
-			set_portraits = { 
-				character = THIS
-				army = { large="gfx/leaders/huanzhuang/DOH/dingan.png" } 
-				civilian = { large="gfx/leaders/huanzhuang/DOH/dingan.png" } 
-			}
-			THIS = { unit_leader_event = getzhg_event.2401 }
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/anshan1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/anshan1.png" } 
 		}
-
-#白鹰
-	#航母
-		#企业
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_qiye
-					}
-				}
-				set_portraits = { 
-					character = THIS  
-					army = { large="gfx/leaders/huanzhuang/BYG/qiye.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/qiye.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "行政装"
-				trigger = {
-					THIS = {
-						is_character = BYG_qiye
-					}
-				}
-				set_portraits = { 
-					character = THIS  
-					army = { large="gfx/leaders/huanzhuang/BYG/qiye1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/qiye1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "戎装"
-				trigger = {
-					THIS = {
-						is_character = BYG_qiye
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/qiye2.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/qiye2.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "赛车"
-				trigger = {
-					THIS = {
-						is_character = BYG_qiye
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/qiye3.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/qiye3.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "潜水"
-				trigger = {
-					THIS = {
-						is_character = BYG_qiye
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/qiye4.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/qiye4.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "沙滩"
-				trigger = {
-					THIS = {
-						is_character = BYG_qiye
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/qiye5.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/qiye5.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "休憩"
-				trigger = {
-					THIS = {
-						is_character = BYG_qiye
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/qiye6.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/qiye6.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#约克城
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_yuekecheng
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/yuekecheng.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/yuekecheng.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "约克城II"
-				trigger = {
-					THIS = {
-						is_character = BYG_yuekecheng
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/yuekecheng1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/yuekecheng1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "休憩"
-				trigger = {
-					THIS = {
-						is_character = BYG_yuekecheng
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/yuekecheng2.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/yuekecheng2.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "泳装"
-				trigger = {
-					THIS = {
-						is_character = BYG_yuekecheng
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/yuekecheng3.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/yuekecheng3.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "情人节"
-				trigger = {
-					THIS = {
-						is_character = BYG_yuekecheng
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/yuekecheng4.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/yuekecheng4.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#大黄蜂
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_dahuangfeng
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/dahuangfeng.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/dahuangfeng.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#列克星敦
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_liekexingdun
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/liekexingdun.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/liekexingdun.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#萨拉托加
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_salatuojia
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/salatuojia.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/salatuojia.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "婚纱"
-				trigger = {
-					THIS = {
-						is_character = BYG_salatuojia
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/salatuojia1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/salatuojia1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "异国的偶像"
-				trigger = {
-					THIS = {
-						is_character = BYG_salatuojia
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/salatuojia2.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/salatuojia2.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "萨拉托加-3"
-				trigger = {
-					THIS = {
-						is_character = BYG_salatuojia
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/salatuojia3.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/salatuojia3.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "萨拉托加-4"
-				trigger = {
-					THIS = {
-						is_character = BYG_salatuojia
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/salatuojia4.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/salatuojia4.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "萨拉托加-5"
-				trigger = {
-					THIS = {
-						is_character = BYG_salatuojia
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/salatuojia5.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/salatuojia5.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "萨拉托加-6"
-				trigger = {
-					THIS = {
-						is_character = BYG_salatuojia
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/salatuojia6.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/salatuojia6.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "萨拉托加-7"
-				trigger = {
-					THIS = {
-						is_character = BYG_salatuojia
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/salatuojia7.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/salatuojia7.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#埃塞克斯
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_liekexingdun
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/aisaikesi.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/aisaikesi.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#无畏
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_wuwei
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/wuwei.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/wuwei.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#提康德罗加
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_tikangdeluojia
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/tikangdeluojia.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/tikangdeluojia.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#邦克山
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_bangkeshan
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/bangkeshan.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/bangkeshan.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#香格里拉
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_xianggelila
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/xianggelila.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/xianggelila.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#巴丹
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_badan
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/badan.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/badan.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#卡萨布兰卡
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_kasabulanka
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/kasabulanka.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/kasabulanka.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#长岛
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_changdao
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/changdao.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/changdao.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "摸鱼"
-				trigger = {
-					THIS = {
-						is_character = BYG_changdao
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/changdao1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/changdao1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-
-	#战列
-		#佐治亚
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_zuozhiya
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/zuozhiya.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/zuozhiya.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#南达科他
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_nandaketa
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/nandaketa.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/nandaketa.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#阿拉巴马
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_alabama
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/alabama.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/alabama.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#北卡罗来纳
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_beikaluolaina
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/beikaluolaina.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/beikaluolaina.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#华盛顿
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_huashengdun
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/huashengdun.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/huashengdun.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "旗袍"
-				trigger = {
-					THIS = {
-						is_character = BYG_huashengdun
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/huashengdun1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/huashengdun1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#星座
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_xingzuo
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/xingzuo.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/xingzuo.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#宾夕法尼亚
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_binxifaniya
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/binxifaniya.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/binxifaniya.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#亚利桑那
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_yalisangna
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/yalisangna.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/yalisangna.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-
-	#巡洋
-		#关岛
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_guandao
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/guandao.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/guandao.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "毛衣"
-				trigger = {
-					THIS = {
-						is_character = BYG_guandao
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/guandao1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/guandao1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "兴奋"
-				trigger = {
-					THIS = {
-						is_character = BYG_guandao
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/guandao2.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/guandao2.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "沮丧"
-				trigger = {
-					THIS = {
-						is_character = BYG_guandao
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/guandao3.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/guandao3.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#安克雷奇
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_ankeleiqi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/ankeleiqi.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/ankeleiqi.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "夜游"
-				trigger = {
-					THIS = {
-						is_character = BYG_ankeleiqi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/ankeleiqi1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/ankeleiqi1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "跪坐"
-				trigger = {
-					THIS = {
-						is_character = BYG_ankeleiqi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/ankeleiqi2.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/ankeleiqi2.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "美食"
-				trigger = {
-					THIS = {
-						is_character = BYG_ankeleiqi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/ankeleiqi3.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/ankeleiqi3.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#巴尔的摩
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_baerdimo
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/baerdimo.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/baerdimo.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-				option = {
-					name = "差人"
-					trigger = {
-						THIS = {
-							is_character = BYG_baerdimo
-						}
-					}
-					set_portraits = { 
-						character = THIS
-						army = { large="gfx/leaders/huanzhuang/BYG/baerdimo1.png" } 
-						civilian = { large="gfx/leaders/huanzhuang/BYG/baerdimo1.png" } 
-					}
-					THIS = { unit_leader_event = getzhg_event.2401 }
-				}
-		#布莱默顿
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_bulaimodun
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/bulaimodun.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/bulaimodun.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#西雅图
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_xiyatu
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/xiyatu.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/xiyatu.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#克利夫兰
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_kelifulan
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/kelifulan.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/kelifulan.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "天台"
-				trigger = {
-					THIS = {
-						is_character = BYG_kelifulan
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/kelifulan1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/kelifulan1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#蒙彼利埃
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_mengbiliai
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/mengbiliai.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/mengbiliai.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#明尼阿波利斯
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_mingniabolisi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/mingniabolisi.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/mingniabolisi.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#旧金山
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_jiujinshan
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/jiujinshan.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/jiujinshan.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#波特兰
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_botelan
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/botelan.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/botelan.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#火奴鲁鲁
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_huonululu
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/huonululu.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/huonululu.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "梳妆"
-				trigger = {
-					THIS = {
-						is_character = BYG_huonululu
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/huonululu1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/huonululu1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "泳装"
-				trigger = {
-					THIS = {
-						is_character = BYG_huonululu
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/huonululu2.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/huonululu2.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#圣路易斯
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_shengluyisi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/shengluyisi.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/shengluyisi.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "富婆1"
-				trigger = {
-					THIS = {
-						is_character = BYG_shengluyisi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/shengluyisi1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/shengluyisi1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "富婆2"
-				trigger = {
-					THIS = {
-						is_character = BYG_shengluyisi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/shengluyisi2.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/shengluyisi2.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "富婆3"
-				trigger = {
-					THIS = {
-						is_character = BYG_shengluyisi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/shengluyisi3.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/shengluyisi3.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "泳装1"
-				trigger = {
-					THIS = {
-						is_character = BYG_shengluyisi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/shengluyisi4.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/shengluyisi4.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "泳装2"
-				trigger = {
-					THIS = {
-						is_character = BYG_shengluyisi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/shengluyisi5.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/shengluyisi5.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "泳装3"
-				trigger = {
-					THIS = {
-						is_character = BYG_shengluyisi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/shengluyisi6.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/shengluyisi6.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "泳装4"
-				trigger = {
-					THIS = {
-						is_character = BYG_shengluyisi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/shengluyisi7.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/shengluyisi7.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#海伦娜
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_hailunna
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/hailunna.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/hailunna.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#圣地亚哥
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_shengdiyage
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/shengdiyage.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/shengdiyage.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#里诺
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_linuo
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/linuo.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/linuo.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "兔女郎"
-				trigger = {
-					THIS = {
-						is_character = BYG_linuo
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/linuo1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/linuo1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-
-	#驱逐
-		#艾伦萨姆纳
-			option = {
-					name = "原版"
-					trigger = {
-						THIS = {
-							is_character = BYG_ailunsamuna
-						}
-					}
-					set_portraits = { 
-						character = THIS
-						army = { large="gfx/leaders/huanzhuang/BYG/ailunsamuna.png" } 
-						civilian = { large="gfx/leaders/huanzhuang/BYG/ailunsamuna.png" } 
-					}
-					THIS = { unit_leader_event = getzhg_event.2401 }
-				}
-		#英格拉罕
-			option = {
-					name = "原版"
-					trigger = {
-						THIS = {
-							is_character = BYG_yinggelahan
-						}
-					}
-					set_portraits = { 
-						character = THIS
-						army = { large="gfx/leaders/huanzhuang/BYG/yinggelahan.png" } 
-						civilian = { large="gfx/leaders/huanzhuang/BYG/yinggelahan.png" } 
-					}
-					THIS = { unit_leader_event = getzhg_event.2401 }
-				}
-		#拉菲
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_lafei
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/lafei.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/lafei.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "荡秋千"
-				trigger = {
-					THIS = {
-						is_character = BYG_lafei
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/lafei1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/lafei1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "泳装"
-				trigger = {
-					THIS = {
-						is_character = BYG_lafei
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/lafei2.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/lafei2.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "换装1"
-				trigger = {
-					THIS = {
-						is_character = BYG_lafei
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/lafei3.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/lafei3.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "换装2"
-				trigger = {
-					THIS = {
-						is_character = BYG_lafei
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/lafei4.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/lafei4.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "换装3"
-				trigger = {
-					THIS = {
-						is_character = BYG_lafei
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/lafei5.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/lafei5.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "换装4"
-				trigger = {
-					THIS = {
-						is_character = BYG_lafei
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/lafei6.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/lafei6.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "换装5"
-				trigger = {
-					THIS = {
-						is_character = BYG_lafei
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/lafei7.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/lafei7.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#哈曼
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_haman
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/haman.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/haman.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "哈曼曼II"
-				trigger = {
-					THIS = {
-						is_character = BYG_haman
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/haman1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/haman1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#格里德利
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_gelideli
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/gelideli.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/gelideli.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-		#埃尔德里奇
-			option = {
-				name = "原版"
-				trigger = {
-					THIS = {
-						is_character = BYG_aierdeliqi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/aierdeliqi.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/aierdeliqi.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "婚纱"
-				trigger = {
-					THIS = {
-						is_character = BYG_aierdeliqi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/aierdeliqi1.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/aierdeliqi1.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "吃包子"
-				trigger = {
-					THIS = {
-						is_character = BYG_aierdeliqi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/aierdeliqi2.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/aierdeliqi2.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "情人节"
-				trigger = {
-					THIS = {
-						is_character = BYG_aierdeliqi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/aierdeliqi3.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/aierdeliqi3.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-			option = {
-				name = "举高高"
-				trigger = {
-					THIS = {
-						is_character = BYG_aierdeliqi
-					}
-				}
-				set_portraits = { 
-					character = THIS
-					army = { large="gfx/leaders/huanzhuang/BYG/aierdeliqi4.png" } 
-					civilian = { large="gfx/leaders/huanzhuang/BYG/aierdeliqi4.png" } 
-				}
-				THIS = { unit_leader_event = getzhg_event.2401 }
-			}
-	
-	#潜艇
-		#射水鱼
-		#大青花鱼
-	
-	#其他
-		#奇尔沙治
-		#女灶神
-
-
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	option = {
+		name = "鞍山2"
+		trigger = {
+			THIS = {
+				is_character = DOH_anshan
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/anshan2.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/anshan2.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
 	#奥古斯特
 	option = {
 		name = "犀利"
@@ -3969,8 +1984,36 @@ unit_leader_event = {
 		}
 		THIS = { unit_leader_event = getzhg_event.2401 }
 	}
-	
-	
+	#长春
+	option = {
+		name = "常服"
+		trigger = {
+			THIS = {
+				is_character = DOH_changchun
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/changchun1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/changchun1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	#抚顺
+	option = {
+		name = "看鞍山打游戏"
+		trigger = {
+			THIS = {
+				is_character = DOH_fushun
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/fushun1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/fushun1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
 	#甘古特
 	option = {
 		name = "换个姿势"
@@ -4219,7 +2262,21 @@ unit_leader_event = {
 		}
 		THIS = { unit_leader_event = getzhg_event.2401 }
 	}
-	
+	#太原
+	option = {
+		name = "常服"
+		trigger = {
+			THIS = {
+				is_character = DOH_taiyuan
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/taiyuan1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/taiyuan1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
 	#阿达尔伯特
 	option = {
 		name = "阿达尔伯特-女仆"
@@ -4456,7 +2513,21 @@ unit_leader_event = {
 		}
 		THIS = { unit_leader_event = getzhg_event.2401 }
 	}
-	
+	#里诺
+	option = {
+		name = "兔女郎"
+		trigger = {
+			THIS = {
+				is_character = BYG_linuo
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/linuo1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/linuo1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
 	#罗恩
 	option = {
 		name = "害怕"
@@ -4616,8 +2687,22 @@ unit_leader_event = {
 		}
 		THIS = { unit_leader_event = getzhg_event.2401 }
 	}
-	
-	#树城
+	#圣路易斯
+	option = {
+		name = "富婆"
+		trigger = {
+			THIS = {
+				is_character = BYG_shengluyisi
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/shengluyisi1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/shengluyisi1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	#圣路易斯
 	option = {
 		name = "兔女郎"
 		trigger = {
@@ -4692,7 +2777,21 @@ unit_leader_event = {
 		}
 		THIS = { unit_leader_event = getzhg_event.2401 }
 	}
-	
+	#应瑞
+	option = {
+		name = "礼服"
+		trigger = {
+			THIS = {
+				is_character = DOH_yingrui
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/yingrui1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/yingrui1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
 	#长门
 	option = {
 		name = "常服"
@@ -4708,7 +2807,21 @@ unit_leader_event = {
 		}
 		THIS = { unit_leader_event = getzhg_event.2401 }
 	}
-	
+	#肇和
+	option = {
+		name = "常服"
+		trigger = {
+			THIS = {
+				is_character = DOH_zhaohe
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/zhaohe1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/zhaohe1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
 	#黛朵
 	option = {
 		name = "兵装"
@@ -5347,7 +3460,21 @@ unit_leader_event = {
 		}
 		THIS = { unit_leader_event = getzhg_event.2401 }
 	}
-	
+	#巴尔的摩
+	option = {
+		name = "差人"
+		trigger = {
+			THIS = {
+				is_character = BYG_baerdimo
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/baerdimo1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/baerdimo1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
 	#贝尔法斯特
 	option = {
 		name = "礼服"
@@ -5588,7 +3715,21 @@ unit_leader_event = {
 		}
 		THIS = { unit_leader_event = getzhg_event.2401 }
 	}
-	
+	#抚顺
+	option = {
+		name = "春节"
+		trigger = {
+			THIS = {
+				is_character = DOH_fushun
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/fushun2.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/fushun2.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
 	#甘古特
 	option = {
 		name = "狱警"
@@ -5634,7 +3775,51 @@ unit_leader_event = {
 		}
 		THIS = { unit_leader_event = getzhg_event.2401 }
 	}	
-	
+	#哈曼曼
+	option = {
+		name = "哈曼曼II"
+		trigger = {
+			THIS = {
+				is_character = BYG_haman
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/haman1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/haman1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	#华甲
+	option = {
+		name = "僵尸"
+		trigger = {
+			THIS = {
+				is_character = DOH_huajia
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/huajia1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/huajia1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	#华盛顿
+	option = {
+		name = "旗袍"
+		trigger = {
+			THIS = {
+				is_character = BYG_huashengdun
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/huashengdun1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/huashengdun1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
 	#基辅
 	option = {
 		name = "特工"
@@ -5770,7 +3955,36 @@ unit_leader_event = {
 		}
 		THIS = { unit_leader_event = getzhg_event.2401 }
 	}
-	
+	#平海
+	option = {
+		name = "礼服"
+		trigger = {
+			THIS = {
+				is_character = DOH_pinghai
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/pinghai1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/pinghai1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	#宁海
+	option = {
+		name = "礼服"
+		trigger = {
+			THIS = {
+				is_character = DOH_ninghai
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/ninghai1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/ninghai1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
 	#普利茅斯
 	option = {
 		name = "泳装"
@@ -5801,7 +4015,21 @@ unit_leader_event = {
 		}
 		THIS = { unit_leader_event = getzhg_event.2401 }
 	}
-
+	#企业
+	option = {
+		name = "赛车"
+		trigger = {
+			THIS = {
+				is_character = BYG_qiye
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/qiye1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/qiye1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
 	#瑞鹤
 	option = {
 		name = "赛车"
@@ -5844,6 +4072,21 @@ unit_leader_event = {
 			character = THIS
 			army = { large="gfx/leaders/huanzhuang/shuixingjinian2.png" } 
 			civilian = { large="gfx/leaders/huanzhuang/shuixingjinian2.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	#太原
+	option = {
+		name = "旗袍"
+		trigger = {
+			THIS = {
+				is_character = DOH_taiyuan
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/taiyuan2.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/taiyuan2.png" } 
 		}
 		THIS = { unit_leader_event = getzhg_event.2401 }
 	}
@@ -5937,9 +4180,66 @@ unit_leader_event = {
 		}
 		THIS = { unit_leader_event = getzhg_event.2401 }
 	}
-	
-	
-	
+	#应瑞
+	option = {
+		name = "旗袍"
+		trigger = {
+			THIS = {
+				is_character = DOH_yingrui
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/yingrui2.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/yingrui2.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	#逸仙
+	option = {
+		name = "汉服"
+		trigger = {
+			THIS = {
+				is_character = DOH_yixian
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/yixian2.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/yixian2.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	#逸仙
+	option = {
+		name = "逸仙改"
+		trigger = {
+			THIS = {
+				is_character = DOH_yixian
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/yixian1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/yixian1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	#约克城
+	option = {
+		name = "约克城II"
+		trigger = {
+			THIS = {
+				is_character = BYG_yuekecheng
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/yuekecheng1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/yuekecheng1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
 	#Z-1酱
 	option = {
 		name = "Z-1改"
@@ -5970,8 +4270,51 @@ unit_leader_event = {
 		}
 		THIS = { unit_leader_event = getzhg_event.2401 }
 	}
-	
-	
+	#肇和
+	option = {
+		name = "旗袍"
+		trigger = {
+			THIS = {
+				is_character = DOH_zhaohe
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/zhaohe2.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/zhaohe2.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	#镇海
+	option = {
+		name = "旗袍"
+		trigger = {
+			THIS = {
+				is_character = DOH_zhenhai
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/zhenhai1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/zhenhai1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	#镇海
+	option = {
+		name = "礼服"
+		trigger = {
+			THIS = {
+				is_character = DOH_zhenhai
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/zhenhai2.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/zhenhai2.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
 	#阿拉巴马
 	option = {
 		name = "旗袍"
@@ -6047,7 +4390,35 @@ unit_leader_event = {
 		}
 		THIS = { unit_leader_event = getzhg_event.2401 }
 	}
-		
+	#哈尔滨-汉服
+	option = {
+		name = "哈尔滨-汉服"
+		trigger = {
+			THIS = {
+				is_character = DOH_haerbin
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/haerbin1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/haerbin1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}	
+	option = {
+		name = "哈尔滨-泳装"
+		trigger = {
+			THIS = {
+				is_character = DOH_haerbin
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/haerbin2.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/haerbin2.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}	
 	#基洛夫
 	option = {
 		name = "基洛夫-摩托"
@@ -6151,7 +4522,105 @@ unit_leader_event = {
 		}
 		THIS = { unit_leader_event = getzhg_event.2401 }
 	}
-	
+	#萨拉托加
+	option = {
+		name = "萨拉托加-婚纱"
+		trigger = {
+			THIS = {
+				is_character = BYG_salatuojia
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/salatuojia1.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/salatuojia1.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	option = {
+		name = "萨拉托加-偶像"
+		trigger = {
+			THIS = {
+				is_character = BYG_salatuojia
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/salatuojia2.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/salatuojia2.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	option = {
+		name = "萨拉托加-3"
+		trigger = {
+			THIS = {
+				is_character = BYG_salatuojia
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/salatuojia3.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/salatuojia3.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	option = {
+		name = "萨拉托加-4"
+		trigger = {
+			THIS = {
+				is_character = BYG_salatuojia
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/salatuojia4.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/salatuojia4.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	option = {
+		name = "萨拉托加-5"
+		trigger = {
+			THIS = {
+				is_character = BYG_salatuojia
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/salatuojia5.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/salatuojia5.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	option = {
+		name = "萨拉托加-6"
+		trigger = {
+			THIS = {
+				is_character = BYG_salatuojia
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/salatuojia6.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/salatuojia6.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
+	option = {
+		name = "萨拉托加-7"
+		trigger = {
+			THIS = {
+				is_character = BYG_salatuojia
+			}
+		}
+		set_portraits = { 
+			character = THIS
+			army = { large="gfx/leaders/huanzhuang/salatuojia7.png" } 
+			civilian = { large="gfx/leaders/huanzhuang/salatuojia7.png" } 
+		}
+		THIS = { unit_leader_event = getzhg_event.2401 }
+	}
 	#胜利
 	option = {
 		name = "胜利-常服"
@@ -6948,7 +5417,7 @@ country_event = {
 	trigger = {
 		is_ai = no
 		NOT = { has_country_flag = luoli_huangjiafangzhou_get }
-		or = {
+		OR = {
 			check_variable = { xiaoliwu_luoli_cishu > 3 }
 			check_variable = { xiaoliwu_total_cishu > 20 }
 		}	

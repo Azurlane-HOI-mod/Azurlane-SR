@@ -42,7 +42,7 @@ guiTypes = {
 			buttonFont = "hoi_24header" 
 			Orientation = UPPER_LEFT     
 			clicksound = click_close		
-		}  
+		} 
 		buttonType = {
 			name = "az_pt_goto_3"
 			position = { x = 170 y = 5 } 
@@ -152,7 +152,7 @@ guiTypes = {
 			name = "az_pt_page"
 			position = { x = -90 y = 45 }  
 			Orientation = UPPER_RIGHT
-			font = "hoi_24b"
+			font = "hoi_20b"
 			text = "az_pt_page"
 			maxWidth = 50
 			maxHeight = 50
@@ -167,7 +167,7 @@ guiTypes = {
 			name = "az_PT_1"   
 			position = { x= 110 y = 70 }
 			spriteType = "GFX_az_PT_1"   
-			Orientation = UPPER_CENTER
+			Orientation = CENTER
 			 
 		}
 		iconType = {
@@ -418,7 +418,7 @@ guiTypes = {
 		}
 	} 
 	containerWindowType = {
-		name = "az_pt_1_014_f" 
+		name = "az_pt_1_014_f"
 		Orientation = CENTER
 		position = { x = 225 y = -10 } 		
 		buttonType = {

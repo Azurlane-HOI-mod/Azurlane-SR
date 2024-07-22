@@ -1,6 +1,6 @@
 ai_medium_tank_research_1 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -8,6 +8,7 @@ ai_medium_tank_research_1 = {
 			original_tag = SAD
 			original_tag = CHY
 			original_tag = DOH
+			original_tag = DH1
 			original_tag = TIX
 		}
 	}
@@ -29,7 +30,7 @@ ai_medium_tank_research_1 = {
 
 ai_medium_tank_research_2 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -37,6 +38,7 @@ ai_medium_tank_research_2 = {
 			original_tag = SAD
 			original_tag = CHY
 			original_tag = DOH
+			original_tag = DH1
 			original_tag = TIX
 			
 		}
@@ -59,7 +61,7 @@ ai_medium_tank_research_2 = {
 
 ai_medium_tank_research_3 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -67,6 +69,7 @@ ai_medium_tank_research_3 = {
 			original_tag = SAD
 			original_tag = CHY
 			original_tag = DOH
+			original_tag = DH1
 			original_tag = TIX
 			
 		}
@@ -89,7 +92,7 @@ ai_medium_tank_research_3 = {
 
 ai_light_tank_research_1 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -118,7 +121,7 @@ ai_light_tank_research_1 = {
 
 ai_light_tank_research_2 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -147,7 +150,7 @@ ai_light_tank_research_2 = {
 
 ai_light_tank_research_3 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -176,7 +179,7 @@ ai_light_tank_research_3 = {
 
 mechanised_infantry_research_1 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -184,6 +187,7 @@ mechanised_infantry_research_1 = {
 			original_tag = SAD
 			original_tag = TIX
 			original_tag = DOH
+			original_tag = DH1
 			original_tag = CHY
 			original_tag = BLI
 			original_tag = SIR
@@ -206,7 +210,7 @@ mechanised_infantry_research_1 = {
 
 mechanised_infantry_research_2 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -214,6 +218,7 @@ mechanised_infantry_research_2 = {
 			original_tag = SAD
 			original_tag = TIX
 			original_tag = DOH
+			original_tag = DH1
 			original_tag = CHY
 			original_tag = BLI
 			original_tag = SIR
@@ -237,7 +242,7 @@ mechanised_infantry_research_2 = {
 
 mechanised_infantry_research_3 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -245,6 +250,7 @@ mechanised_infantry_research_3 = {
 			original_tag = SAD
 			original_tag = TIX
 			original_tag = DOH
+			original_tag = DH1
 			original_tag = CHY
 			original_tag = BLI
 			original_tag = SIR
@@ -269,6 +275,7 @@ mechanised_infantry_research_3 = {
 DOH_ai_light_tank_research_1 = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		has_idea = DOH_dfgg5
@@ -288,6 +295,7 @@ DOH_ai_light_tank_research_1 = {
 DOH_ai_light_tank_research_2 = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		has_tech = basic_light_tank_chassis
@@ -307,6 +315,7 @@ DOH_ai_light_tank_research_2 = {
 DOH_ai_light_tank_research_3 = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		date > 1941.1.1
@@ -325,7 +334,7 @@ DOH_ai_light_tank_research_3 = {
 
 ai_plane_research_1 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -354,7 +363,7 @@ ai_plane_research_1 = {
 
 ai_plane_research_2 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -383,7 +392,7 @@ ai_plane_research_2 = {
 
 ai_plane_research_3_nohujsad = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = BYG
@@ -411,7 +420,7 @@ ai_plane_research_3_nohujsad = {
 
 ai_plane_research_4_nohujsad = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = BYG
@@ -439,7 +448,7 @@ ai_plane_research_4_nohujsad = {
 
 ai_plane_research_5_nosad = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = BYG
@@ -468,7 +477,7 @@ ai_plane_research_5_nosad = {
 
 ai_plane_research_3_huj = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = HUJ
 			original_tag = TIX
 			original_tag = SAD
@@ -492,7 +501,7 @@ ai_plane_research_3_huj = {
 
 ai_plane_research_4_huj = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = HUJ
 			original_tag = TIX
 			original_tag = SAD
@@ -517,6 +526,7 @@ ai_plane_research_4_huj = {
 ai_plane_research_DOH_1 = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		date > 1936.1.1
@@ -538,6 +548,7 @@ ai_plane_research_DOH_1 = {
 ai_plane_research_DOH_2 = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		has_tech = iw_small_airframe
@@ -558,6 +569,7 @@ ai_plane_research_DOH_2 = {
 ai_plane_research_DOH_3 = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		date > 1939.1.1
@@ -578,6 +590,7 @@ ai_plane_research_DOH_3 = {
 ai_plane_research_DOH_4 = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		date > 1943.1.1
@@ -598,6 +611,7 @@ ai_plane_research_DOH_4 = {
 ai_plane_research_DOH_5 = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		date > 1944.1.1
@@ -617,7 +631,7 @@ ai_plane_research_DOH_5 = {
 
 ai_large_plane_research_byghuj_1 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = HUJ
 			original_tag = BYG
 			original_tag = TIX
@@ -641,7 +655,7 @@ ai_large_plane_research_byghuj_1 = {
 
 ai_large_plane_research_byghuj_2 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = HUJ
 			original_tag = BYG
 			original_tag = TIX
@@ -665,7 +679,7 @@ ai_large_plane_research_byghuj_2 = {
 
 ai_large_plane_research_byghuj_3 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = HUJ
 			original_tag = BYG
 			original_tag = TIX
@@ -690,7 +704,7 @@ ai_large_plane_research_byghuj_3 = {
 
 ai_large_plane_research_byghuj_4 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = HUJ
 			original_tag = BYG
 			original_tag = TIX
@@ -715,7 +729,7 @@ ai_large_plane_research_byghuj_4 = {
 
 ai_large_plane_research_byghuj_5 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = HUJ
 			original_tag = BYG
 			original_tag = TIX
@@ -741,6 +755,7 @@ ai_large_plane_research_byghuj_5 = {
 ai_large_plane_research_doh_1 = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		date > 1936.1.1
@@ -762,6 +777,7 @@ ai_large_plane_research_doh_1 = {
 ai_large_plane_research_doh_2 = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		has_tech = iw_large_airframe
@@ -782,6 +798,7 @@ ai_large_plane_research_doh_2 = {
 ai_large_plane_research_doh_3 = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		date > 1940.1.1
@@ -803,6 +820,7 @@ ai_large_plane_research_doh_3 = {
 ai_large_plane_research_doh_4 = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		date > 1944.1.1
@@ -824,6 +842,7 @@ ai_large_plane_research_doh_4 = {
 ai_large_plane_research_doh_5 = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		date > 1945.1.1
@@ -844,7 +863,7 @@ ai_large_plane_research_doh_5 = {
 
 ai_naval_research_1 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -902,6 +921,7 @@ ai_naval_research_1 = {
 ai_naval_research_1_doh = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		date > 1936.1.1
@@ -949,7 +969,7 @@ ai_naval_research_1_doh = {
 
 ai_naval_research_2 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -960,6 +980,7 @@ ai_naval_research_2 = {
 			original_tag = BLI
 			original_tag = SIR
 			original_tag = DOH
+			original_tag = DH1
 		}
 	}
 	enable = {
@@ -1012,7 +1033,7 @@ ai_naval_research_2 = {
 
 ai_naval_research_heavy_ship = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -1023,6 +1044,7 @@ ai_naval_research_heavy_ship = {
 			original_tag = BLI
 			original_tag = SIR
 			original_tag = DOH
+			original_tag = DH1
 		}
 	}
 	enable = {
@@ -1043,7 +1065,7 @@ ai_naval_research_heavy_ship = {
 
 ai_naval_research_3 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -1054,6 +1076,7 @@ ai_naval_research_3 = {
 			original_tag = BLI
 			original_tag = SIR
 			original_tag = DOH
+			original_tag = DH1
 		}
 	}
 	enable = {
@@ -1106,7 +1129,7 @@ ai_naval_research_3 = {
 
 ai_naval_research_4 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -1117,6 +1140,7 @@ ai_naval_research_4 = {
 			original_tag = BLI
 			original_tag = SIR
 			original_tag = DOH
+			original_tag = DH1
 		}
 	}
 	enable = {
@@ -1169,7 +1193,7 @@ ai_naval_research_4 = {
 
 ai_naval_research_5 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -1255,7 +1279,7 @@ ai_naval_research_5 = {
 
 ai_naval_research_6 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -1295,7 +1319,7 @@ ai_naval_research_6 = {
 
 ai_naval_research_7 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -1335,7 +1359,7 @@ ai_naval_research_7 = {
 
 ai_naval_research_8 = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = YUW
 			original_tag = BFL
 			original_tag = HUJ
@@ -1375,6 +1399,7 @@ ai_naval_research_8 = {
 ai_naval_research_DOH_5 = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		date > 1939.1.1
@@ -1451,6 +1476,7 @@ ai_naval_research_DOH_5 = {
 ai_naval_research_DOH_6 = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		date > 1939.1.1
@@ -1481,6 +1507,7 @@ ai_naval_research_DOH_6 = {
 ai_naval_research_DOH_7 = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		date > 1939.1.1
@@ -1511,6 +1538,7 @@ ai_naval_research_DOH_7 = {
 ai_naval_research_DOH_8 = {
 	allowed = {
 		original_tag = DOH
+			original_tag = DH1
 	}
 	enable = {
 		date > 1941.1.1
@@ -1539,7 +1567,7 @@ ai_naval_research_DOH_8 = {
 
 ai_naval_submarine = {
 	allowed = {
-		or = {
+		OR = {
 			original_tag = SAD
 			original_tag = CHY
 			original_tag = TIX
