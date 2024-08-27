@@ -258,6 +258,7 @@ recruit_character = SAD_leigeluo
 recruit_character = SAD_geliqiya
 recruit_character = SAD_boerzhanuo
 recruit_character = SAD_duoliya
+recruit_character = SAD_nabulesi
 if = {
 	limit = {
 		not = { has_dlc = "Man the Guns" }
