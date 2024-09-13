@@ -104,6 +104,7 @@ recruit_character = DOH_huben
 recruit_character = DOH_jian
 recruit_character = DOH_longwu
 recruit_character = DOH_gelideli
+recruit_character = DOH_shaoqian_advisor
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	# Destroyers #
