@@ -1,0 +1,40 @@
+
+state={
+	id=536
+	name="STATE_536"
+	manpower = 19812000
+	
+	state_category = megalopolis
+	resources = {
+		chromium = 75
+		aluminium = 52
+	}
+	history={
+		owner = CHY
+		
+		buildings = {
+			infrastructure = 2
+			arms_factory = 5
+			industrial_complex = 4
+			air_base = 5
+			dockyard = 10
+			3962 = {
+				naval_base = 8
+
+			}
+		}
+		victory_points = {
+			10444 5
+		}
+		victory_points = {
+			12421 5 
+		}
+
+	}
+
+	provinces={
+		1512 1642 3962 4576 4646 7532 7595 10444 10512 12352 12421 12493 
+	}
+
+	local_supplies=0.0 
+}

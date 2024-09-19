@@ -1,0 +1,36 @@
+state=
+{
+	id=318
+	name="STATE_318"
+	manpower = 3380000
+	
+	state_category = town
+	
+	resources={
+		rubber = 120
+		oil = 30
+	}
+	history=
+	{
+		owner = BYG
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 5 
+			air_base = 1
+			4641 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = BYG
+		victory_points = {
+			4641 5 
+		}
+
+	}
+	provinces={
+		1594 1635 4641
+	}
+
+	local_supplies=0.0 
+}

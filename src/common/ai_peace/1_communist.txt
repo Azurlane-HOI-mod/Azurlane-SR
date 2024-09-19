@@ -1,0 +1,56 @@
+# Logic for Communist AI on how to deal in peace conferences
+# Should favor annexing other nations and taking their states
+# Written by Henrik "Groogy" Hansson
+
+#Adjustments
+#The generic communist AI will very strongly prefer establishing puppet states and liberation, annexing only if they have a valid war goal.
+#Communists will not expand overseas/into islands unless they have a core, preferring satellites instead.
+#Soviet Union should/will have its own AI.
+
+communist_peace = {
+	enable = {
+		has_government = communism
+		NOT = { has_government = siren }
+	}
+
+	annex_randomness = 0 #200
+	liberate_randomness = 0 #100
+	puppet_randomness = 0 #400
+	take_states_randomness = 0 #200
+	force_government_randomness = 0 #100
+	
+	# ROOT = Taker, FROM = Giver
+	annex = {
+		factor = 5000 #1500 - insanely high, but necessary for reunification of some nations.
+	}
+
+	liberate = {
+		factor = 0
+	}
+
+	puppet = {
+		factor = 0
+	}
+
+	# ROOT = Taker, FROM = Giver
+	puppet_all = {
+		base = 0 
+	}
+	
+	# ROOT = STATE, FROM = Taker, FROM.FROM = Giver
+	puppet_state = {
+		base = 0 
+	}
+	
+	# ROOT = Taker, FROM = State
+	take_states = {
+		factor = 400 #50
+		
+		
+	}
+
+	force_government = {
+		factor = 0
+
+	}
+}

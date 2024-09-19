@@ -1,0 +1,41 @@
+state= {
+	id=315
+	name="STATE_315"
+	manpower = 13607919
+	resources={
+		steel= 60
+		chromium = 160
+	}
+	
+	state_category = megalopolis
+
+	history= {
+		owner = BYG
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 11
+			air_base = 5
+			dockyard = 10
+			7622 = {
+				naval_base = 8
+			}
+			1550 = {
+				naval_base = 4
+			}
+		}
+		
+		victory_points = {
+			7622 30 
+		}
+		victory_points = {
+			7590 10
+		}
+
+	}
+	provinces={
+		1550 4476 4600 7451 7546 7590 7622 10374 10498 12347
+	}
+
+	local_supplies=0.0 
+}
