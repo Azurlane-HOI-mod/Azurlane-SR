@@ -23,7 +23,7 @@
 # airc fighter_1_vs_bomber_1 pass 6103 126 29 fighter_equipment_0 strat_bomber_equipment_1 GER USA
 # airc fighter_1_vs_bomber_1 success 6103 126 29 fighter_equipment_0 strat_bomber_equipment_1 GER USA
 # airc bomber_1_bombing default 11471 126 29 strat_bomber_equipment_1 strat_bomber_equipment_1 GER FRA
-# airc bomber_3_bombing default 11471 126 29 strat_bomber_equipment_1 strat_bomber_equipment_1 GER FRA
+# airc bomber_3_bombing default 3301 126 29 strat_bomber_equipment_1 strat_bomber_equipment_1 FRA FRA
 
 
 # Example of using events: TODO - remove later
@@ -41,22 +41,21 @@ entity = {
 	state = { name = "fire" animation = "idle" 
 		event = { time = 0 node = "gun1"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
 		event = { time = 0 node = "gun2"	particle = "plane_mg_muzzle_particle" keep_particle = yes }
-		event = { sound = { soundeffect = "distance_airplane_light_fire" } }
 	}
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle" 
 		event = { trigger_once = yes sound = { soundeffect = "airplane_idle" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_idle" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "root"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } } 
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 		}
 	state = { name = "explode" animation = "idle" 
 		event = { time = 0 particle = "vehicle_explode_effect" keep_particle = yes }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.144
 }
@@ -66,17 +65,18 @@ entity = {
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "supply" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "supply_drop_particle" keep_particle = yes }
 	}
 	state = { name = "idle" animation = "idle" 
 		event = { trigger_once = yes sound = { soundeffect = "airplane_medium_idle_01" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_medium_idle_01" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.176
 }
@@ -86,16 +86,17 @@ entity = {
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle" 
 		event = { trigger_once = yes sound = { soundeffect = "airplane_heavy_idle_01" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_heavy_idle_01" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		#event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		#event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine3"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine4"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.288
 }
@@ -106,23 +107,22 @@ entity = {
 	state = { name = "fire" animation = "idle" 
 		event = { time = 0 node = "gun1"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_ger_jet_fire" } }
 		event = { time = 0.3 node = "gun2"	particle = "plane_mg_muzzle_particle" keep_particle = yes }
-		event = { sound = { soundeffect = "distance_airplane_ger_jet_fire" } }
 	}
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_jet_idle" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_jet_idle" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	state = { name = "explode" animation = "idle" 
 		event = { time = 0 particle = "vehicle_explode_effect" keep_particle = yes }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.19
 }
@@ -135,22 +135,21 @@ entity = {
 	state = { name = "fire" animation = "idle" 
 		event = { time = 0 node = "gun1"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
 		event = { time = 0 node = "gun2"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_light_fire" } }
 	}
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_idle" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_idle" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "root"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } } 
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	state = { name = "explode" animation = "idle" 
 		event = { time = 0 particle = "vehicle_explode_effect" keep_particle = yes }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.144
 }
@@ -160,17 +159,18 @@ entity = {
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "supply" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "supply_drop_particle" keep_particle = yes }
 	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_medium_idle_01" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_medium_idle_01" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.224
 }
@@ -181,16 +181,17 @@ entity = {
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_heavy_idle_01" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_heavy_idle_01" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } } 
 		event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } } 
 		event = { time = 0 node = "engine3"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } } 
 		event = { time = 0 node = "engine4"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } } 
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.288
 }
@@ -201,25 +202,174 @@ entity = {
 	state = { name = "fire" animation = "idle" 
 		event = { time = 0 node = "gun1"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_ger_jet_fire" } }
 		event = { time = 0.3 node = "gun2"	particle = "plane_mg_muzzle_particle" keep_particle = yes }
-		event = { sound = { soundeffect = "distance_airplane_ger_jet_fire" } }
 	}
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_jet_idle" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_jet_idle" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	state = { name = "explode" animation = "idle" 
 		event = { time = 0 particle = "vehicle_explode_effect" keep_particle = yes }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.19
+}
+
+# Finland
+#INCLUDES CLONES FOR BBA AND NON-BBA ENTITYS. IN CASE WE GET CODE SUPPORT FOR SHOWING DIFFERENT 3D MODELS IN THE BBA TECH-TREE.
+
+#IVL Haukka
+entity = {
+	name = "FIN_light_plane_0_entity"
+	pdxmesh = "FIN_light_plane_0_mesh"
+	
+	state = { name = "fire" animation = "idle" 
+		event = { time = 0 node = "gun1"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
+		event = { time = 0 node = "gun2"	particle = "plane_mg_muzzle_particle" keep_particle = yes }
+		
+	}
+	state = { name = "bomb" animation = "idle" 
+		event = { time = 0 particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
+	state = { name = "idle" animation = "idle"
+		event = { trigger_once = yes sound = { soundeffect = "airplane_idle" } }
+	}
+	state = { name = "crash" animation = "idle" 
+		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
+		
+	}
+	state = { name = "explode" animation = "idle" 
+		event = { time = 0 particle = "vehicle_explode_effect" keep_particle = yes }
+	}
+	scale = 0.145
+
+}
+#IVL Haukka CLONE
+entity = {
+	clone = "FIN_light_plane_0_entity"
+	name = "FIN_fighter_equipment_0_entity"
+}
+
+#VL Myrsky
+entity = {
+	name = "FIN_light_plane_2_entity"
+	pdxmesh = "FIN_light_plane_2_mesh"
+	
+	state = { name = "fire" animation = "idle" 
+		event = { time = 0 node = "gun1"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
+		event = { time = 0 node = "gun2"	particle = "plane_mg_muzzle_particle" keep_particle = yes }
+		event = { time = 0 node = "gun3"	particle = "plane_mg_muzzle_particle" keep_particle = yes }
+		event = { time = 0 node = "gun4"	particle = "plane_mg_muzzle_particle" keep_particle = yes }
+		
+	}
+	state = { name = "bomb" animation = "idle" 
+		event = { time = 0 particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
+	state = { name = "idle" animation = "idle"
+		event = { trigger_once = yes sound = { soundeffect = "airplane_idle" } }
+	}
+	state = { name = "crash" animation = "idle" 
+		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
+		
+	}
+	state = { name = "explode" animation = "idle" 
+		event = { time = 0 particle = "vehicle_explode_effect" keep_particle = yes }
+	}
+	scale = 0.145
+
+}
+#VL Myrsky CLONE
+entity = {
+	clone = "FIN_light_plane_2_entity"
+	name = "FIN_fighter_equipment_2_entity"
+}
+
+#DEFAULT LIGHT FINNISH PLANE
+entity = {
+	clone = "FIN_light_plane_2_entity"
+	name = "FIN_light_plane_entity"
+}
+
+#generic FIN_medium_plane
+entity = {
+	name = "FIN_medium_plane_entity"
+	pdxmesh = "FIN_medium_plane_mesh"
+	
+	state = { name = "fire" animation = "idle" 
+		event = { time = 0 node = "gun1"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
+		event = { time = 0 node = "gun2"	particle = "plane_mg_muzzle_particle" keep_particle = yes }
+		event = { time = 0 node = "gun3"	particle = "plane_mg_muzzle_particle" keep_particle = yes }
+		event = { time = 0 node = "gun4"	particle = "plane_mg_muzzle_particle" keep_particle = yes }
+		
+	}
+	state = { name = "bomb" animation = "idle" 
+		event = { time = 0 particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
+	state = { name = "idle" animation = "idle"
+		event = { trigger_once = yes sound = { soundeffect = "airplane_idle" } }
+	}
+	state = { name = "crash" animation = "idle" 
+		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
+		event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes }
+	}
+	state = { name = "explode" animation = "idle" 
+		event = { time = 0 particle = "vehicle_explode_effect" keep_particle = yes }
+	}
+	scale = 0.176
+
+}
+
+#generic FIN_medium_plane CLONE
+entity = {
+	clone = "FIN_medium_plane_entity"
+	name = "FIN_tac_bomber_equipment_entity"
+}
+
+#generic FIN_heavy_plane
+entity = {
+	name = "FIN_heavy_plane_entity"
+	pdxmesh = "FIN_heavy_plane_mesh"
+	state = { name = "bomb" animation = "idle" 
+		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
+	state = { name = "idle" animation = "idle" 
+		event = { trigger_once = yes sound = { soundeffect = "airplane_heavy_idle_01" } }
+	}
+	state = { name = "crash" animation = "idle" 
+		#event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
+		#event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
+		event = { time = 0 node = "engine3"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
+		event = { time = 0 node = "engine4"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
+	}
+	state = { name = "explode" animation = "idle" 
+		event = { time = 0 particle = "vehicle_explode_effect" keep_particle = yes }
+	}
+	scale = 0.288
+}
+
+#generic FIN_heavy_plane CLONE
+entity = {
+	clone = "FIN_heavy_plane_entity"
+	name = "FIN_strat_bomber_equipment_entity"
 }
 
 # France
@@ -229,22 +379,21 @@ entity = {
 	state = { name = "fire" animation = "idle" 
 		event = { time = 0 node = "gun1"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
 		event = { time = 0 node = "gun2"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_light_fire" } }
 	}
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_idle" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_idle" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "root"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } } 
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 		}
 	state = { name = "explode" animation = "idle" 
 		event = { time = 0 particle = "vehicle_explode_effect" keep_particle = yes }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.144
 }
@@ -254,17 +403,18 @@ entity = {
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "supply" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "supply_drop_particle" keep_particle = yes }
 	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_medium_idle_01" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_medium_idle_01" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.672
 }
@@ -274,14 +424,15 @@ entity = {
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_heavy_idle_01" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_heavy_idle_01" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.24
 }
@@ -293,22 +444,21 @@ entity = {
 	state = { name = "fire" animation = "idle" 
 		event = { time = 0 node = "gun1"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
 		event = { time = 0.3 node = "gun2"	particle = "plane_mg_muzzle_particle" keep_particle = yes }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_light_fire" } }
 	}
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_idle" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_idle" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "root"	particle = "explosion_particle" keep_particle = yes }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	state = { name = "explode" animation = "idle" 
 		event = { time = 0 particle = "vehicle_explode_effect" keep_particle = yes }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.144
 }
@@ -318,17 +468,18 @@ entity = {
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "supply" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "supply_drop_particle" keep_particle = yes }
 	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_medium_idle_01" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_medium_idle_01" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.208
 }
@@ -338,14 +489,15 @@ entity = {
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_heavy_idle_01" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_heavy_idle_01" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.288
 }
@@ -355,23 +507,22 @@ entity = {
 	state = { name = "fire" animation = "idle" 
 		event = { time = 0 node = "gun1"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_ger_jet_fire" } }
 		event = { time = 0.3 node = "gun2"	particle = "plane_mg_muzzle_particle" keep_particle = yes }
-		event = { sound = { soundeffect = "distance_airplane_ger_jet_fire" } }
 	}
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_jet_idle" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_jet_idle" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	state = { name = "explode" animation = "idle" 
 		event = { time = 0 particle = "vehicle_explode_effect" keep_particle = yes }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.176
 }
@@ -383,22 +534,21 @@ entity = {
 	state = { name = "fire" animation = "idle" 
 		event = { time = 0 node = "gun1"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
 		event = { time = 0 node = "gun2"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_light_fire" } }
 	}
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_idle" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_idle" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "root"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } } 
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 		}
 	state = { name = "explode" animation = "idle" 
 		event = { time = 0 particle = "vehicle_explode_effect" keep_particle = yes }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.144
 }
@@ -408,18 +558,19 @@ entity = {
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "supply" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "supply_drop_particle" keep_particle = yes }
 	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_medium_idle_01" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_medium_idle_01" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		#event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		#event = { time = 0 node = "engine3"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.176
 }
@@ -429,15 +580,16 @@ entity = {
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_heavy_idle_01" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_heavy_idle_01" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		#event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		#event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine3"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 		#event = { time = 0 node = "engine4"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 	}
 	scale = 0.288
@@ -450,22 +602,21 @@ entity = {
 	state = { name = "fire" animation = "idle" 
 		event = { time = 0 node = "gun1"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
 		event = { time = 0.02 node = "gun2"	particle = "plane_mg_muzzle_particle" keep_particle = yes }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_light_fire" } }
 	}
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_idle" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_idle" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "root"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 		}
 	state = { name = "explode" animation = "idle" 
 		event = { time = 0 particle = "vehicle_explode_effect" keep_particle = yes }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.144
 }
@@ -475,17 +626,18 @@ entity = {
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "supply" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "supply_drop_particle" keep_particle = yes }
 	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_medium_idle_01" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_medium_idle_01" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.24
 }
@@ -495,16 +647,17 @@ entity = {
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_heavy_idle_01" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_heavy_idle_01" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine3"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine4"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.288
 }
@@ -516,22 +669,21 @@ entity = {
 	state = { name = "fire" animation = "idle" 
 		event = { time = 0 node = "gun1"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
 		event = { time = 0.02 node = "gun2"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_light_fire" } }
 	}
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_idle" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_idle" } }
 	}
 	state = { name = "crash" animation = "idle" looping = no
 		event = { time = 0 node = "root"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 		}
 	state = { name = "explode" animation = "idle" 
 		event = { time = 0 particle = "vehicle_explode_effect" keep_particle = yes }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.144
 }
@@ -541,17 +693,18 @@ entity = {
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "supply" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "supply_drop_particle" keep_particle = yes }
 	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_medium_idle_01" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_medium_idle_01" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.208
 }
@@ -561,16 +714,17 @@ entity = {
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_heavy_idle_01" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_heavy_idle_01" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		#event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		#event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine3"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine4"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.288
 }
@@ -582,22 +736,21 @@ entity = {
 	state = { name = "fire" animation = "idle" 
 		event = { time = 0 node = "gun1"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
 		event = { time = 0 node = "gun2"	particle = "plane_mg_muzzle_particle" keep_particle = yes sound = { soundeffect = "airplane_light_fire" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_light_fire" } }
 	}
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_idle" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_idle" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "root"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 		}
 	state = { name = "explode" animation = "idle" 
 		event = { time = 0 particle = "vehicle_explode_effect" keep_particle = yes }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.144
 }
@@ -607,17 +760,18 @@ entity = {
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "supply" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "supply_drop_particle" keep_particle = yes }
 	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_medium_idle_01" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_medium_idle_01" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.232
 }
@@ -627,16 +781,17 @@ entity = {
 	state = { name = "bomb" animation = "idle" 
 		event = { time = 0 node = "bomb"	particle = "bomb_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
 	}
+	state = { name = "firebomb" animation = "idle"
+		event = { time = 0 node = "bomb"	particle = "napalm_particle" keep_particle = yes sound = { soundeffect = "airplane_bomb" } }
+	}
 	state = { name = "idle" animation = "idle"
 		event = { trigger_once = yes sound = { soundeffect = "airplane_heavy_idle_01" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_heavy_idle_01" } }
 	}
 	state = { name = "crash" animation = "idle" 
 		#event = { time = 0 node = "engine1"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		#event = { time = 0 node = "engine2"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		#event = { time = 0 node = "engine3"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
 		event = { time = 0 node = "engine4"	particle = "explosion_particle" keep_particle = yes sound = { soundeffect = "airplane_crash" } }
-		event = { trigger_once = yes sound = { soundeffect = "distance_airplane_crash" } }
 	}
 	scale = 0.288
 }
@@ -685,22 +840,10 @@ entity = {
 	#scale = 0.5
 }
 entity = {
-	name = "bomber_1_bombing_entity"
-	pdxmesh = "bomber_1_bombing_mesh"
-	state = { name = "default" animation = "default" 
-		event = { time = 3.7 id = a_bomb }
-		event = { time = 4.0 id = a_idle }
-	}
-	#scale = 0.5
-}
-entity = {
 	name = "bomber_1_CAS_entity"
 	pdxmesh = "bomber_1_CAS_mesh"
-	state = { name = "default" animation = "success" 
-		event = { time = 0.4 id = a_bomb }
-		event = { time = 1.0 id = a_idle }
-	}
-	state = { name = "fail" animation = "fail" 
+	state = { name = "default" animation = "default" 
+		event = { time = 0.2 id = a_fire }
 		event = { time = 0.4 id = a_bomb }
 		event = { time = 1.0 id = a_idle }
 	}
@@ -709,40 +852,230 @@ entity = {
 entity = {
 	name = "bomber_3_CAS_entity"
 	pdxmesh = "bomber_3_CAS_mesh"
-	state = { name = "default" animation = "success" 
+	state = { name = "default" animation = "default" 
+		event = { time = 0.2 id = a_1_fire }
 		event = { time = 0.4 id = a_1_bomb }
 		event = { time = 1.0 id = a_1_idle }
 		
+		event = { time = 0.9 id = a_2_fire }
 		event = { time = 1.1 id = a_2_bomb }
 		event = { time = 1.6 id = a_2_idle }
 	
-		event = { time = 0.8 id = a_3_bomb }
-		event = { time = 1.3 id = a_3_idle }
-	}
-	state = { name = "fail" animation = "fail" 
-		event = { time = 0.4 id = a_1_bomb }
-		event = { time = 1.0 id = a_1_idle }
-		
-		event = { time = 1.1 id = a_2_bomb }
-		event = { time = 1.6 id = a_2_idle }
-	
+		event = { time = 0.6 id = a_3_fire }
 		event = { time = 0.8 id = a_3_bomb }
 		event = { time = 1.3 id = a_3_idle }
 	}
 	#scale = 0.5
 }
+
+entity = {
+	name = "bomber_1_bombing_entity"
+	pdxmesh = "bomber_1_bombing_mesh"
+	state = { name = "default" animation = "default"
+		event = { time = 3.2 id = a_bomb }
+		event = { time = 3.5 id = a_idle }
+	}
+	#scale = 0.5
+}
+
 entity = {
 	name = "bomber_3_bombing_entity"
 	pdxmesh = "bomber_3_bombing_mesh"
+
+	state = { name = "default" animation = "default"
+		event = { time = 2.83 id = a_2_bomb }
+		event = { time = 2.86 id = a_2_idle }
+
+		event = { time = 3.5 id = a_1_bomb }
+		event = { time = 3.56 id = a_1_idle }
+
+		event = { time = 4.43 id = a_3_bomb }
+		event = { time = 4.45 id = a_3_idle }
+
+	}
+	#scale = 0.5
+}
+
+entity = {
+	name = "bomber_1_carpetbombing_entity"
+	pdxmesh = "bomber_1_carpetbombing_mesh"
+	state = { name = "default" animation = "default"
+		event = { time = 2.49 id = a_bomb }
+		event = { time = 2.5 id = a_idle }
+
+		event = { time = 2.65 id = a_bomb }
+		event = { time = 2.68 id = a_idle }
+
+		event = { time = 2.83 id = a_bomb }
+		event = { time = 2.86 id = a_idle }
+
+		event = { time = 2.96 id = a_bomb }
+		event = { time = 2.98 id = a_idle }
+
+		event = { time = 3.10 id = a_bomb }
+		event = { time = 3.11 id = a_idle }
+	}
+	#scale = 0.5
+}
+
+entity = {
+	name = "bomber_3_carpetbombing_entity"
+	pdxmesh = "bomber_3_carpetbombing_mesh"
+
+	### EF 2020-12-01: I was trying out how it'd look like if we'd want to do carpet bombing. And since that doesn't have a gameplay function yet I did it for the standard bombing, so the things that are commented is what we'd want in a state where they're carpetbombing.
+	# FIXED!
+	# Remove these comments after checking the carpet_bomb.asset particle mentioned below.
+
+	### BPM 2023-05-26: Trying to hook in these things, I noticed that we do actually have a carpet bombing particle as well ("hoi4\game\gfx\particles\vehicles\carpet_bomb.asset"). We should check what that does and perhaps use that instead of the normal bomb particle
+	
 	state = { name = "default" animation = "default" 
-		event = { time = 3.33 id = a_2_bomb }
-		event = { time = 3.43 id = a_2_idle }
-		
-		event = { time = 4.0 id = a_1_bomb }
-		event = { time = 4.1 id = a_1_idle }
-		
-		event = { time = 4.93 id = a_3_bomb }
-		event = { time = 5.03 id = a_3_idle }
+		event = { time = 2.49 id = a_2_bomb }
+		event = { time = 2.5 id = a_2_idle }
+
+		event = { time = 2.65 id = a_2_bomb }
+		event = { time = 2.68 id = a_2_idle }
+
+		event = { time = 2.83 id = a_2_bomb }
+		event = { time = 2.86 id = a_2_idle }
+
+		event = { time = 2.96 id = a_2_bomb }
+		event = { time = 2.98 id = a_2_idle }
+
+		event = { time = 3.10 id = a_2_bomb }
+		event = { time = 3.11 id = a_2_idle }
+
+
+		event = { time = 3.15 id = a_1_bomb }
+		event = { time = 3.16 id = a_1_idle }
+
+		event = { time = 3.30 id = a_1_bomb }
+		event = { time = 3.35 id = a_1_idle }
+
+		event = { time = 3.45 id = a_1_bomb }
+		event = { time = 3.46 id = a_1_idle }
+
+		event = { time = 3.60 id = a_1_bomb }
+		event = { time = 3.61 id = a_1_idle }
+
+		event = { time = 3.73 id = a_1_bomb }
+		event = { time = 3.74 id = a_1_idle }
+
+
+		event = { time = 4.13 id = a_3_bomb }
+		event = { time = 4.17 id = a_3_idle }
+
+		event = { time = 4.29 id = a_3_bomb }
+		event = { time = 4.36 id = a_3_idle }
+
+		event = { time = 4.41 id = a_3_bomb }
+		event = { time = 4.48 id = a_3_idle }
+
+		event = { time = 4.55 id = a_3_bomb }
+		event = { time = 4.58 id = a_3_idle }
+
+		event = { time = 4.69 id = a_3_bomb }
+		event = { time = 4.78 id = a_3_idle }
+	}
+	#scale = 0.5
+}
+
+entity = {
+	name = "bomber_1_firebombing_entity"
+	pdxmesh = "bomber_1_firebombing_mesh"
+	state = { name = "default" animation = "default"
+		event = { time = 2.33 id = a_bomb }
+		event = { time = 2.36 id = a_idle }
+
+		event = { time = 2.49 id = a_firebomb }
+		event = { time = 2.5 id = a_idle }
+
+		event = { time = 2.65 id = a_bomb }
+		event = { time = 2.68 id = a_idle }
+
+		event = { time = 2.83 id = a_firebomb }
+		event = { time = 2.86 id = a_idle }
+
+		event = { time = 2.96 id = a_bomb }
+		event = { time = 2.98 id = a_idle }
+
+		event = { time = 3.10 id = a_firebomb }
+		event = { time = 3.11 id = a_idle }
+
+		event = { time = 3.23 id = a_bomb }
+		event = { time = 3.3 id = a_idle }
+	}
+	#scale = 0.5
+}
+
+entity = {
+	name = "bomber_3_firebombing_entity"
+	pdxmesh = "bomber_3_firebombing_mesh"
+
+	state = { name = "default" animation = "default"
+		event = { time = 2.33 id = a_2_bomb }
+		event = { time = 2.36 id = a_2_idle }
+
+		event = { time = 2.49 id = a_2_firebomb }
+		event = { time = 2.5 id = a_2_idle }
+
+		event = { time = 2.65 id = a_2_bomb }
+		event = { time = 2.68 id = a_2_idle }
+
+		event = { time = 2.83 id = a_2_firebomb }
+		event = { time = 2.86 id = a_2_idle }
+
+		event = { time = 2.96 id = a_2_bomb }
+		event = { time = 2.98 id = a_2_idle }
+
+		event = { time = 3.10 id = a_2_firebomb }
+		event = { time = 3.11 id = a_2_idle }
+
+		event = { time = 3.23 id = a_2_bomb }
+		event = { time = 3.3 id = a_2_idle }
+
+
+		event = { time = 3.0 id = a_1_bomb }
+		event = { time = 3.06 id = a_1_idle }
+
+		event = { time = 3.15 id = a_1_firebomb }
+		event = { time = 3.16 id = a_1_idle }
+
+		event = { time = 3.30 id = a_1_bomb }
+		event = { time = 3.35 id = a_1_idle }
+
+		event = { time = 3.45 id = a_1_firebomb }
+		event = { time = 3.46 id = a_1_idle }
+
+		event = { time = 3.60 id = a_1_bomb }
+		event = { time = 3.61 id = a_1_idle }
+
+		event = { time = 3.73 id = a_1_firebomb }
+		event = { time = 3.74 id = a_1_idle }
+
+		event = { time = 3.89 id = a_1_bomb }
+		event = { time = 3.91 id = a_1_idle }
+
+
+		event = { time = 3.93 id = a_3_bomb }
+		event = { time = 3.95 id = a_3_idle }
+
+		event = { time = 4.13 id = a_3_firebomb }
+		event = { time = 4.17 id = a_3_idle }
+
+		event = { time = 4.29 id = a_3_bomb }
+		event = { time = 4.36 id = a_3_idle }
+
+		event = { time = 4.41 id = a_3_firebomb }
+		event = { time = 4.48 id = a_3_idle }
+
+		event = { time = 4.55 id = a_3_bomb }
+		event = { time = 4.58 id = a_3_idle }
+
+		event = { time = 4.69 id = a_3_firebomb }
+		event = { time = 4.78 id = a_3_idle }
+
+		event = { time = 4.81 id = a_3_bomb }
+		event = { time = 4.88 id = a_3_idle }
 	}
 	#scale = 0.5
 }

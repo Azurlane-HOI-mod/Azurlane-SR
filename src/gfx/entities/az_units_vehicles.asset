@@ -1335,6 +1335,18 @@
 		attach = { 	name = "infantry"			infantry = "DOH_vehicle_infantry_rifle_entity" }
 	}
 	entity = {
+		name = "DH1_vehicle_infantry_rifle_entity"
+		clone = "DOH_vehicle_infantry_rifle_entity"
+	}
+	entity = {
+		name = "DH1_motorized_entity"
+		clone = "DOH_motorized_entity"
+	}
+	entity = {
+		name = "DH1_mechanized_entity"
+		clone = "DOH_mechanized_entity"
+	}
+	entity = {
 		name = "SIR_vehicle_infantry_rifle_entity"
 		pdxmesh = "SIR_infantry_rifle_mesh"	
 		

@@ -1634,7 +1634,50 @@ entity = {
 	pdxmesh = "DOH_infantry_weapon_mg_mesh"
 	scale = 1.0
 }
+#远征军
+entity = { 
+	clone = "DOH_infantry_entity"
+	name = "DH1_infantry_entity"
+}
+entity = { 
+	clone = "DOH_infantry_2_entity"
+	name = "DH1_infantry_2_entity"	
+}
+entity = { 
+	clone = "DOH_infantry_2_entity"
+	name = "DH1_infantry_3_entity"
+}
 
+entity = {
+	clone = "DOH_infantry_weapon_rifle_right_entity"
+	name = "DH1_infantry_weapon_rifle_right_entity"
+	scale = 1.0
+}	
+
+entity = {
+	clone = "DOH_infantry_weapon_rifle_left_entity"
+	name = "DH1_infantry_weapon_rifle_left_entity"
+}
+entity = {
+	clone = "DOH_infantry_weapon_rifle_long_idle_entity"
+	name = "DH1_infantry_weapon_rifle_long_idle_entity"
+	scale = 1.0
+}	
+
+entity = {
+	clone = "DOH_infantry_weapon_mg_left_entity"
+	name = "DH1_infantry_weapon_mg_left_entity"
+	scale = 1.0
+}
+
+entity = {
+	clone = "DOH_infantry_weapon_mg_right_entity"
+	name = "DH1_infantry_weapon_mg_right_entity"
+}
+entity = {
+	clone = "DOH_infantry_weapon_mg_long_idle_entity"
+	name = "DH1_infantry_weapon_mg_long_idle_entity"
+}
 
 ##北联##
 entity = { 
