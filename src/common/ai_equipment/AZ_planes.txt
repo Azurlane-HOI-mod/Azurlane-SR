@@ -3,7 +3,7 @@
 AZ_fighter = {
 	category = air
 
-	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 }
+	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 DH1 }
 
 	roles = {
 		air_fighter
@@ -182,7 +182,7 @@ AZ_fighter = {
 AZ_cas = {
 	category = air
 
-	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 }
+	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 DH1 }
 
 	roles = {
 		air_cas
@@ -349,7 +349,7 @@ AZ_naval_bomber = {
 
 	
 
-	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 }
+	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 DH1 }
 
 	roles = {
 		air_naval_bomber
@@ -506,7 +506,7 @@ AZ_cv_fighter = {
 
 	#blocked_for = {  ENG BYG FRA JAP }
 
-	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 }
+	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 DH1 }
 
 	roles = {
 		air_cv_fighter
@@ -680,7 +680,7 @@ AZ_cv_cas = {
 
 	#blocked_for = { ENG BYG FRA JAP }
 
-	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 }
+	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 DH1 }
 
 	roles = {
 		air_cv_cas
@@ -849,7 +849,7 @@ AZ_cv_naval_bomber = {
 
 	#blocked_for = {  ENG BYG FRA JAP }
 
-	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 }
+	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 DH1 }
 
 	roles = {
 		air_cv_naval_bomber
@@ -1017,7 +1017,7 @@ AZ_tactical_bomber = {
 
 	
 
-	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 }
+	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 DH1 }
 
 	roles = {
 		air_tactical_bomber
@@ -1206,7 +1206,7 @@ AZ_heavy_fighter = {
 
 	
 
-	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 }
+	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 DH1 }
 
 	roles = {
 		air_heavy_fighter
@@ -1388,7 +1388,7 @@ AZ_heavy_fighter = {
 AZ_scout_plane = {
 	category = air
 	
-	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 }
+	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 DH1 }
 
 	roles = {
 		air_scout_plane
@@ -1567,7 +1567,7 @@ AZ_scout_plane = {
 AZ_strategic_bomber = {
 	category = air
 
-	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 }
+	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 DH1 }
 
 	roles = {
 		air_strategic_bomber
@@ -1767,7 +1767,7 @@ AZ_strategic_bomber = {
 AZ_maritime_patrol = {
 	category = air
 
-	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 }
+	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 DH1 }
 
 	roles = {
 		air_maritime_patrol
@@ -1954,3 +1954,55 @@ AZ_maritime_patrol = {
 	}
 }
 
+AZ_jianniangji = {
+	category = air
+
+	available_for = { BYG HUJ CHY DOH TIX BFL SAD YUW BLI WEX SIR SR1 SR2 SR3 SR4 DH1 }
+
+	roles = {
+		air_fighter
+	}
+
+	priority = {
+		factor = 5000
+		modifier = {
+			has_War = yes
+			factor = 100
+		}
+	}
+
+	jizaijianniang_fighter_ex = {
+		priority = {
+			factor = 100
+		}
+
+		target_variant = {
+			match_value = 1000
+			type = jizaijianniang_equipment_airframe
+			modules = {
+				fixed_main_weapon_slot = az_fighter_weapon
+				fixed_auxiliary_weapon_slot_1 = az_fighter_weapon
+				fixed_auxiliary_weapon_slot_2 = az_fighter_weapon
+				fixed_auxiliary_weapon_slot_3 = az_fighter_weapon
+				fixed_auxiliary_weapon_slot_4 = az_fighter_weapon
+				engine_type_slot = engine_4_2x
+				special_type_slot_1 = fuel_tanks_small
+				special_type_slot_2 = non_strategic_materials_small
+				special_type_slot_3 = fuel_tanks_small
+				special_type_slot_4 = armor_plate_small	
+				special_type_slot_5 = self_sealing_fuel_tanks_small
+				special_type_slot_6 = drop_tanks
+			}
+		}
+
+		allowed_modules = {
+			engine_4_2x
+			az_fighter_weapon
+			armor_plate_small
+			non_strategic_materials_small
+			fuel_tanks_small
+			self_sealing_fuel_tanks_small
+			drop_tanks
+		}
+	}
+}
