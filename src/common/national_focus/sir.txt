@@ -1080,6 +1080,550 @@ focus_tree = {
 				amount = 400
 				producer = ROOT
 			}
+			hidden_effect = {if = {
+				limit = {
+					has_global_flag = modoption_historicalbossai_on
+					is_ai = yes
+				}
+				division_template = {
+					name = "塞壬重型装甲师" 			
+					division_names_group = SIR_HVARM_01					
+					regiments = {
+						heavy_armor = { x = 0 y = 0 }
+						heavy_armor = { x = 0 y = 1 }
+						heavy_armor = { x = 0 y = 2 }
+						heavy_armor = { x = 0 y = 3 }
+						heavy_armor = { x = 1 y = 0 }
+						heavy_armor = { x = 1 y = 1 }
+						heavy_armor = { x = 1 y = 2 }
+						heavy_armor = { x = 1 y = 3 }
+						heavy_tank_destroyer_brigade = { x = 2 y = 0 }
+						mechanized = { x = 3 y = 0 }
+						mechanized = { x = 3 y = 1 }
+						mechanized = { x = 3 y = 2 }
+						mechanized = { x = 3 y = 3 }
+						mechanized = { x = 4 y = 0 }
+						mechanized = { x = 4 y = 1 }
+						mechanized = { x = 4 y = 2 }
+						mechanized = { x = 4 y = 3 }
+					}
+					support = {
+					engineer = { x = 0 y = 0 }
+					medium_flame_tank = { x = 0 y = 1 }
+					recon = { x = 0 y = 2 }
+					signal_company = { x = 0 y = 3 }
+					anti_air = { x = 0 y = 4 }
+				}
+			}
+			696 = {
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					create_unit = {
+						division = "name = \"塞壬重型装甲师\" division_template = \"塞壬重型装甲师\" start_experience_factor = 0.4"
+						owner = ROOT
+					}
+					
+				}
+			}
+			}
 		}
 	}
 	focus = {
@@ -1282,6 +1826,19 @@ focus_tree = {
 				}
 			}
 		}
+		bypass = {
+			IF = {
+				NOT = {
+					country_exists = CUB
+				}
+				NOT = {
+					country_exists = DOM
+				}
+				NOT = {
+					country_exists = HAI
+				}
+			}
+		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -1320,6 +1877,19 @@ focus_tree = {
 		ai_will_do = {
 			factor = 40
 		}
+		bypass = {
+			IF = {
+				NOT = {
+					country_exists = BRA
+				}
+				NOT = {
+					country_exists = COL
+				}
+				NOT = {
+					country_exists = VEN
+				}
+			}
+		}
 		available = {
 			if = {
 				limit = {
@@ -1355,6 +1925,7 @@ focus_tree = {
 			}
 			add_political_power = 50
 			add_manpower = 18000
+			set_global_flag = SIR_get_mainland_state
 		}
 	}
 	focus = {
@@ -1371,7 +1942,7 @@ focus_tree = {
 		relative_position_id = SIR_chuanjiao_nanmei
 		cost = 20
 		bypass = {
-			OR = {
+			IF = {
 				NOT = {
 					country_exists = ECU
 				}
