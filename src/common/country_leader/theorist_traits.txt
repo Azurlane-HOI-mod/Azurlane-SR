@@ -626,6 +626,7 @@ leader_traits = {
 		army_defence_factor = 0.05
 		army_speed_factor = 0.05
 		army_strength_factor = 0.05
+		equipment_capture = 0.1
 		org_loss_when_moving = -0.1
 		recon_factor = 0.2
 		org_loss_at_low_org_factor = -0.3
@@ -653,10 +654,48 @@ leader_traits = {
 		    small_plane_airframe = {
 			instant = yes
 			    maximum_speed = 0.2
+			}
+			small_plane_cas_airframe = {
+			instant = yes
+			    maximum_speed = 0.2
 			    naval_strike_attack = 0.15
 				naval_strike_targetting = 0.15
 			}
-			jizaijianniang_equipment_airframe = {
+			small_plane_naval_bomber_airframe = {
+				instant = yes
+			    maximum_speed = 0.2
+			    naval_strike_attack = 0.15
+				naval_strike_targetting = 0.15
+			}
+			cv_small_plane_airframe = {
+			instant = yes
+			    maximum_speed = 0.2
+			}
+			cv_small_plane_cas_airframe = {
+			instant = yes
+			    maximum_speed = 0.2
+			    naval_strike_attack = 0.15
+				naval_strike_targetting = 0.15
+			}
+			cv_small_plane_naval_bomber_airframe = {
+				instant = yes
+			    maximum_speed = 0.2
+			    naval_strike_attack = 0.15
+				naval_strike_targetting = 0.15
+			}
+			jizaijianniang_fighter = {
+			instant = yes
+			    maximum_speed = 0.2
+			    naval_strike_attack = 0.15
+				naval_strike_targetting = 0.15
+			}
+			jizaijianniang_cas = {
+			instant = yes
+			    maximum_speed = 0.2
+			    naval_strike_attack = 0.15
+				naval_strike_targetting = 0.15
+			}
+			jizaijianniang_nb = {
 			instant = yes
 			    maximum_speed = 0.2
 			    naval_strike_attack = 0.15
