@@ -938,6 +938,7 @@ TIX_jihua = {
 			OR = {
 				has_completed_focus = TIX_danzehuozhanzheng
 				has_completed_focus = TIX_danzehyuanqubaohu
+				has_completed_focus = TIX_dongfangshengcunkongjian
 			}
 			has_war_with = POL
 		}
@@ -1061,6 +1062,8 @@ TIX_jihua = {
 			OR = {
 				has_completed_focus = TIX_zhifujuxiong
 				has_completed_focus = TIX_danzehyuanqubaohu
+				has_completed_focus = TIX_jiuzhengbeiliandecuowu
+				has_completed_focus = TIX_heiseliming
 			}
 			has_war_with = BFL
 		}
@@ -1100,6 +1103,7 @@ TIX_jihua = {
 			OR = {
 				has_completed_focus = TIX_kuayuedaxiyang
 				has_government = neutrality
+				has_government = communism
 			}
 			OR = {
 				has_war_with = BYG
@@ -1578,7 +1582,10 @@ TIX_neiwu = {
 				has_war_with = TIX
 				is_major = yes
 			}
+			or = {
 			has_government = fascism
+			has_completed_focus = TIX_laibixijihua
+			}
 			has_offensive_war = yes
 			threat > 0.95
 			OR = {
@@ -3325,6 +3332,8 @@ TIX_zongduxiaqujueyi = {
 			controls_state = 6
 			controls_state = 29
 			controls_state = 34
+			controls_state = 977
+			controls_state = 980
 		}
 		cost = 0
 		fire_only_once = yes
@@ -3367,9 +3376,13 @@ TIX_zongduxiaqujueyi = {
 						transfer_state = 6
 						transfer_state = 29
 						transfer_state = 34
+						transfer_state = 977
+						transfer_state = 980
 						add_state_core = 6
 						add_state_core = 29
 						add_state_core = 34
+						add_state_core = 977
+						add_state_core = 980
 					}
 				}
 				HOL = {
@@ -3389,9 +3402,13 @@ TIX_zongduxiaqujueyi = {
 					transfer_state = 6
 					transfer_state = 29
 					transfer_state = 34
+					transfer_state = 977
+					transfer_state = 980
 					add_state_core = 6
 					add_state_core = 29
 					add_state_core = 34
+					add_state_core = 977
+					add_state_core = 980
 					set_cosmetic_tag = NDL_reichskommissariat
 					load_focus_tree = tix_zdxq_focus
 					TIX = {
@@ -3420,9 +3437,13 @@ TIX_zongduxiaqujueyi = {
 					transfer_state = 6
 					transfer_state = 29
 					transfer_state = 34
+					transfer_state = 977
+					transfer_state = 980
 					add_state_core = 6
 					add_state_core = 29
 					add_state_core = 34
+					add_state_core = 977
+					add_state_core = 980
 					set_cosmetic_tag = NDL_reichskommissariat
 					load_focus_tree = tix_zdxq_focus
 					create_country_leader = {
@@ -11189,7 +11210,7 @@ AZ_fkAIplayerjiaqiang = {
 			limit = {
 			has_country_flag = AZ_fkAI_xuanzebuff_6
 			}
-			activate_mission = AZ_fkAI_xuanzebuff_dafuweng
+			activate_mission = AZ_fkAI_xuanzebuff_mofangdaheng
 			}
 			if = {
 			limit = {

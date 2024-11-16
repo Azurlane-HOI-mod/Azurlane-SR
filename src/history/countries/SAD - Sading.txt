@@ -260,6 +260,14 @@ recruit_character = SAD_geliqiya
 recruit_character = SAD_boerzhanuo
 recruit_character = SAD_duoliya
 recruit_character = SAD_nabulesi
+
+#sci
+recruit_character = SAD_xibeifeng_sci
+recruit_character = SAD_daleike_sci
+recruit_character = SAD_boerzhanuo_sci
+recruit_character = SAD_abuluqi_sci
+recruit_character = SAD_diguo_sci
+
 if = {
 	limit = {
 		not = { has_dlc = "Man the Guns" }

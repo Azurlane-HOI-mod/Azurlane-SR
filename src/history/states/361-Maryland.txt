@@ -7,7 +7,8 @@ state={
 	state_category = city
 
 	history={
-		owner = SIR
+		owner = BYG
+		add_core_of = BYG
 		victory_points = {
 			3957 40 
 		}
@@ -21,11 +22,11 @@ state={
 			air_base = 6
 			6984 = {
 				naval_base = 2
-
 			}
 			3957 = {
 				naval_base = 1
-
+				# United States Naval Research Laboratory (NRL)
+				naval_facility = 1
 			}
 		}
 

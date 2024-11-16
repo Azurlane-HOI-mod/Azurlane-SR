@@ -10,6 +10,13 @@ add_to_faction = SR2
 add_to_faction = SR3
 add_to_faction = SR4
 
+#sci
+recruit_character = SIR_sairenjiaojisi_sci
+recruit_character = SR1_guanchazhe_sci
+recruit_character = SIR_ceshizhe_sci
+recruit_character = SIR_jinghuazhe_sci
+
+
 
 
 navy_experience = 1000

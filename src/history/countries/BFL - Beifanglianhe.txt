@@ -59,6 +59,13 @@ recruit_character = BFL_kuersike
 recruit_character = BFL_gubixuefu
 recruit_character = BFL_lingmin
 recruit_character = BFL_naximofu
+
+#sci
+recruit_character = BFL_kuersike_sci
+recruit_character = BFL_fuluosiluofu_sci
+recruit_character = BFL_qikaluofu_sci
+recruit_character = BFL_naximofu_sci
+
 capital = 213
 
 starting_train_buffer = 3.0

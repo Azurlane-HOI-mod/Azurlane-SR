@@ -16,6 +16,10 @@ country_event = {
 		set_technology = { tech_military_police = 1 }
 		set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		complete_special_project = { project = sp:sp_land_flamethrower_tank }
+		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
+		complete_special_project = { project = sp:sp_air_helicopter }
+		set_technology = { sp_armored_advanced_flamethrower_tech = 1 }
 		set_technology = { mechanised_infantry = 1 }
 		set_technology = { armored_train = 1 }
 		set_technology = { basic_fire_control_system = 1 }
@@ -109,7 +113,7 @@ country_event = {
 						mechanized = { x = 4 y = 3 }
 					}
 					support = {
-					engineer = { x = 0 y = 0 }
+					armored_engineer = { x = 0 y = 0 }
 					medium_flame_tank = { x = 0 y = 1 }
 					light_tank_recon = { x = 0 y = 2 }
 					artillery = { x = 0 y = 3 }
@@ -136,11 +140,11 @@ country_event = {
 						motorized = { x = 3 y = 0 }
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
+						armored_engineer = { x = 0 y = 0 }
 						light_tank_recon = { x = 0 y = 1 }
 						artillery = { x = 0 y = 2 }
 						anti_air= { x = 0 y = 3 }
-						logistics_company = { x = 0 y = 4 }
+						helicopter_transport = { x = 0 y = 4 }
 					}
 				}
 
@@ -159,11 +163,11 @@ country_event = {
 						artillery_brigade = { x = 2 y = 1 }
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
+						armored_engineer = { x = 0 y = 0 }
 						recon = { x = 0 y = 1 }
 						artillery = { x = 0 y = 2 }
 						anti_air= { x = 0 y = 3 }
-						logistics_company = { x = 0 y = 4 }
+						helicopter_transport = { x = 0 y = 4 }
 					}
 				}
 			}
@@ -223,6 +227,10 @@ country_event = {
 		set_technology = { tech_military_police = 1 }
 		set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		complete_special_project = { project = sp:sp_land_flamethrower_tank }
+		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
+		complete_special_project = { project = sp:sp_air_helicopter }
+		set_technology = { sp_armored_advanced_flamethrower_tech = 1 }
 		set_technology = { mechanised_infantry = 1 }
 		set_technology = { armored_train = 1 }
 		set_technology = { basic_fire_control_system = 1 }
@@ -317,7 +325,7 @@ country_event = {
 						mechanized = { x = 4 y = 3 }
 					}
 					support = {
-					engineer = { x = 0 y = 0 }
+					armored_engineer = { x = 0 y = 0 }
 					medium_flame_tank = { x = 0 y = 1 }
 				    }
 				}
@@ -345,7 +353,7 @@ country_event = {
 						amphibious_mechanized = { x = 4 y = 3 }
 					}
 					support = {
-					engineer = { x = 0 y = 0 }
+					armored_engineer = { x = 0 y = 0 }
 					medium_flame_tank = { x = 0 y = 1 }
 				    }
 				}
@@ -369,11 +377,11 @@ country_event = {
 						motorized = { x = 3 y = 0 }
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
+						armored_engineer = { x = 0 y = 0 }
 						light_tank_recon = { x = 0 y = 1 }
 						artillery = { x = 0 y = 2 }
 						anti_air= { x = 0 y = 3 }
-						logistics_company = { x = 0 y = 4 }
+						helicopter_transport = { x = 0 y = 4 }
 					}
 				}
 
@@ -392,11 +400,11 @@ country_event = {
 						artillery_brigade = { x = 2 y = 1 }
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
+						armored_engineer = { x = 0 y = 0 }
 						recon = { x = 0 y = 1 }
 						artillery = { x = 0 y = 2 }
 						anti_air= { x = 0 y = 3 }
-						logistics_company = { x = 0 y = 4 }
+						helicopter_transport = { x = 0 y = 4 }
 					}
 				}
 			}
@@ -457,6 +465,10 @@ country_event = {
 			set_technology = { tech_military_police = 1 }
 			set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		complete_special_project = { project = sp:sp_land_flamethrower_tank }
+		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
+		complete_special_project = { project = sp:sp_air_helicopter }
+		set_technology = { sp_armored_advanced_flamethrower_tech = 1 }
 			set_technology = { mechanised_infantry = 1 }
 		set_technology = { armored_train = 1 }
 		set_technology = { basic_fire_control_system = 1 }
@@ -587,7 +599,7 @@ country_event = {
 							infantry = { x = 2 y = 2 }
 						}
 						support = {
-							engineer = { x = 0 y = 0 }
+							armored_engineer = { x = 0 y = 0 }
 							artillery = { x = 0 y = 1 }
 							}
 						}
@@ -612,7 +624,7 @@ country_event = {
 							infantry = { x = 2 y = 2 }
 						}
 						support = {
-							engineer = { x = 0 y = 0 }
+							armored_engineer = { x = 0 y = 0 }
 							artillery = { x = 0 y = 1 }
 							}
 						}
@@ -632,11 +644,11 @@ country_event = {
 								infantry = { x = 3 y = 0 }
 							}
 							support = {
-								engineer = { x = 0 y = 0 }
+								armored_engineer = { x = 0 y = 0 }
 								light_tank_recon = { x = 0 y = 1 }
 								artillery = { x = 0 y = 2 }
 								anti_air= { x = 0 y = 3 }
-								logistics_company = { x = 0 y = 4 }
+								helicopter_transport = { x = 0 y = 4 }
 							}
 						}
 		
@@ -655,11 +667,11 @@ country_event = {
 								artillery_brigade = { x = 2 y = 1 }
 							}
 							support = {
-								engineer = { x = 0 y = 0 }
+								armored_engineer = { x = 0 y = 0 }
 								recon = { x = 0 y = 1 }
 								artillery = { x = 0 y = 2 }
 								anti_air= { x = 0 y = 3 }
-								logistics_company = { x = 0 y = 4 }
+								helicopter_transport = { x = 0 y = 4 }
 							}
 						}
 					}
@@ -721,6 +733,10 @@ country_event = {
 		set_technology = { tech_military_police = 1 }
 		set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		complete_special_project = { project = sp:sp_land_flamethrower_tank }
+		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
+		complete_special_project = { project = sp:sp_air_helicopter }
+		set_technology = { sp_armored_advanced_flamethrower_tech = 1 }
 		set_technology = { mechanised_infantry = 1 }
 		set_technology = { armored_train = 1 }
 		set_technology = { basic_fire_control_system = 1 }
@@ -815,7 +831,7 @@ country_event = {
 						medium_sp_anti_air_brigade = { x = 4 y = 2 }
 					}
 					support = {
-					logistics_company = { x = 0 y = 0 }
+					helicopter_transport = { x = 0 y = 0 }
 					medium_flame_tank = { x = 0 y = 1 }
 					}
 				}
@@ -839,11 +855,11 @@ country_event = {
 						motorized = { x = 3 y = 0 }
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
+						armored_engineer = { x = 0 y = 0 }
 						light_tank_recon = { x = 0 y = 1 }
 						artillery = { x = 0 y = 2 }
 						anti_air= { x = 0 y = 3 }
-						logistics_company = { x = 0 y = 4 }
+						helicopter_transport = { x = 0 y = 4 }
 					}
 				}
 
@@ -862,11 +878,11 @@ country_event = {
 						artillery_brigade = { x = 2 y = 1 }
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
+						armored_engineer = { x = 0 y = 0 }
 						recon = { x = 0 y = 1 }
 						artillery = { x = 0 y = 2 }
 						anti_air= { x = 0 y = 3 }
-						logistics_company = { x = 0 y = 4 }
+						helicopter_transport = { x = 0 y = 4 }
 					}
 				}
 			}
@@ -893,7 +909,7 @@ country_event = {
 						medium_sp_anti_air_brigade = { x = 4 y = 2 }
 					}
 					support = {
-					engineer = { x = 0 y = 0 }
+					armored_engineer = { x = 0 y = 0 }
 					medium_flame_tank = { x = 0 y = 1 }
 				    }
 				}
@@ -973,6 +989,10 @@ country_event = {
 			set_technology = { motorized_rocket_unit = 1 } 
 			set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		complete_special_project = { project = sp:sp_land_flamethrower_tank }
+		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
+		complete_special_project = { project = sp:sp_air_helicopter }
+		set_technology = { sp_armored_advanced_flamethrower_tech = 1 }
 			set_technology = { mechanised_infantry = 1 }
 		set_technology = { armored_train = 1 }
 		set_technology = { basic_fire_control_system = 1 }
@@ -1024,6 +1044,17 @@ country_event = {
 		set_technology = { engines_4 = 1 }
 		set_technology = { rocket_artillery = 1 }
 		set_technology = { jet_engines = 1 }
+		set_technology = { interwar_antitank = 1 }
+		set_technology = { tech_engineers = 1 }
+		set_technology = { tech_engineers2 = 1 }  
+		set_technology = { antitank1 = 1 }
+		set_technology = { antitank2 = 1 } 
+		set_technology = { antitank3 = 1 }  
+		set_technology = { armor_tech_1 = 1 }
+		set_technology = { armor_tech_2 = 1 }
+		set_technology = { radio = 1 } 
+		set_technology = { improved_radio = 1 }
+        set_technology = { advanced_radio = 1 }
 			mio:BFL_okmo_organization = { add_mio_size = 20 }
 			mio:BFL_mig_design_bureau_organization = { add_mio_size = 20 }
 			mio:BFL_nevskoye_design_bureau_organization = { add_mio_size = 20 }
@@ -1062,7 +1093,7 @@ country_event = {
 	
 					}
 					support = {
-					logistics_company = { x = 0 y = 0 }
+					helicopter_transport = { x = 0 y = 0 }
 					medium_flame_tank = { x = 0 y = 1 }
 					}
 				}
@@ -1092,7 +1123,7 @@ country_event = {
 							infantry = { x = 4 y = 4 }
 					}
 					support = {
-						engineer = { x = 0 y = 0 } 	# (semi-mot) Engineer bn
+						armored_engineer = { x = 0 y = 0 } 	
 						medium_flame_tank = { x = 0 y = 1 }
 					}
 					}
@@ -1115,11 +1146,11 @@ country_event = {
 						infantry = { x = 3 y = 0 }
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
+						armored_engineer = { x = 0 y = 0 }
 						light_tank_recon = { x = 0 y = 1 }
 						artillery = { x = 0 y = 2 }
 						anti_air= { x = 0 y = 3 }
-						logistics_company = { x = 0 y = 4 }
+						helicopter_transport = { x = 0 y = 4 }
 					}
 				}
 
@@ -1138,11 +1169,11 @@ country_event = {
 						artillery_brigade = { x = 2 y = 1 }
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
+						armored_engineer = { x = 0 y = 0 }
 						recon = { x = 0 y = 1 }
 						artillery = { x = 0 y = 2 }
 						anti_air= { x = 0 y = 3 }
-						logistics_company = { x = 0 y = 4 }
+						helicopter_transport = { x = 0 y = 4 }
 					}
 				}
 			}
@@ -1203,6 +1234,10 @@ country_event = {
 			set_technology = { tech_military_police = 1 }
 			set_technology = { tech_maintenance_company = 1 }
 		    set_technology = { tech_maintenance_company2 = 1 }
+		complete_special_project = { project = sp:sp_land_flamethrower_tank }
+		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
+		complete_special_project = { project = sp:sp_air_helicopter }
+		set_technology = { sp_armored_advanced_flamethrower_tech = 1 }
 			set_technology = { mechanised_infantry = 1 }
 		set_technology = { armored_train = 1 }
 		set_technology = { basic_fire_control_system = 1 }
@@ -1338,11 +1373,11 @@ country_event = {
 						motorized = { x = 3 y = 0 }
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
+						armored_engineer = { x = 0 y = 0 }
 						light_tank_recon = { x = 0 y = 1 }
 						artillery = { x = 0 y = 2 }
 						anti_air= { x = 0 y = 3 }
-						logistics_company = { x = 0 y = 4 }
+						helicopter_transport = { x = 0 y = 4 }
 					}
 				}
 
@@ -1361,11 +1396,11 @@ country_event = {
 						artillery_brigade = { x = 2 y = 1 }
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
+						armored_engineer = { x = 0 y = 0 }
 						recon = { x = 0 y = 1 }
 						artillery = { x = 0 y = 2 }
 						anti_air= { x = 0 y = 3 }
-						logistics_company = { x = 0 y = 4 }
+						helicopter_transport = { x = 0 y = 4 }
 					}
 				}
 			}
@@ -1422,7 +1457,7 @@ country_event = {
 	}
 	option = {
 		name = "ai_bianzhi.7.a"
-		set_technology = { tech_engineers2 = 1 }
+		
 		set_technology = { tech_logistics_company = 1 }
 			set_technology = { tech_signal_company = 1 }
 			set_technology = { tech_military_police = 1 }
@@ -1430,6 +1465,10 @@ country_event = {
 			set_technology = { interwar_antitank = 1 }
 			set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		complete_special_project = { project = sp:sp_land_flamethrower_tank }
+		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
+		complete_special_project = { project = sp:sp_air_helicopter }
+		set_technology = { sp_armored_advanced_flamethrower_tech = 1 }
 			set_technology = { mechanised_infantry = 1 }
 		set_technology = { armored_train = 1 }
 		set_technology = { basic_fire_control_system = 1 }
@@ -1601,11 +1640,11 @@ country_event = {
 						motorized = { x = 3 y = 0 }
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
+						armored_engineer = { x = 0 y = 0 }
 						light_tank_recon = { x = 0 y = 1 }
 						artillery = { x = 0 y = 2 }
 						anti_air= { x = 0 y = 3 }
-						logistics_company = { x = 0 y = 4 }
+						helicopter_transport = { x = 0 y = 4 }
 					}
 				}
 
@@ -1624,11 +1663,11 @@ country_event = {
 						artillery_brigade = { x = 2 y = 1 }
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
+						armored_engineer = { x = 0 y = 0 }
 						recon = { x = 0 y = 1 }
 						artillery = { x = 0 y = 2 }
 						anti_air= { x = 0 y = 3 }
-						logistics_company = { x = 0 y = 4 }
+						helicopter_transport = { x = 0 y = 4 }
 					}
 				}
 			}
@@ -1686,11 +1725,16 @@ country_event = {
 	option = {
 		name = "ai_bianzhi.8.a"
 		
+		
 		set_technology = { amphibious_drive = 1 }
-		set_technology = { tech_engineers2 = 1 }
 		set_technology = { tech_logistics_company = 1 }
 		set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		complete_special_project = { project = sp:sp_land_flamethrower_tank }
+		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
+		complete_special_project = { project = sp:sp_air_helicopter }
+		complete_special_project = { project = sp:sp_naval_super_heavy_battleship }
+		set_technology = { sp_armored_advanced_flamethrower_tech = 1 }
 		set_technology = { mechanised_infantry = 1 }
 		set_technology = { armored_train = 1 }
 		set_technology = { basic_fire_control_system = 1 }
@@ -1787,7 +1831,7 @@ country_event = {
 					mechanized = { x = 4 y = 3 }
 				}
 				support = {
-				engineer = { x = 0 y = 0 }
+				armored_engineer = { x = 0 y = 0 }
 				medium_flame_tank = { x = 0 y = 1 }
 				}
 			}
@@ -1815,7 +1859,7 @@ country_event = {
 					infantry = { x = 4 y = 3 }
 				}
 				support = {
-				engineer = { x = 0 y = 0 }
+				armored_engineer = { x = 0 y = 0 }
 				medium_flame_tank = { x = 0 y = 1 }
 				}
 			}
@@ -1843,7 +1887,7 @@ country_event = {
 					marine = { x = 4 y = 3 }
 				}
 				support = {
-				engineer = { x = 0 y = 0 }
+				armored_engineer = { x = 0 y = 0 }
 				medium_flame_tank = { x = 0 y = 1 }
 				}
 			}
@@ -1866,10 +1910,10 @@ country_event = {
 					infantry = { x = 3 y = 3 }
 				}
 				support = {
-					engineer = { x = 0 y = 0 }
+					armored_engineer = { x = 0 y = 0 }
 					artillery = { x = 0 y = 1 }
 					recon = { x = 0 y = 2 }
-					maintenance_company = { x = 0 y = 3 }
+					armored_maintenance = { x = 0 y = 3 }
 					}
 				}
 				division_template = {
@@ -1891,10 +1935,10 @@ country_event = {
 					infantry = { x = 3 y = 3 }
 				}
 				support = {
-					engineer = { x = 0 y = 0 }
+					armored_engineer = { x = 0 y = 0 }
 					artillery = { x = 0 y = 1 }
 					recon = { x = 0 y = 2 }
-					maintenance_company = { x = 0 y = 3 }
+					armored_maintenance = { x = 0 y = 3 }
 					}
 				}
 				division_template = {
@@ -1912,7 +1956,7 @@ country_event = {
 						infantry = { x = 2 y = 2 }
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
+						armored_engineer = { x = 0 y = 0 }
 						artillery = { x = 0 y = 1 }
 						}
 					}
@@ -1937,10 +1981,10 @@ country_event = {
 					light_armor = { x = 4 y = 1 }
 				}
 				support = {
-				engineer = { x = 0 y = 0 }
+				armored_engineer = { x = 0 y = 0 }
 				artillery = { x = 0 y = 1 }
 				recon = { x = 0 y = 2 }
-				logistics_company = { x = 0 y = 3 }
+				helicopter_transport = { x = 0 y = 3 }
 				field_hospital = { x = 0 y = 4 }
 				}
 			}
@@ -1964,11 +2008,11 @@ country_event = {
 				infantry = { x = 3 y = 0 }
 			}
 			support = {
-				engineer = { x = 0 y = 0 }
+				armored_engineer = { x = 0 y = 0 }
 				light_tank_recon = { x = 0 y = 1 }
 				artillery = { x = 0 y = 2 }
 				anti_air= { x = 0 y = 3 }
-				logistics_company = { x = 0 y = 4 }
+				helicopter_transport = { x = 0 y = 4 }
 			}
 		}
 
@@ -1987,11 +2031,11 @@ country_event = {
 				artillery_brigade = { x = 2 y = 1 }
 			}
 			support = {
-				engineer = { x = 0 y = 0 }
+				armored_engineer = { x = 0 y = 0 }
 				recon = { x = 0 y = 1 }
 				artillery = { x = 0 y = 2 }
 				anti_air= { x = 0 y = 3 }
-				logistics_company = { x = 0 y = 4 }
+				helicopter_transport = { x = 0 y = 4 }
 			}
 		}
 		}
@@ -2069,6 +2113,10 @@ country_event = {
 		set_technology = { tech_logistics_company = 1 }
 		set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		complete_special_project = { project = sp:sp_land_flamethrower_tank }
+		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
+		complete_special_project = { project = sp:sp_air_helicopter }
+		set_technology = { sp_armored_advanced_flamethrower_tech = 1 }
 		set_technology = { mechanised_infantry = 1 }
 		set_technology = { armored_train = 1 }
 		set_technology = { basic_fire_control_system = 1 }
@@ -2155,7 +2203,7 @@ country_event = {
 						mechanized = { x = 4 y = 3 }
 					}
 					support = {
-					engineer = { x = 0 y = 0 }
+					armored_engineer = { x = 0 y = 0 }
 					medium_flame_tank = { x = 0 y = 1 }
 				    }
 				}
@@ -2178,11 +2226,11 @@ country_event = {
 						motorized = { x = 3 y = 0 }
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
+						armored_engineer = { x = 0 y = 0 }
 						light_tank_recon = { x = 0 y = 1 }
 						artillery = { x = 0 y = 2 }
 						anti_air= { x = 0 y = 3 }
-						logistics_company = { x = 0 y = 4 }
+						helicopter_transport = { x = 0 y = 4 }
 					}
 				}
 
@@ -2200,11 +2248,11 @@ country_event = {
 						artillery_brigade = { x = 2 y = 1 }
 					}
 					support = {
-						engineer = { x = 0 y = 0 }
+						armored_engineer = { x = 0 y = 0 }
 						recon = { x = 0 y = 1 }
 						artillery = { x = 0 y = 2 }
 						anti_air= { x = 0 y = 3 }
-						logistics_company = { x = 0 y = 4 }
+						helicopter_transport = { x = 0 y = 4 }
 					}
 				}
 			}
@@ -2283,6 +2331,10 @@ country_event = {
 		set_technology = { tech_logistics_company = 1 }
 		set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		complete_special_project = { project = sp:sp_land_flamethrower_tank }
+		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
+		complete_special_project = { project = sp:sp_air_helicopter }
+		set_technology = { sp_armored_advanced_flamethrower_tech = 1 }
 		set_technology = { mechanised_infantry = 1 }
 		set_technology = { armored_train = 1 }
 		set_technology = { basic_fire_control_system = 1 }
@@ -2370,7 +2422,7 @@ country_event = {
 						mechanized = { x = 4 y = 3 }
 					}
 					support = {
-					engineer = { x = 0 y = 0 }
+					armored_engineer = { x = 0 y = 0 }
 					medium_flame_tank = { x = 0 y = 1 }
 				    }
 				}
@@ -2416,11 +2468,11 @@ country_event = {
 							motorized = { x = 3 y = 0 }
 						}
 						support = {
-							engineer = { x = 0 y = 0 }
+							armored_engineer = { x = 0 y = 0 }
 							light_tank_recon = { x = 0 y = 1 }
 							artillery = { x = 0 y = 2 }
 							anti_air= { x = 0 y = 3 }
-							logistics_company = { x = 0 y = 4 }
+							helicopter_transport = { x = 0 y = 4 }
 						}
 					}
 	
@@ -2439,11 +2491,11 @@ country_event = {
 							artillery_brigade = { x = 2 y = 1 }
 						}
 						support = {
-							engineer = { x = 0 y = 0 }
+							armored_engineer = { x = 0 y = 0 }
 							recon = { x = 0 y = 1 }
 							artillery = { x = 0 y = 2 }
 							anti_air= { x = 0 y = 3 }
-							logistics_company = { x = 0 y = 4 }
+							helicopter_transport = { x = 0 y = 4 }
 						}
 					}
 				}
