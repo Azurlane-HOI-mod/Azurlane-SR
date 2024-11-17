@@ -16,6 +16,11 @@ country_event = {
 		set_technology = { tech_military_police = 1 }
 		set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		set_technology = { sp_armored_engineer_tech = 1 }
+		set_technology = { sp_armored_maintenance_tech = 1 }
+		set_technology = { sp_helicopter_med_evac_tech = 1 }
+		set_technology = { sp_helicopter_transport_pods_tech = 1 }
+		set_technology = { sp_armored_signal_tech = 1 }
 		complete_special_project = { project = sp:sp_land_flamethrower_tank }
 		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
 		complete_special_project = { project = sp:sp_air_helicopter }
@@ -227,6 +232,11 @@ country_event = {
 		set_technology = { tech_military_police = 1 }
 		set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		set_technology = { sp_armored_engineer_tech = 1 }
+		set_technology = { sp_armored_maintenance_tech = 1 }
+		set_technology = { sp_helicopter_med_evac_tech = 1 }
+		set_technology = { sp_helicopter_transport_pods_tech = 1 }
+		set_technology = { sp_armored_signal_tech = 1 }
 		complete_special_project = { project = sp:sp_land_flamethrower_tank }
 		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
 		complete_special_project = { project = sp:sp_air_helicopter }
@@ -465,6 +475,11 @@ country_event = {
 			set_technology = { tech_military_police = 1 }
 			set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		set_technology = { sp_armored_engineer_tech = 1 }
+		set_technology = { sp_armored_maintenance_tech = 1 }
+		set_technology = { sp_helicopter_med_evac_tech = 1 }
+		set_technology = { sp_helicopter_transport_pods_tech = 1 }
+		set_technology = { sp_armored_signal_tech = 1 }
 		complete_special_project = { project = sp:sp_land_flamethrower_tank }
 		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
 		complete_special_project = { project = sp:sp_air_helicopter }
@@ -733,6 +748,11 @@ country_event = {
 		set_technology = { tech_military_police = 1 }
 		set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		set_technology = { sp_armored_engineer_tech = 1 }
+		set_technology = { sp_armored_maintenance_tech = 1 }
+		set_technology = { sp_helicopter_med_evac_tech = 1 }
+		set_technology = { sp_helicopter_transport_pods_tech = 1 }
+		set_technology = { sp_armored_signal_tech = 1 }
 		complete_special_project = { project = sp:sp_land_flamethrower_tank }
 		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
 		complete_special_project = { project = sp:sp_air_helicopter }
@@ -989,6 +1009,11 @@ country_event = {
 			set_technology = { motorized_rocket_unit = 1 } 
 			set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		set_technology = { sp_armored_engineer_tech = 1 }
+		set_technology = { sp_armored_maintenance_tech = 1 }
+		set_technology = { sp_helicopter_med_evac_tech = 1 }
+		set_technology = { sp_helicopter_transport_pods_tech = 1 }
+		set_technology = { sp_armored_signal_tech = 1 }
 		complete_special_project = { project = sp:sp_land_flamethrower_tank }
 		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
 		complete_special_project = { project = sp:sp_air_helicopter }
@@ -1234,6 +1259,11 @@ country_event = {
 			set_technology = { tech_military_police = 1 }
 			set_technology = { tech_maintenance_company = 1 }
 		    set_technology = { tech_maintenance_company2 = 1 }
+		set_technology = { sp_armored_engineer_tech = 1 }
+		set_technology = { sp_armored_maintenance_tech = 1 }
+		set_technology = { sp_helicopter_med_evac_tech = 1 }
+		set_technology = { sp_helicopter_transport_pods_tech = 1 }
+		set_technology = { sp_armored_signal_tech = 1 }
 		complete_special_project = { project = sp:sp_land_flamethrower_tank }
 		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
 		complete_special_project = { project = sp:sp_air_helicopter }
@@ -1465,6 +1495,11 @@ country_event = {
 			set_technology = { interwar_antitank = 1 }
 			set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		set_technology = { sp_armored_engineer_tech = 1 }
+		set_technology = { sp_armored_maintenance_tech = 1 }
+		set_technology = { sp_helicopter_med_evac_tech = 1 }
+		set_technology = { sp_helicopter_transport_pods_tech = 1 }
+		set_technology = { sp_armored_signal_tech = 1 }
 		complete_special_project = { project = sp:sp_land_flamethrower_tank }
 		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
 		complete_special_project = { project = sp:sp_air_helicopter }
@@ -1730,6 +1765,11 @@ country_event = {
 		set_technology = { tech_logistics_company = 1 }
 		set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		set_technology = { sp_armored_engineer_tech = 1 }
+		set_technology = { sp_armored_maintenance_tech = 1 }
+		set_technology = { sp_helicopter_med_evac_tech = 1 }
+		set_technology = { sp_helicopter_transport_pods_tech = 1 }
+		set_technology = { sp_armored_signal_tech = 1 }
 		complete_special_project = { project = sp:sp_land_flamethrower_tank }
 		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
 		complete_special_project = { project = sp:sp_air_helicopter }
@@ -2113,6 +2153,11 @@ country_event = {
 		set_technology = { tech_logistics_company = 1 }
 		set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		set_technology = { sp_armored_engineer_tech = 1 }
+		set_technology = { sp_armored_maintenance_tech = 1 }
+		set_technology = { sp_helicopter_med_evac_tech = 1 }
+		set_technology = { sp_helicopter_transport_pods_tech = 1 }
+		set_technology = { sp_armored_signal_tech = 1 }
 		complete_special_project = { project = sp:sp_land_flamethrower_tank }
 		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
 		complete_special_project = { project = sp:sp_air_helicopter }
@@ -2331,6 +2376,11 @@ country_event = {
 		set_technology = { tech_logistics_company = 1 }
 		set_technology = { tech_maintenance_company = 1 }
 		set_technology = { tech_maintenance_company2 = 1 }
+		set_technology = { sp_armored_engineer_tech = 1 }
+		set_technology = { sp_armored_maintenance_tech = 1 }
+		set_technology = { sp_helicopter_med_evac_tech = 1 }
+		set_technology = { sp_helicopter_transport_pods_tech = 1 }
+		set_technology = { sp_armored_signal_tech = 1 }
 		complete_special_project = { project = sp:sp_land_flamethrower_tank }
 		complete_special_project = { project = sp:sp_land_military_engineering_vehicles }
 		complete_special_project = { project = sp:sp_air_helicopter }

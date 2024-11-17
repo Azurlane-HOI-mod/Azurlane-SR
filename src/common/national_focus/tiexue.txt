@@ -1056,9 +1056,12 @@ focus_tree = {
 			}
 			}
 			if = {
-                limit = { has_idea = TIX_organization_todt_improved
+                limit = { OR = {
+					      has_idea = TIX_organization_todt_improved
 				          has_idea = TIX_philipp_holzmann_improved
-						  has_dlc = "Arms Against Tyranny" }
+						  } 
+						  has_dlc = "Arms Against Tyranny"
+				 }
                 swap_ideas = {
 				add_idea = TIX_hanz_building
 				remove_idea = TIX_organization_todt_improved
@@ -1066,8 +1069,10 @@ focus_tree = {
 			}
 			}
 			if = {
-                limit = { has_idea = TIX_organization_todt_improved
+                limit = { OR = {
+					      has_idea = TIX_organization_todt_improved
 				          has_idea = TIX_philipp_holzmann_improved
+						  } 
 						  NOT = { has_dlc = "Arms Against Tyranny" } }
                 swap_ideas = {
 				add_idea = TIX_hanz_building_no_aat
