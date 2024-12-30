@@ -12,8 +12,11 @@ state={
 			industrial_complex = 1
 			air_base = 3
 		}
+		
 		1938.3.12 = {
-		owner = SIR
+			owner = SIR
+			controller = GER
+			
 		}
 	}
 	provinces={

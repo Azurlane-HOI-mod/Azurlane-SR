@@ -26,8 +26,7 @@ ideas = {
 				sp_nuclear_reactor_speed_factor = 0.05
 				sp_nuclear_bomb_speed_factor = 0.05
 				sp_nuclear_warheads_speed_factor = 0.05
-				sp_tag_tank_speed_factor = 0.1
-				sp_tag_jet_speed_factor = 0.1
+				sp_air_jet_engine_speed_factor = 0.05
 			}
 		}
 		TIX_heikeji_2 = {
@@ -43,8 +42,7 @@ ideas = {
 				sp_nuclear_reactor_speed_factor = 0.1
 				sp_nuclear_bomb_speed_factor = 0.1
 				sp_nuclear_warheads_speed_factor = 0.1
-				sp_tag_tank_speed_factor = 0.15
-				sp_tag_jet_speed_factor = 0.15
+				sp_air_jet_engine_speed_factor = 0.1
 			}
 		}
 		TIX_heikeji_3 = {
@@ -60,8 +58,7 @@ ideas = {
 				sp_nuclear_reactor_speed_factor = 0.15
 				sp_nuclear_bomb_speed_factor = 0.15
 				sp_nuclear_warheads_speed_factor = 0.15
-				sp_tag_tank_speed_factor = 0.2
-				sp_tag_jet_speed_factor = 0.2
+				sp_air_jet_engine_speed_factor = 0.15
 			}
 		}
 		TIX_heikeji_4 = {
@@ -79,8 +76,7 @@ ideas = {
 				sp_nuclear_reactor_speed_factor = 0.2
 				sp_nuclear_bomb_speed_factor = 0.2
 				sp_nuclear_warheads_speed_factor = 0.2
-				sp_tag_tank_speed_factor = 0.25
-				sp_tag_jet_speed_factor = 0.25
+				sp_air_jet_engine_speed_factor = 0.2
 			}
 		}
 		TIX_gxlfdj = {
@@ -115,8 +111,18 @@ ideas = {
 				special_project_speed_factor = 0.15
 				production_speed_facility_factor = 0.25
 				sp_nuclear_reactor_speed_factor = 0.15
-				sp_tag_tank_speed_factor = 0.15
-				sp_tag_jet_speed_factor = 0.15
+				sp_nuclear_bomb_speed_factor = 0.15
+				sp_thermo_nuclear_bomb_speed_factor = 0.15
+				sp_air_earthshaker_bomb_speed_factor = 0.15
+				sp_naval_nuclear_submarine_speed_factor = 0.15
+				sp_naval_nuclear_missile_submarine_speed_factor = 0.15
+				sp_naval_anechoic_tiles_speed_factor = 0.15
+				sp_air_jet_engine_speed_factor = 0.15
+				sp_rockets_flying_bomb_speed_factor = 0.15
+				sp_commercial_nuclear_reactor_speed_factor = 0.15
+				sp_nuclear_engines_speed_factor = 0.15
+				sp_nuclear_warheads_speed_factor = 0.15
+				sp_air_mothership_aircraft_speed_factor = 0.15
 			}
 			research_bonus = {
 				rocketry = 0.15
@@ -372,10 +378,10 @@ ideas = {
 				always = yes
 			}			
 			modifier = {
-				army_armor_defence_factor = 0.1
-				army_infantry_attack_factor = 0.05
-				army_infantry_defence_factor = 0.05
-				breakthrough_factor = 0.08
+				army_armor_defence_factor = 0.15
+				army_infantry_attack_factor = 0.1
+				army_infantry_defence_factor = 0.1
+				breakthrough_factor = 0.15
 			}
 		}
 		TIX_jdtk = {
@@ -759,9 +765,9 @@ ideas = {
 			modifier = {
 				compliance_growth = -0.1
 				resistance_growth = 0.1
-				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = 0.05
-				consumer_goods_factor = -0.1
+				industrial_capacity_factory = 0.12
+				industrial_capacity_dockyard = 0.12
+				consumer_goods_factor = -0.12
 			}
 		}
 		TIX_wsdrqz = {
@@ -771,9 +777,9 @@ ideas = {
 			}			
 	
 			modifier = {
-				compliance_growth = 0.15
-				resistance_growth = -0.05
-				non_core_manpower = 0.05
+				compliance_growth = 0.16
+				resistance_growth = -0.08
+				non_core_manpower = 0.08
 				consumer_goods_factor = 0.05
 			}
 		}

@@ -11,16 +11,22 @@ state={
 	{
 		owner = SR3
 		
+		
+		
+		
+		
 		buildings = {
 			infrastructure = 1
 		}
 
 		1938.10.25 = {
+			controller = JAP
 		}
 		
 		1939.1.1 = {
 			
-		owner = SR3
+			owner = SR3
+			controller = MEN
 
 		}
 	}

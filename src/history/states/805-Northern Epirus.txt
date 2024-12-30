@@ -20,6 +20,15 @@ state={
 		buildings = {
 			infrastructure = 1
 		}
+		
+		add_claim_by = GRE
+		add_claim_by = ITA
+
+		1939.4.12 = {
+			owner = SIR
+			controller = ITA
+			remove_claim_by = ITA
+		}
 	}
 
 	local_supplies=0.0 

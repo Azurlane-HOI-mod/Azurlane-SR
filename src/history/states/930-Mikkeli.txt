@@ -8,6 +8,7 @@ state={
 	
 	history={
 		owner = SIR
+		
 
 		victory_points = { #Mikkeli
 			165 1
@@ -18,7 +19,7 @@ state={
 		}
 		
 		buildings = {
-			infrastructure = 1 #TODO_Manu: Was 2
+			infrastructure = 1 #MM: Was 2
 		}
 		
 	}

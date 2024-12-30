@@ -13,7 +13,7 @@ state = {
 	history = {
 
 		owner = SR1
-		#add_core_of = SR1
+		
 
 		victory_points = {
 			10999 5

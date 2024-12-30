@@ -3,6 +3,7 @@ state={
 	name="STATE_732"
 
 	history={
+		
 		owner = SR3
 		victory_points = {
 			12583 1
@@ -11,6 +12,7 @@ state={
 			infrastructure = 1
 
 		}
+		
 
 	}
 

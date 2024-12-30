@@ -9,6 +9,7 @@ state={
 			infrastructure = 1
 		}
 		owner = SR4
+		
 	}
 	manpower=100000
 	state_category = rural

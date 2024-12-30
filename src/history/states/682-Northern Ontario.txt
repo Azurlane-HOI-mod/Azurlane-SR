@@ -13,6 +13,7 @@ state = {
 	history = {
 
 		owner = SIR
+		
 
 		buildings = {
 			infrastructure = 3 #was: 5

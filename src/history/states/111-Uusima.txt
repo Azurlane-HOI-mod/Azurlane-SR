@@ -8,6 +8,7 @@ state = {
 	
 	history = {
 		owner = SIR
+		
 		victory_points = { #Helsinki
 			11105 15 
 		}
@@ -21,7 +22,7 @@ state = {
 		}
 
 		buildings = {
-			infrastructure = 2 #TODO_Manu: Was 3
+			infrastructure = 2 #MM: Was 3
 			arms_factory = 2
 			industrial_complex = 1
 			air_base = 3

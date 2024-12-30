@@ -2,6 +2,7 @@ state={
 	id=741
 	name="STATE_741"
 	history = {
+		
 		owner = SR3
 		victory_points = {
 			7376 1

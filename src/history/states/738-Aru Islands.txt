@@ -4,6 +4,7 @@ state={
 
 	history={
 		owner = SR4
+		
 		buildings = {
 			infrastructure = 1
 

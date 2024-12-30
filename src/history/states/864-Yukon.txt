@@ -6,6 +6,7 @@ state={
 	}
 	history = {
 		owner = SIR
+		
 	}
 	manpower=10
 	state_category = wasteland

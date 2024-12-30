@@ -13,6 +13,7 @@ state = {
 				naval_base = 1
 			}
 		}
+		
 
 		victory_points = { #Tórshavn
 			13003 1

@@ -1,15 +1,7 @@
 ﻿
-capital = 315
+capital = 361
 
 oob = "BYG_1936"
-
-if = {
-	limit = { has_dlc = "Man the Guns" }
-		set_naval_oob = "BYG_1936_naval_mtg"
-	else = {
-		set_naval_oob = "USA_1936_naval_legacy"
-	}
-}
 
 starting_train_buffer = 5
 
@@ -18,54 +10,353 @@ add_breakthrough_progress = {
 	value = 1.0
 }
 
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "BYG_1936_naval_mtg"
+	else = {
+		set_naval_oob = "USA_1936_naval_legacy"
+	}
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "BYG_1936_air_bba"
+		set_technology = {
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			iw_medium_airframe = 1
+			basic_medium_airframe = 1
+			engines_1 = 1
+			engines_2 = 1
+			aa_lmg = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			air_torpedoe_1 = 1
+		}
+	else = {
+		set_air_oob = "USA_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			cv_early_fighter = 1
+			cv_naval_bomber1 = 1
+			cv_CAS1 = 1
+			naval_bomber1 = 1
+			CAS1 = 1
+			early_bomber = 1
+		}
+	}
+}
+
 set_research_slots = 4
 set_stability = 0.5
 set_war_support = 0.25
+add_command_power = 20
 set_variable = { var = xzmf_sl value = 3 }
-set_variable = { var = zs_sl value = 50 }
-set_variable = { var = wz_sl value = 1800 }
+set_variable = { var = zs_sl value = 200 }
+set_variable = { var = wz_sl value = 2000 }
 
 # Starting tech
 set_technology = {
+	air_superiority = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
+	tech_trucks = 1
 	tech_recon = 1
 	tech_support = 1		
 	tech_engineers = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	
-	early_fighter = 1
-	cv_early_fighter = 1
-	cv_naval_bomber1 = 1
-	cv_CAS1 = 1
-	naval_bomber1 = 1
-	CAS1 = 1
-	early_bomber = 1
 	superior_firepower = 1
 	base_strike = 1
-	tech_trucks = 1
 	motorised_infantry = 1
 	fuel_silos = 1
 	fuel_refining = 1
 	marines = 1
 	basic_train = 1
+	engine_tech_1 = 1
+}
+
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+	add_ideas = bureau_of_ordnance_spirit
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		early_carrier = 1
+		basic_carrier = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		improved_airplane_launcher = 1
+		basic_dp_light_battery = 1
+	}
+}
+
+give_guarantee = CAN
+give_guarantee = MEX
+give_guarantee = CUB
+give_guarantee = HAI
+give_guarantee = DOM
+give_guarantee = GUA
+give_guarantee = HON
+give_guarantee = ELS
+give_guarantee = NIC
+give_guarantee = COS
+give_guarantee = PAN
+give_guarantee = VEN
+give_guarantee = COL
+give_guarantee = ECU
+give_guarantee = PRU
+give_guarantee = BRA
+give_guarantee = BOL
+give_guarantee = CHL
+give_guarantee = PAR
+give_guarantee = ARG
+give_guarantee = URG
+give_guarantee = BLI
+
+set_convoys = 500
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.11.8"
+	election_frequency = 480
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 99
+	communism = 1
+}
+
+add_ideas = {
+	BYG_ziyoudengta1
+	BYG_jjwjhyz
+	BYG_CHY_Pacific
+	free_trade
+	disarmed_nation
+	undisturbed_isolation
+}
+
+set_autonomy = {
+	target = PHI
+	autonomous_state =  autonomy_puppet
+}
+
+recruit_character = BYG_qiye
+recruit_character = BYG_alabama
+recruit_character = BYG_beikaluolaina
+recruit_character = BYG_baerdimo
+recruit_character = BYG_bulaimodun
+recruit_character = BYG_aisaikesi
+recruit_character = BYG_salatuojia
+recruit_character = BYG_botelan
+recruit_character = BYG_shengdiyage
+recruit_character = BYG_mengbiliai
+recruit_character = BYG_mingniabolisi
+recruit_character = BYG_wuwei
+recruit_character = BYG_lafei
+recruit_character = BYG_haman
+recruit_character = BYG_kelifulan
+recruit_character = BYG_hailunna
+recruit_character = BYG_huashengdun
+recruit_character = BYG_changdao
+recruit_character = BYG_liekexingdun
+recruit_character = BYG_daqinghuayu
+recruit_character = BYG_aierdeliqi
+recruit_character = BYG_huonululu
+recruit_character = BYG_xianggelila
+recruit_character = BYG_tikangdeluojia
+recruit_character = BYG_kasabulanka
+recruit_character = BYG_huashengdun
+recruit_character = BYG_youqibing
+recruit_character = BYG_badan
+recruit_character = BYG_dahuangfeng
+recruit_character = BYG_binxifaniya
+recruit_character = BYG_ailunsamuna
+recruit_character = BYG_nandaketa
+recruit_character = BYG_yuekecheng
+recruit_character = BYG_nvzaoshen
+recruit_character = BYG_jiujinshan
+recruit_character = BYG_shengluyisi
+recruit_character = BYG_yalisangna
+recruit_character = BYG_yinggelahan
+recruit_character = BYG_zuozhiya
+recruit_character = BYG_xiyatu
+recruit_character = BYG_ankeleiqi
+recruit_character = BYG_huayuan
+recruit_character = BYG_huayuan_baby
+recruit_character = BYG_qiershazhi
+recruit_character = BYG_guandao
+recruit_character = BYG_xingzuo
+recruit_character = BYG_malani
+recruit_character = BYG_luyisiweier
+recruit_character = BYG_jinboli
+recruit_character = BYG_bulisituoer
+recruit_character = BYG_bangkeshan
+recruit_character = BYG_biluokexi
+recruit_character = BYG_bominghan
+recruit_character = BYG_chaersiaosiben
+recruit_character = BYG_danfo
+recruit_character = BYG_gelunbiya
+recruit_character = BYG_duli
+recruit_character = BYG_hufeng
+recruit_character = BYG_jialifuniya
+recruit_character = BYG_jiqi
+recruit_character = BYG_keluoladuo
+recruit_character = BYG_kunxi
+recruit_character = BYG_kupo
+recruit_character = BYG_linuo
+recruit_character = BYG_masazhusai
+recruit_character = BYG_nigulasi
+recruit_character = BYG_pulinsidun
+recruit_character = BYG_saqieer
+recruit_character = BYG_sipengsi
+recruit_character = BYG_tiannaxi
+recruit_character = BYG_weiqita
+recruit_character = BYG_wensensi
+recruit_character = BYG_xifunijiya
+recruit_character = BYG_ximusi
+
+#sci
+recruit_character = BYG_hailunna_sci
+recruit_character = BYG_xingzuo_sci
+recruit_character = BYG_linuo_sci
+recruit_character = BYG_qiershazhi_sci
+recruit_character = BYG_aisaikesi_sci
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "梭鱼级"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "法拉格特级"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 3
+			destroyer_engine_upgrade = 3
+			ship_ASW_upgrade = 3
+			ship_anti_air_upgrade = 3
+		}
+	}
+
+	create_equipment_variant = {
+		name = "波特兰级"
+		type = heavy_cruiser_1
+		upgrades = {
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 2
+			ship_armor_upgrade = 2
+			ship_gun_upgrade = 2
+		}
+	}
+
+	create_equipment_variant = {
+		name = "宾夕法尼亚州级"
+		type = battleship_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			ship_engine_upgrade = 1
+			ship_armor_upgrade = 1
+			ship_gun_upgrade = 1
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "新墨西哥级"
+		type = battleship_1
+		upgrades = {
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 2
+			ship_armor_upgrade = 2
+			ship_gun_upgrade = 2
+		}
+	}
+
+	create_equipment_variant = {
+		name = "科罗拉多级"
+		type = battleship_1
+		upgrades = {
+			ship_reliability_upgrade = 3
+			ship_engine_upgrade = 3
+			ship_armor_upgrade = 3
+			ship_gun_upgrade = 4
+		}
+	}
+
+	create_equipment_variant = {
+		name = "约克镇级"
+		type = carrier_2
+		upgrades = {
+			ship_deckspace_upgrade = 1
+			carrier_armor_upgrade = 1
+			ship_engine_upgrade = 1
+			ship_reliability_upgrade = 1
+		}
+	}
 }
 if = {
 	limit = {
 		has_dlc = "By Blood Alone"
-	}
-	#set_air_oob = "USA_1936_air_bba"
-	set_technology = {
-		iw_small_airframe = 1
-		basic_small_airframe = 1
-		iw_medium_airframe = 1
-		basic_medium_airframe = 1
-		engines_1 = 1
-		engines_2 = 1
-		aa_lmg = 1
-		early_bombs = 1
-		aircraft_construction = 1
 	}
 	create_equipment_variant = {
 		name = "P-6" #export models only
@@ -122,7 +413,7 @@ if = {
 		name = "A-12" #
 		type = small_plane_cas_airframe_0
 		modules = {
-			fixed_main_weapon_slot = small_bomb_bay
+			fixed_main_weapon_slot = bomb_locks
 			fixed_auxiliary_weapon_slot_1 = light_mg_4x
 			engine_type_slot = engine_1_1x
 			special_type_slot_1 = empty
@@ -212,6 +503,7 @@ if = {
 		modules = {
 			fixed_main_weapon_slot = medium_bomb_bay
 			fixed_auxiliary_weapon_slot_1 = torpedo_mounting
+			fixed_auxiliary_weapon_slot_2 = torpedo_mounting
 			engine_type_slot = engine_2_2x
 			special_type_slot_1 = flying_boat_medium
 			special_type_slot_2 = lmg_defense_turret
@@ -240,45 +532,6 @@ if = {
 		icon = "GFX_USA_cv_fighter1_medium"
 	}
 }
-
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
-		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
-		early_ship_hull_cruiser = 1
-		basic_ship_hull_cruiser = 1
-		early_ship_hull_heavy = 1
-		early_ship_hull_carrier = 1
-		basic_ship_hull_carrier = 1
-		basic_battery = 1
-		basic_light_battery = 1
-		basic_medium_battery = 1
-		basic_heavy_battery = 1
-		basic_torpedo = 1
-		sonar = 1
-		basic_depth_charges = 1
-		basic_secondary_battery = 1
-		improved_secondary_battery = 1
-		basic_cruiser_armor_scheme = 1
-		basic_heavy_armor_scheme = 1
-		mtg_transport = 1
-		improved_airplane_launcher = 1
-	}
-}
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	set_technology = {
-		gwtank_chassis = 1
-		basic_light_tank_chassis = 1
-	}
-}
 if = {
 	limit = {
 		has_dlc = "No Step Back"
@@ -316,232 +569,15 @@ if = {
 		}
 		upgrades = {
 			tank_nsb_armor_upgrade = 2
-			tank_nsb_engine_upgrade = 5
-		}
-		icon = "gfx/interface/technologies/USA_basic_light_tank.dds"
-	}
-}
-set_convoys = 500
-
-
-set_politics = {
-	ruling_party = democratic
-	last_election = "1932.11.8"
-	election_frequency = 480
-	elections_allowed = yes
-}
-set_popularities = {
-	democratic = 99
-	communism = 1
-}
-
-recruit_character = BYG_qiye
-recruit_character = BYG_alabama
-recruit_character = BYG_beikaluolaina
-recruit_character = BYG_baerdimo
-recruit_character = BYG_bulaimodun
-recruit_character = BYG_aisaikesi
-recruit_character = BYG_salatuojia
-recruit_character = BYG_botelan
-recruit_character = BYG_shengdiyage
-recruit_character = BYG_mengbiliai
-recruit_character = BYG_mingniabolisi
-recruit_character = BYG_wuwei
-recruit_character = BYG_lafei
-recruit_character = BYG_haman
-recruit_character = BYG_kelifulan
-recruit_character = BYG_hailunna
-recruit_character = BYG_huashengdun
-recruit_character = BYG_changdao
-recruit_character = BYG_liekexingdun
-recruit_character = BYG_daqinghuayu
-recruit_character = BYG_aierdeliqi
-recruit_character = BYG_huonululu
-recruit_character = BYG_xianggelila
-recruit_character = BYG_tikangdeluojia
-recruit_character = BYG_kasabulanka
-recruit_character = BYG_huashengdun
-recruit_character = BYG_youqibing
-recruit_character = BYG_badan
-recruit_character = BYG_dahuangfeng
-recruit_character = BYG_binxifaniya
-recruit_character = BYG_ailunsamuna
-recruit_character = BYG_nandaketa
-recruit_character = BYG_yuekecheng
-recruit_character = BYG_nvzaoshen
-recruit_character = BYG_jiujinshan
-recruit_character = BYG_shengluyisi
-recruit_character = BYG_yalisangna
-recruit_character = BYG_yinggelahan
-recruit_character = BYG_zuozhiya
-recruit_character = BYG_xiyatu
-recruit_character = BYG_ankeleiqi
-recruit_character = BYG_huayuan
-recruit_character = BYG_huayuan_baby
-recruit_character = BYG_qiershazhi
-recruit_character = BYG_guandao
-recruit_character = BYG_xingzuo
-recruit_character = BYG_malani
-recruit_character = BYG_luyisiweier
-recruit_character = BYG_jinboli
-recruit_character = BYG_bulisituoer
-recruit_character = BYG_bangkeshan
-recruit_character = BYG_biluokexi
-recruit_character = BYG_bominghan
-recruit_character = BYG_chaersiaosiben
-recruit_character = BYG_danfo
-recruit_character = BYG_gelunbiya
-recruit_character = BYG_duli
-recruit_character = BYG_hufeng
-recruit_character = BYG_jialifuniya
-recruit_character = BYG_jiqi
-recruit_character = BYG_keluoladuo
-recruit_character = BYG_kunxi
-recruit_character = BYG_kupo
-recruit_character = BYG_linuo
-recruit_character = BYG_masazhusai
-recruit_character = BYG_nigulasi
-recruit_character = BYG_pulinsidun
-recruit_character = BYG_saqieer
-recruit_character = BYG_sipengsi
-recruit_character = BYG_tiannaxi
-recruit_character = BYG_weiqita
-recruit_character = BYG_wensensi
-recruit_character = BYG_xifunijiya
-recruit_character = BYG_ximusi
-
-#sci
-recruit_character = BYG_hailunna_sci
-recruit_character = BYG_xingzuo_sci
-recruit_character = BYG_linuo_sci
-recruit_character = BYG_qiershazhi_sci
-
-if = {
-	limit = {
-		has_dlc = "No Step Back"
-	}
-	create_equipment_variant = {
-		name = "M1 Combat Car"
-		type = light_tank_chassis_1
-		parent_version = 0
-		modules = {
-			main_armament_slot = tank_heavy_machine_gun
-			turret_type_slot = tank_light_two_man_tank_turret
-			suspension_type_slot = tank_bogie_suspension
-			armor_type_slot = tank_riveted_armor
-			engine_type_slot = tank_gasoline_engine
-			special_type_slot_1 = tank_radio_1
-		}
-		upgrades = {
-			tank_nsb_armor_upgrade = 2
-			tank_nsb_engine_upgrade = 5
-		}
-		icon = "gfx/interface/technologies/USA_basic_light_tank.dds"
-	}
-	create_equipment_variant = {
-		name = "M2A2"
-		type = light_tank_chassis_1
-		parent_version = 1
-		modules = {
-			main_armament_slot = tank_heavy_machine_gun
-			turret_type_slot = tank_light_one_man_tank_turret
-			suspension_type_slot = tank_bogie_suspension
-			armor_type_slot = tank_riveted_armor
-			engine_type_slot = tank_gasoline_engine
-			special_type_slot_1 = secondary_turret_hmg
-			special_type_slot_2 = tank_radio_1
-		}
-		upgrades = {
-			tank_nsb_armor_upgrade = 2
-			tank_nsb_engine_upgrade = 5
+			tank_nsb_engine_upgrade = 4
 		}
 		icon = "gfx/interface/technologies/USA_basic_light_tank.dds"
 	}
 }
 
+### VARIANTS ###
+# 1936 Start #
 
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	### Ship Variants ###
-	create_equipment_variant = {
-		name = "梭鱼级"
-		type = submarine_1
-		upgrades = {
-			ship_reliability_upgrade = 1
-			sub_engine_upgrade = 1
-			sub_stealth_upgrade = 1
-			sub_torpedo_upgrade = 1
-		}
-		obsolete = yes
-	}
-
-	create_equipment_variant = {
-		name = "法拉格特级"
-		type = destroyer_1
-		upgrades = {
-			ship_torpedo_upgrade = 3
-			destroyer_engine_upgrade = 3
-			ship_ASW_upgrade = 3
-			ship_anti_air_upgrade = 3
-		}
-	}
-
-	create_equipment_variant = {
-		name = "波特兰级"
-		type = heavy_cruiser_1
-		upgrades = {
-			ship_reliability_upgrade = 2
-			ship_engine_upgrade = 2
-			ship_armor_upgrade = 2
-			ship_gun_upgrade = 2
-		}
-	}
-
-	create_equipment_variant = {
-		name = "宾夕法尼亚州级"
-		type = battleship_1
-		upgrades = {
-			ship_reliability_upgrade = 1
-			ship_engine_upgrade = 1
-			ship_armor_upgrade = 1
-			ship_gun_upgrade = 1
-		}
-		obsolete = yes
-	}
-
-	create_equipment_variant = {
-		name = "新墨西哥级"
-		type = battleship_1
-		upgrades = {
-			ship_reliability_upgrade = 2
-			ship_engine_upgrade = 2
-			ship_armor_upgrade = 2
-			ship_gun_upgrade = 2
-		}
-	}
-
-	create_equipment_variant = {
-		name = "科罗拉多级"
-		type = battleship_1
-		upgrades = {
-			ship_reliability_upgrade = 3
-			ship_engine_upgrade = 3
-			ship_armor_upgrade = 3
-			ship_gun_upgrade = 4
-		}
-	}
-
-	create_equipment_variant = {
-		name = "约克镇级"
-		type = carrier_2
-		upgrades = {
-			ship_deckspace_upgrade = 1
-			carrier_armor_upgrade = 1
-			ship_engine_upgrade = 1
-			ship_reliability_upgrade = 1
-		}
-	}
-}
 if = {
 	limit = { has_dlc = "Man the Guns" }
 	# Submarines #
@@ -604,7 +640,7 @@ if = {
 		name_group = USA_DD_HISTORICAL
 		parent_version = 0
 		modules = {
-			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_battery_slot = dp_light_battery_1
 			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = ship_sonar_1
@@ -617,7 +653,7 @@ if = {
 	# Light Cruisers #
 	create_equipment_variant = {
 		name = "奥马哈级"
-		type = ship_hull_cruiser_1
+		type = ship_hull_cruiser_2
 		name_group = USA_CL_HISTORICAL
 		parent_version = 0
 		modules = {
@@ -625,7 +661,7 @@ if = {
 			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_engine_slot = cruiser_ship_engine_2
 			fixed_ship_armor_slot = ship_armor_cruiser_1
 			mid_1_custom_slot = empty
 			mid_2_custom_slot = empty
@@ -645,7 +681,7 @@ if = {
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = cruiser_ship_engine_2
 			fixed_ship_armor_slot = ship_armor_cruiser_3
-			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_secondaries_slot = dp_ship_secondaries_1
 			front_1_custom_slot = ship_light_medium_battery_2
 			mid_1_custom_slot = ship_airplane_launcher_1
 			mid_2_custom_slot = ship_anti_air_1
@@ -658,7 +694,7 @@ if = {
 		name_group = USA_MINELAYERS_HISTORICAL
 		parent_version = 0
 		modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_battery_slot = dp_light_battery_1
 			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
@@ -680,7 +716,7 @@ if = {
 			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_engine_slot = cruiser_ship_engine_2
 			fixed_ship_secondaries_slot = ship_secondaries_1
 			fixed_ship_armor_slot = ship_armor_cruiser_1
 			mid_1_custom_slot = ship_medium_battery_1
@@ -699,7 +735,7 @@ if = {
 			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_engine_slot = cruiser_ship_engine_2
 			fixed_ship_secondaries_slot = ship_secondaries_1
 			fixed_ship_armor_slot = ship_armor_cruiser_2
 			mid_1_custom_slot = ship_airplane_launcher_1
@@ -739,6 +775,7 @@ if = {
 				fixed_ship_radar_slot = empty
 				fixed_ship_engine_slot = cruiser_ship_engine_2
 				fixed_ship_armor_slot = ship_armor_cruiser_3
+				fixed_ship_secondaries_slot = dp_ship_secondaries_1
 				mid_1_custom_slot = ship_airplane_launcher_1
 				mid_2_custom_slot = ship_anti_air_1
 				rear_1_custom_slot = ship_medium_battery_2
@@ -803,6 +840,7 @@ if = {
 			mid_2_custom_slot = ship_airplane_launcher_1
 			rear_1_custom_slot = ship_heavy_battery_2
 		}
+		obsolete = yes
 	}
 	# Carriers #
 	create_equipment_variant = {
@@ -815,7 +853,7 @@ if = {
 			fixed_ship_deck_slot_2 = ship_deck_space
 			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_engine_slot = heavy_ship_engine_2
 			fixed_ship_secondaries_slot = ship_secondaries_1
 			mid_1_custom_slot = ship_deck_space
 		}
@@ -854,5 +892,3 @@ if = {
 		}
 	}
 }
-
-

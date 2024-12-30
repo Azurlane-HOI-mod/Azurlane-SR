@@ -9,6 +9,8 @@ state=
 	history=
 	{
 		owner = SR3
+		
+		
 		victory_points = {
 			1069 3 
 		}
@@ -24,6 +26,7 @@ state=
 		}
 
 		1938.10.25 = {
+			controller = JAP
 		}
 	}
 	provinces={

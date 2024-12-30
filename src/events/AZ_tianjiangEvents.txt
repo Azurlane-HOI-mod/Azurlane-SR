@@ -627,7 +627,7 @@ news_event = {
 		trigger = {
 			NOT = {
 			tag = TIX 
-			tag = HUH 
+			tag = HUJ 
 			tag = YUW
 			}
 		}
@@ -636,7 +636,7 @@ news_event = {
 		name = az_tianjiang.15.c
 		trigger = { 
 		OR = {
-		tag = HUH 
+		tag = HUJ 
 		tag = YUW
 		}
 		}
@@ -658,6 +658,9 @@ country_event = {
 		transfer_state = 85
 		transfer_state = 86
 		transfer_state = 807
+		add_state_core = 85
+		add_state_core = 86
+		add_state_core = 807
 		}
 		ai_chance = {
 			factor = 100
@@ -850,8 +853,11 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = "这很划算"
-		add_political_power = -100
+		custom_effect_tooltip = TIX_bixuchanghuan_tips
 		add_timed_idea = { idea = TIX_hszq days = 1300 }
+		hidden_effect = {
+			country_event = { id = az_tianjiang.316 days = 1400 }
+		}
 		ai_chance = {
 			factor = 100
 		}
@@ -1249,7 +1255,7 @@ country_event = {
 		name = "好耶！"
 		add_stability = 0.1
 		add_war_support = 0.2
-		BYG_dxt_dengji = 1
+		BYG_dxt_dengji = yes
 		remove_ideas = BYG_jjwjhyz_4
 		ai_chance = {
 			factor = 100
@@ -1337,7 +1343,7 @@ country_event = {
 		name = "欢迎欢迎！"
 		add_political_power = 50
 		TIX = {
-			add_to_faction = FORM
+			add_to_faction = FROM
 		}
 		ai_chance = {
 			factor = 100
@@ -8220,29 +8226,29 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = az_tianjiang.230
-	title = "释放埃及"
-	desc = "测试皇家AI保卫北非"
-	picture = GFX_aze_diannao
-	trigger = {
-		date > 1936.1.3
-		tag = HUJ
-		is_ai = yes
-	}
-	fire_only_once = yes
-	option = {
-		name = "OK"
-		release_on_controlled = EGY
-		set_autonomy = {
-			target = EGY
-			autonomy_state = autonomy_integrated_puppet
-		}
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
+#country_event = {
+#	id = az_tianjiang.230
+#	title = "释放埃及"
+#	desc = "测试皇家AI保卫北非"#由于P社AI改进，此事件作废
+#	picture = GFX_aze_diannao
+#	trigger = {
+#		date > 1936.1.3
+#		tag = HUJ
+#		is_ai = yes
+#	}
+#	fire_only_once = yes
+#	option = {
+#		name = "OK"
+#		release_on_controlled = EGY
+#		set_autonomy = {
+#			target = EGY
+#			autonomy_state = autonomy_integrated_puppet
+#		}
+#		ai_chance = {
+#			factor = 100
+#		}
+#	}
+#}
 
 country_event = {
 	id = az_tianjiang.231
@@ -8296,7 +8302,7 @@ country_event = {
 	picture = GFX_aze_tianyingemoji
 	trigger = {
 		date > 1939.1.1
-		threa > 0.3
+		threat > 0.3
 		tag = SAD
 		has_government = fascism
 		has_global_flag = MOD_azurlane_tianjiangjianniang
@@ -9031,7 +9037,7 @@ country_event = {
 		name = "无言，图之"
 		add_political_power = 150
 		custom_effect_tooltip = bfldaqingxi_tips
-		BFL_dqx_dengji = 1
+		BFL_dqx_dengji = yes
 		complete_national_focus = BFL_55
 		hidden_effect = {
 		country_event = { id = az_tianjiang.257 days = 20 }
@@ -9064,7 +9070,7 @@ country_event = {
 		add_political_power = 50
 		add_stability = 0.2
 		custom_effect_tooltip = bfldaqingxi_tips
-		BFL_dqx_dengji = 1
+		BFL_dqx_dengji = yes
 		complete_national_focus = BFL_56
 		hidden_effect = {
 		country_event = { id = az_tianjiang.258 days = 20 }
@@ -9097,7 +9103,7 @@ country_event = {
 		add_political_power = 100
 		add_war_support = 0.2
 		custom_effect_tooltip = bfldaqingxi_tips
-		BFL_dqx_dengji = 1
+		BFL_dqx_dengji = yes
 		complete_national_focus = BFL_57
 		hidden_effect = {
 		country_event = { id = az_tianjiang.259 days = 20 }
@@ -9129,7 +9135,7 @@ country_event = {
 		name = "图！"
 		add_political_power = 50
 		custom_effect_tooltip = bfldaqingxi_tips
-		BFL_dqx_dengji = 1
+		BFL_dqx_dengji = yes
 		complete_national_focus = BFL_58
 		hidden_effect = {
 		country_event = { id = az_tianjiang.260 days = 20 }
@@ -9160,7 +9166,7 @@ country_event = {
 		name = "杀杀杀"
 		army_experience = 100
 		custom_effect_tooltip = bfldaqingxi_tips
-		BFL_dqx_dengji = 1
+		BFL_dqx_dengji = yes
 		complete_national_focus = BFL_59
 		hidden_effect = {
 		country_event = { id = az_tianjiang.261 days = 3 }
@@ -9475,6 +9481,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = "军队会带领我们渡过难关！"
+		set_country_flag = TIX_bisimaihunmizhong
 		add_stability = -0.5
 		add_war_support = -0.5
 		remove_power_balance = { id = TIX_balance }
@@ -9508,6 +9515,7 @@ country_event = {
 	}
 	option = {
 		name = "元帅将确保国家的稳定！"
+		set_country_flag = TIX_bisimaihunmizhong
 		add_stability = -0.5
 		add_war_support = -0.5
 		remove_power_balance = { id = TIX_balance }
@@ -9541,6 +9549,7 @@ country_event = {
 	}
 	option = {
 		name = "俾斯麦自有人选！"
+		set_country_flag = TIX_bisimaihunmizhong
 		add_stability = -0.5
 		add_war_support = -0.5
 		remove_power_balance = { id = TIX_balance }
@@ -9608,6 +9617,7 @@ country_event = {
 			character = TIX_bisimai
 			ideology = nazism
 		}
+		clr_country_flag = TIX_bisimaihunmizhong
 		}
 	}
 	option = {
@@ -9625,6 +9635,10 @@ country_event = {
 		add_country_leader_trait = trait_psh_sirtixkejijiejing
 		hidden_effect = {
 		news_event = { id = az_tianjiang.277 days = 1}
+		}
+		trigger = {
+			has_government = fascism
+			is_subject = no
 		}
 		ai_chance = {
 			base = 100
@@ -10792,6 +10806,146 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = az_tianjiang.316
+	title = "偿还汉斯债券欠款"
+	desc = "汉斯集团要求我们偿还债款，我们无法拖欠。"
+	picture = GFX_aze_txbsm
+	is_triggered_only = yes
+	option = {
+		name = "这一天还是来了"
+		add_timed_idea = { idea = TIX_hszq_changhuan days = 365 }
+		trigger = {
+			not = { has_completed_focus = TIX_agst_mczfzw }
+			not = { has_completed_focus = TIX_huanxingfeitelie }
+			not = { has_completed_focus = TIX_jianlijungongfuheti }
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = "我们通过其他方式免除了债务"
+		trigger = {
+			or = {
+			has_completed_focus = TIX_agst_mczfzw
+			has_completed_focus = TIX_huanxingfeitelie
+			has_completed_focus = TIX_jianlijungongfuheti
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = {
+	id = az_tianjiang.317
+	title = "铁血提议建立隔离线"
+	desc = "铁血想与我们签署一份互不侵犯条约，而代价仅仅是荷兰与卢森堡的欧陆领土。"
+	picture = GFX_aze_txbsm
+	is_triggered_only = yes
+	option = {
+		name = "成交！"
+		TIX = {
+			country_event = { id = az_tianjiang.319 days = 2}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = "不能再放任铁血扩张了！"
+		TIX = {
+			country_event = { id = az_tianjiang.320 days = 2}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = "询问皇家的意见"
+		HUJ = {
+			country_event = { id = az_tianjiang.318 days = 1}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = {
+	id = az_tianjiang.318
+	title = "铁血提议建立隔离线"
+	desc = "铁血想与鸢尾签署一份互不侵犯条约，而代价仅仅是荷兰与卢森堡的欧陆领土。由于鸢尾请求我们的意见，所以我们如果同意，也会和铁血签署条约。"
+	picture = GFX_aze_txbsm
+	is_triggered_only = yes
+	option = {
+		name = "成交！"
+		diplomatic_relation = {
+			country = TIX
+			relation = non_aggression_pact
+			active = yes
+		}
+		TIX = {
+			country_event = { id = az_tianjiang.319 days = 1}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = "不能再放任铁血扩张了！"
+		TIX = {
+			country_event = { id = az_tianjiang.320 days = 1}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+country_event = {
+	id = az_tianjiang.319
+	title = "鸢尾与皇家同意了我们的要求"
+	desc = "碧蓝航线已经同意了我们建立隔离线的要求。"
+	picture = GFX_aze_txbsm
+	is_triggered_only = yes
+	option = {
+		name = "很好！"
+		diplomatic_relation = {
+			country = YUW
+			relation = non_aggression_pact
+			active = yes
+		}
+		transfer_state = 35
+		transfer_state = 36
+		transfer_state = 7
+		transfer_state = 8
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+
+country_event = {
+	id = az_tianjiang.320
+	title = "碧蓝航线拒绝了我们的要求"
+	desc = "碧蓝航线拒绝了我们的合理要求！"
+	picture = GFX_aze_txbsm
+	is_triggered_only = yes
+	option = {
+		name = "看来只能战争了！"
+		create_wargoal = { target = HOL type = take_state_focus }
+		create_wargoal = { target = BEL type = take_state_focus }
+		create_wargoal = { target = LUX type = take_state_focus }
+		create_wargoal = { target = YUW type = take_state_focus }
+		ai_chance = {
+			base = 100
 		}
 	}
 }

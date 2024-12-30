@@ -6,6 +6,7 @@ state={
 	}
 	history = {
 		owner = SR2
+		
 	}
 	manpower=69
 	state_category=pastoral

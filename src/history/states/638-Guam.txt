@@ -6,7 +6,8 @@ state=
 	manpower=75153
 	history=
 	{
-		owner = SR4
+		owner = SR3
+		
 		buildings = {
 			infrastructure = 3 #was: 5
 			12140 = {

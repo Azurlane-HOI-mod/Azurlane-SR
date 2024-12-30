@@ -9,6 +9,7 @@ state = {
 			6310 1
 		}
 		owner = SIR
+		
 		buildings = {
 			infrastructure = 3
 		}

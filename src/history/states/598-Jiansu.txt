@@ -7,12 +7,15 @@ state={
 
 	history={
 		owner = SR3
+		
+		
 		buildings = {
 			infrastructure = 2
 
 		}
 
 		1938.10.25 = {
+			controller = JAP
 		}
 	}
 

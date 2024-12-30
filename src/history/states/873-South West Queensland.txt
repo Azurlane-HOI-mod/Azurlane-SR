@@ -9,6 +9,7 @@ state={
 			infrastructure = 1
 		}
 		owner = SR4
+		
 	}
 	state_category = pastoral
 	manpower=10000

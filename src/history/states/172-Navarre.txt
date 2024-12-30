@@ -4,12 +4,14 @@ state={
 
 	history={
 		owner = SIR
+		
 		victory_points = {
 			3933 1
 		}
 		buildings = {
 			infrastructure = 3 #was: 6
 		}
+		
 
 	}
 

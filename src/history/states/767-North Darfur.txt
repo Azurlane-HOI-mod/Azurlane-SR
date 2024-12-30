@@ -8,6 +8,7 @@ state=
 	impassable = yes
 	
 	history= {
+		
 		owner = SR2
 		buildings = {
 			infrastructure = 0

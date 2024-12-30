@@ -12,11 +12,13 @@ state = {
 	}
 
 	history = {
-		owner = SR3
+		owner = SIR
 		buildings = {
 			infrastructure = 1
 
 		}
+		
+		
 	}
 
 	provinces = {

@@ -10,6 +10,8 @@ state=
 		victory_points = {
 			6727 1
 		}
+		
+		
 		owner = SIR
 		buildings = {
 			infrastructure = 2
@@ -18,6 +20,7 @@ state=
 				naval_base = 3
 			}
 		}
+		
 	}
 	provinces=
 	{

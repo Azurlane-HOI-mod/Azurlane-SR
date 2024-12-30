@@ -12,12 +12,9 @@ state = {
 
 	history = {
 		owner = SIR
-		add_core_of = SMI
-		if = {
-			limit = {
-				has_dlc = "Arms Against Tyranny"
-			}
-		}
+		
+		
+		
 		victory_points = {
 			3048 1
 		}

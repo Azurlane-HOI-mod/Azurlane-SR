@@ -7,7 +7,14 @@ state = {
 	}
 
 	history = {
+
 		owner = SIR
+		
+
+		buildings = {
+			infrastructure = 1
+		}
+
 	}
 	
 	state_category = pastoral

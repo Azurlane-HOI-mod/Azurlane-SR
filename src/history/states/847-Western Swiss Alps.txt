@@ -12,6 +12,7 @@ state={
 			infrastructure = 1 
 			industrial_complex = 1
 		}
+		
 	}
 	provinces={
 		636 9587 3612 9618  

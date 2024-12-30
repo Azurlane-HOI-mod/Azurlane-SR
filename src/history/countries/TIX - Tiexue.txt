@@ -1,6 +1,19 @@
-capital = 37
-starting_train_buffer = 5
-oob = "TIX_1936"
+﻿capital = 64
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+	}
+	set_oob = "TIX_1936"
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_oob = "TIX_1936_nsb"
+}
+
 add_breakthrough_progress = {
 	specialization = specialization_land
 	value = 1.0
@@ -15,9 +28,86 @@ add_breakthrough_progress = {
 	specialization = specialization_air
 	value = 0.8
 }
+
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_air_oob = "TIX_1936_air_bba"
+		set_technology = {
+			aa_lmg = 1
+			aa_cannon_1 = 1
+			engines_1 = 1
+			engines_2 = 1
+			early_bombs = 1
+			aircraft_construction = 1
+			iw_small_airframe = 1
+			basic_small_airframe = 1
+			iw_medium_airframe = 1
+			basic_medium_airframe = 1
+			iw_large_airframe = 1
+			air_torpedoe_1 = 1
+		}
+	else = {
+		set_air_oob = "GER_1936_air_legacy"
+		set_technology = {
+			early_fighter = 1
+			fighter1 = 1
+			early_bomber = 1
+			tactical_bomber1 = 1
+			strategic_bomber1 = 1
+			CAS1 = 1
+			naval_bomber1 = 1
+		}
+	}
+}
+
+starting_train_buffer = 2
+set_fuel_ratio = 0.8
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	basic_train = 1
+	mobile_warfare = 1
+	trade_interdiction = 1
+	formation_flying = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
 if = {
 	limit = {
-		not = { has_dlc = "Man the Guns" }
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+		improved_light_tank = 1
+		basic_heavy_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		improved_light_tank_chassis = 1
+		basic_heavy_tank_chassis = 1
+		engine_tech_1 = 1
+		basic_medium_tank_chassis = 1
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "Man the Guns" }
 	}
 	set_technology = {
 		early_submarine = 1
@@ -59,241 +149,11 @@ if = {
 		basic_light_battery = 1
 		basic_medium_battery = 1
 		basic_heavy_battery = 1
-		basic_secondary_battery = 1
-		improved_secondary_battery = 1
 		basic_depth_charges = 1
 		sonar = 1
 		basic_cruiser_armor_scheme = 1
 	}
 	set_naval_oob = "TIX_1936_naval_mtg"
-}
-set_fuel_ratio = 0.8
-set_variable = { var = xzmf_sl value = 1 }
-set_variable = { var = zs_sl value = 50 }
-set_variable = { var = wz_sl value = 300 }
-set_research_slots = 4
-set_technology = {
-	infantry_weapons = 1
-	infantry_weapons1 = 1
-	tech_recon = 1
-	tech_support = 1		
-	tech_engineers = 1
-	tech_mountaineers = 1
-	tech_trucks = 1
-	motorised_infantry = 1
-	gw_artillery = 1
-	interwar_antiair = 1
-	
-	
-	improved_light_tank = 1
-	basic_heavy_tank = 1
-	early_fighter = 1
-	fighter1 = 1
-	early_bomber = 1
-	tactical_bomber1 = 1
-	strategic_bomber1 = 1
-	CAS1 = 1
-	naval_bomber1 = 1
-	mobile_warfare = 1
-	trade_interdiction = 1
-	formation_flying = 1
-	synth_oil_experiments = 1
-	fuel_silos = 1
-	fuel_refining = 1
-	basic_train = 1
-}
-if = {
-	limit = {
-		has_dlc = "By Blood Alone"
-	}
-	#set_air_oob = "TIX_1936_air_bba"
-	set_technology = {
-		aa_lmg = 1
-		aa_cannon_1 = 1
-		engines_1 = 1
-		engines_2 = 1
-		early_bombs = 1
-		aircraft_construction = 1
-		iw_small_airframe = 1
-		basic_small_airframe = 1
-		iw_medium_airframe = 1
-		basic_medium_airframe = 1
-		iw_large_airframe = 1
-	}
-	create_equipment_variant = {
-		name = "Do 23"
-		type = medium_plane_airframe_0
-		modules = {
-			fixed_main_weapon_slot = medium_bomb_bay
-			fixed_auxiliary_weapon_slot_1 = empty
-			fixed_auxiliary_weapon_slot_2 = empty
-			fixed_auxiliary_weapon_slot_3 = empty
-			engine_type_slot = engine_1_2x
-			special_type_slot_1 = empty
-			special_type_slot_2 = empty
-			special_type_slot_3 = empty
-			special_type_slot_4 = empty
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Ju 86"
-		type = medium_plane_airframe_0
-		modules = {
-			fixed_main_weapon_slot = medium_bomb_bay
-			fixed_auxiliary_weapon_slot_1 = empty
-			fixed_auxiliary_weapon_slot_2 = empty
-			fixed_auxiliary_weapon_slot_3 = empty
-			engine_type_slot = engine_2_2x
-			special_type_slot_1 = lmg_defense_turret_2x
-			special_type_slot_2 = fuel_tanks_medium
-			special_type_slot_3 = empty
-			special_type_slot_4 = empty
-		}
-		obsolete = yes
-	}
-
-	create_equipment_variant = {
-		name = "He 111"
-		type = medium_plane_airframe_1
-		modules = {
-			fixed_main_weapon_slot = medium_bomb_bay
-			fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
-			fixed_auxiliary_weapon_slot_2 = empty
-			fixed_auxiliary_weapon_slot_3 = empty
-			engine_type_slot = engine_2_2x
-			special_type_slot_1 = lmg_defense_turret_2x
-			special_type_slot_2 = lmg_defense_turret_2x
-			special_type_slot_3 = empty
-			special_type_slot_4 = empty
-		}
-		icon = "GFX_GER_tactical_bomber1_medium"
-	}
-	
-	create_equipment_variant = {
-		name = "Do 17"
-		type = small_plane_cas_airframe_0
-		modules = {
-			fixed_main_weapon_slot = small_bomb_bay
-			engine_type_slot = engine_1_2x
-			special_type_slot_1 = lmg_defense_turret_2x
-		}
-		icon = "GFX_GER_medium_plane_1_medium"
-	}
-
-	create_equipment_variant = {
-		name = "He 51" #also covers Ar 68
-		type = small_plane_airframe_0
-		modules = {
-			fixed_main_weapon_slot = light_mg_2x
-			engine_type_slot = engine_1_1x
-			special_type_slot_1 = empty
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Hs 123"
-		type = small_plane_cas_airframe_0
-		modules = {
-			fixed_main_weapon_slot = bomb_locks
-			engine_type_slot = engine_1_1x
-			special_type_slot_1 = empty
-		}
-		obsolete = yes
-	}
-	create_equipment_variant = {
-		name = "Bf 109 D"
-		type = small_plane_airframe_1
-		modules = {
-			fixed_main_weapon_slot = light_mg_4x
-			engine_type_slot = engine_2_1x
-			special_type_slot_1 = empty
-		}
-		icon = "GFX_GER_fighter1_medium"
-	}
-	create_equipment_variant = {
-		name = "Ju 87"
-		type = small_plane_cas_airframe_1
-		modules = {
-			fixed_main_weapon_slot = bomb_locks
-			engine_type_slot = engine_2_1x
-			special_type_slot_1 = lmg_defense_turret
-			special_type_slot_2 = dive_brakes_small
-		}
-		icon = "GFX_GER_CAS1_medium"
-	}
-	create_equipment_variant = {
-		name = "Do 22"
-		type = small_plane_naval_bomber_airframe_1
-		modules = {
-			fixed_main_weapon_slot = torpedo_mounting
-			engine_type_slot = engine_1_1x
-			special_type_slot_1 = lmg_defense_turret
-			special_type_slot_2 = floats
-		}
-		icon = "GFX_GER_naval_bomber1_medium"
-	}
-}
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		basic_naval_mines = 1
-		submarine_mine_laying = 1
-		early_ship_hull_light = 1
-		basic_ship_hull_light = 1
-		early_ship_hull_cruiser = 1
-		basic_ship_hull_cruiser = 1
-		improved_ship_hull_cruiser = 1
-		basic_cruiser_armor_scheme = 1
-		improved_cruiser_armor_scheme = 1
-		early_ship_hull_heavy = 1
-		basic_ship_hull_heavy = 1
-		improved_ship_hull_heavy = 1
-		basic_heavy_armor_scheme = 1
-		early_ship_hull_submarine = 1
-		basic_ship_hull_submarine = 1
-		improved_ship_hull_submarine = 1
-		mtg_transport = 1
-		basic_battery = 1
-		improved_light_battery = 1
-		
-		improved_medium_battery = 1
-		
-		
-		improved_heavy_battery = 1
-		advanced_heavy_battery = 1
-		
-		
-		improved_heavy_battery_3 = 1
-		
-		
-		
-		basic_torpedo = 1
-		
-		improved_ship_torpedo_launcher = 1
-		advanced_ship_torpedo_launcher = 1
-		sonar = 1
-		improved_sonar = 1
-		improved_sonar_2 = 1
-		
-		early_engine = 1
-		improved_engine = 1
-		early_diesel = 1
-		smoke_generator = 1
-		basic_depth_charges = 1
-		improved_depth_charges = 1
-		damage_control_1 = 1
-		damage_control_2 = 1
-		fire_control_methods_1 = 1
-		fire_control_methods_2 = 1
-		panzerschiffe = 1
-		pre_dreadnoughts = 1
-		basic_light_shell = 1
-		basic_medium_shell = 1
-		basic_heavy_shell = 1
-	}
 }
 if = {
 	limit = {
@@ -303,16 +163,138 @@ if = {
 		armored_car1 = 1
 	}
 }
+
+
+set_variable = { var = xzmf_sl value = 1 }
+set_variable = { var = zs_sl value = 200 }
+set_variable = { var = wz_sl value = 2000 }
+set_research_slots = 4
+
+set_convoys = 450
+set_stability = 0.5
+set_war_support = 0.6
+
+
+
+
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 20
+	fascism = 60
+	communism = 20
+}
+
+
+
+
+add_ideas = {
+	TIX_txzcmb
+	TIX_lrdhj
+	partial_economic_mobilisation
+	limited_exports
+	limited_conscription
+}
+
+recruit_character = TIX_bisimai
+recruit_character = TIX_tierpici
+recruit_character = TIX_xipeiershangjiang
+recruit_character = TIX_deyizhi
+recruit_character = TIX_kelong
+recruit_character = TIX_ougenqinwang
+recruit_character = TIX_shaenhuosite
+recruit_character = TIX_genaisennao
+recruit_character = TIX_laibixi
+recruit_character = TIX_sipei
+recruit_character = TIX_qibolin
+recruit_character = TIX_u81
+recruit_character = TIX_z46
+recruit_character = TIX_z23
+recruit_character = TIX_weixi
+recruit_character = TIX_bide
+recruit_character = TIX_haiyinlixi
+recruit_character = TIX_niulunbao
+recruit_character = TIX_feitelie
+recruit_character = TIX_luoen
+recruit_character = TIX_adaerbote
+recruit_character = TIX_aijier
+recruit_character = TIX_aoding
+recruit_character = TIX_aogusite
+recruit_character = TIX_huteng
+recruit_character = TIX_magedebao
+recruit_character = TIX_meiyinci
+recruit_character = TIX_yibei
+recruit_character = TIX_z1
+recruit_character = TIX_tulingen
+recruit_character = TIX_aimudeng
+recruit_character = TIX_lvzuofu
+recruit_character = TIX_aierbin
+recruit_character = TIX_saidelici
+recruit_character = TIX_yueke
+recruit_character = TIX_leipuxitele
+recruit_character = TIX_bulunxierde
+recruit_character = TIX_bulvxieer
+recruit_character = TIX_feilikesishuerci
+recruit_character = TIX_xingdengbao
+recruit_character = TIX_u37
+recruit_character = TIX_u47
+recruit_character = TIX_u101
+recruit_character = TIX_u96
+recruit_character = TIX_leigensibao
+recruit_character = TIX_aerwensilaiben
+recruit_character = TIX_feiteliekaer
+recruit_character = TIX_z2
+recruit_character = TIX_z18
+recruit_character = TIX_kaersilue
+recruit_character = TIX_u556
+recruit_character = TIX_kenisibao
+recruit_character = TIX_z47
+recruit_character = TIX_z43
+recruit_character = TIX_u31
+recruit_character = TIX_yaerweite
+
+#sci
+recruit_character = TIX_kelong_sci
+recruit_character = TIX_bide_sci
+recruit_character = TIX_aogusite_sci
+recruit_character = TIX_huteng_sci
+recruit_character = TIX_feitelie_sci
+
 if = {
 	limit = {
-		has_dlc = "No Step Back"
+		NOT = { has_dlc = "Man the Guns" }
 	}
-	set_technology = {
-		gwtank_chassis = 1
-		basic_light_tank_chassis = 1
-		improved_light_tank_chassis = 1
-		basic_heavy_tank_chassis = 1
-		engine_tech_1 = 1
+	### Ship Variants ###
+	## 1936 Start ##
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "柯尼斯堡级"
+		type = light_cruiser_1
+		parent_version = 0
+		upgrades = {
+			ship_reliability_upgrade = 2
+			ship_engine_upgrade = 2
+			ship_gun_upgrade = 2
+			ship_anti_air_upgrade = 2
+		}
+		obsolete = yes
+	}
+	# Heavy Cruisers #
+	create_equipment_variant = {
+		name = "德意志级"
+		type = heavy_cruiser_1
+		parent_version = 0
+		upgrades = {
+			ship_reliability_upgrade = 1
+			ship_engine_upgrade = 1
+			ship_armor_upgrade = 1
+			ship_gun_upgrade = 2
+		}
 	}
 }
 if = {
@@ -381,6 +363,7 @@ if = {
 	create_equipment_variant = {
 		name = "Panzer II Ausf. a"
 		type = light_tank_chassis_2
+		design_team = mio:TIX_daimler_benz_organization
 		parent_version = 0
 		modules = {
 			main_armament_slot = tank_auto_cannon
@@ -396,123 +379,27 @@ if = {
 		}
 		icon = "gfx/interface/technologies/ger_imp_light_tank.dds"
 	}
-}
-set_convoys = 450
-set_stability = 0.5
-set_war_support = 0.8
-
-set_politics = {
-	ruling_party = fascism
-	last_election = "1933.3.5"
-	election_frequency = 48
-	elections_allowed = no
-}
-set_popularities = {
-	democratic = 20
-	fascism = 60
-	communism = 20
-}
-
-
-add_ideas = {
-	TIX_txzcmb
-	TIX_lrdhj
-	limited_exports
-}
-
-recruit_character = TIX_bisimai
-recruit_character = TIX_tierpici
-recruit_character = TIX_xipeiershangjiang
-recruit_character = TIX_deyizhi
-recruit_character = TIX_kelong
-recruit_character = TIX_ougenqinwang
-recruit_character = TIX_shaenhuosite
-recruit_character = TIX_genaisennao
-recruit_character = TIX_laibixi
-recruit_character = TIX_sipei
-recruit_character = TIX_qibolin
-recruit_character = TIX_u81
-recruit_character = TIX_z46
-recruit_character = TIX_z23
-recruit_character = TIX_weixi
-recruit_character = TIX_bide
-recruit_character = TIX_haiyinlixi
-recruit_character = TIX_niulunbao
-recruit_character = TIX_feitelie
-recruit_character = TIX_luoen
-recruit_character = TIX_adaerbote
-recruit_character = TIX_aijier
-recruit_character = TIX_aoding
-recruit_character = TIX_aogusite
-recruit_character = TIX_huteng
-recruit_character = TIX_magedebao
-recruit_character = TIX_meiyinci
-recruit_character = TIX_yibei
-recruit_character = TIX_z1
-recruit_character = TIX_tulingen
-recruit_character = TIX_aimudeng
-recruit_character = TIX_lvzuofu
-recruit_character = TIX_aierbin
-recruit_character = TIX_saidelici
-recruit_character = TIX_yueke
-recruit_character = TIX_leipuxitele
-recruit_character = TIX_bulunxierde
-recruit_character = TIX_bulvxieer
-recruit_character = TIX_feilikesishuerci
-recruit_character = TIX_xingdengbao
-recruit_character = TIX_u37
-recruit_character = TIX_u47
-recruit_character = TIX_u101
-recruit_character = TIX_u96
-recruit_character = TIX_leigensibao
-recruit_character = TIX_aerwensilaiben
-recruit_character = TIX_feiteliekaer
-recruit_character = TIX_z2
-recruit_character = TIX_z18
-recruit_character = TIX_kaersilue
-recruit_character = TIX_u556
-recruit_character = TIX_kenisibao
-recruit_character = TIX_z47
-recruit_character = TIX_z43
-recruit_character = TIX_u31
-recruit_character = TIX_yaerweite
-
-#sci
-recruit_character = TIX_kelong_sci
-recruit_character = TIX_bide_sci
-recruit_character = TIX_aogusite_sci
-recruit_character = TIX_huteng_sci
-
-if = {
-	limit = {
-		not = { has_dlc = "Man the Guns" }
-	}
-	### Ship Variants ###
-	## 1936 Start ##
-	# Light Cruisers #
 	create_equipment_variant = {
-		name = "柯尼斯堡级"
-		type = light_cruiser_1
+		name = "三号坦克"
+		type = medium_tank_chassis_1
+		design_team = mio:TIX_daimler_benz_organization
 		parent_version = 0
-		upgrades = {
-			ship_reliability_upgrade = 2
-			ship_engine_upgrade = 2
-			ship_gun_upgrade = 2
-			ship_anti_air_upgrade = 2
+		modules = {
+			main_armament_slot = tank_small_cannon_2
+			turret_type_slot = tank_medium_three_man_tank_turret
+			suspension_type_slot = tank_torsion_bar_suspension
+			armor_type_slot = tank_welded_armor
+			engine_type_slot = tank_diesel_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = additional_machine_guns
+			special_type_slot_3 = additional_machine_guns
+			special_type_slot_4 = additional_machine_guns
 		}
-		obsolete = yes
-	}
-	# Heavy Cruisers #
-	create_equipment_variant = {
-		name = "德意志级"
-		type = heavy_cruiser_1
-		parent_version = 0
 		upgrades = {
-			ship_reliability_upgrade = 1
-			ship_engine_upgrade = 1
-			ship_armor_upgrade = 1
-			ship_gun_upgrade = 2
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 4
 		}
+		icon = "gfx/interface/technologies/ger_imp_main_tank.dds"
 	}
 }
 if = {
@@ -528,7 +415,7 @@ if = {
 			fixed_ship_secondaries_slot = ship_secondaries_1
 			fixed_ship_armor_slot = ship_armor_cruiser_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_engine_slot = cruiser_ship_engine_2
 			rear_1_custom_slot = ship_torpedo_1
 			mid_1_custom_slot = ship_airplane_launcher_1
     	}
@@ -607,7 +494,7 @@ if = {
 	}
 	create_equipment_variant = {
 		name = "柯尼斯堡级"
-		type = ship_hull_cruiser_1
+		type = ship_hull_cruiser_2
 		name_group = GER_CL_HISTORICAL
 		parent_version = 0
 		modules = {
@@ -615,7 +502,7 @@ if = {
 			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_engine_slot = cruiser_ship_engine_2
 			fixed_ship_armor_slot = ship_armor_cruiser_1
 			mid_1_custom_slot = ship_torpedo_1
 			mid_2_custom_slot = ship_light_medium_battery_1
@@ -686,7 +573,7 @@ if = {
 			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_engine_slot = cruiser_ship_engine_2
 			fixed_ship_armor_slot = ship_armor_cruiser_2
 			front_1_custom_slot = ship_anti_air_1
 			mid_1_custom_slot = ship_torpedo_1
@@ -706,7 +593,7 @@ if = {
 			fixed_ship_radar_slot = empty
 			fixed_ship_engine_slot = heavy_ship_engine_2
 			fixed_ship_secondaries_slot = ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_bb_1
+			fixed_ship_armor_slot = ship_armor_bc_1
 			front_1_custom_slot = ship_anti_air_1
 			mid_1_custom_slot = empty
 			mid_2_custom_slot = ship_secondaries_1
@@ -723,7 +610,7 @@ if = {
 			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_engine_slot = heavy_ship_engine_2
 			fixed_ship_secondaries_slot = ship_secondaries_1
 			fixed_ship_armor_slot = ship_armor_bb_1
 			front_1_custom_slot = ship_anti_air_1
@@ -733,29 +620,158 @@ if = {
 		obsolete = yes
 	}
 }
-
-create_equipment_variant = {
-	name = "Ju 86"
-	type = tac_bomber_equipment_0
-	upgrades = {
-		plane_tac_bomb_upgrade = 5
-		plane_range_upgrade = 5
-		plane_engine_upgrade = 5
-		plane_reliability_upgrade = 10
+if = {
+	limit = {
+		NOT = {
+			has_dlc = "By Blood Alone"
+		}
 	}
-	obsolete = yes
-}
-
-create_equipment_variant = {
-	name = "Do 17"
-	type = tac_bomber_equipment_0
-	upgrades = {
-		plane_tac_bomb_upgrade = 5
-		plane_range_upgrade = 1
-		plane_engine_upgrade = 1
-		plane_reliability_upgrade = 5
+	create_equipment_variant = {
+		name = "Ju 86"
+		type = tac_bomber_equipment_0
+		upgrades = {
+			plane_tac_bomb_upgrade = 5
+			plane_range_upgrade = 5
+			plane_engine_upgrade = 5
+			plane_reliability_upgrade = 5
+		}
+		obsolete = yes
 	}
-	obsolete = yes
+	
+	create_equipment_variant = {
+		name = "Do 17"
+		type = tac_bomber_equipment_0
+		upgrades = {
+			plane_tac_bomb_upgrade = 5
+			plane_range_upgrade = 1
+			plane_engine_upgrade = 1
+			plane_reliability_upgrade = 5
+		}
+		obsolete = yes
+	}
 }
+if = {
+	limit = {
+		has_dlc = "By Blood Alone"
+	}
 
+	create_equipment_variant = {
+		name = "Do 23"
+		type = medium_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			fixed_auxiliary_weapon_slot_2 = empty
+			fixed_auxiliary_weapon_slot_3 = empty
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+			special_type_slot_3 = empty
+			special_type_slot_4 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Ju 86"
+		type = medium_plane_airframe_0
+		design_team = mio:TIX_junkers_organization
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = empty
+			fixed_auxiliary_weapon_slot_2 = empty
+			fixed_auxiliary_weapon_slot_3 = empty
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = lmg_defense_turret_2x
+			special_type_slot_2 = fuel_tanks_medium
+			special_type_slot_3 = empty
+			special_type_slot_4 = empty
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "He 111"
+		type = medium_plane_airframe_1
+		design_team = mio:TIX_heinkel_organization
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
+			fixed_auxiliary_weapon_slot_2 = empty
+			fixed_auxiliary_weapon_slot_3 = empty
+			engine_type_slot = engine_2_2x
+			special_type_slot_1 = lmg_defense_turret_2x
+			special_type_slot_2 = lmg_defense_turret_2x
+			special_type_slot_3 = empty
+			special_type_slot_4 = empty
+		}
+		icon = "GFX_GER_tactical_bomber1_medium"
+	}
+	
+	create_equipment_variant = {
+		name = "Do 17"
+		type = medium_plane_airframe_1
+		modules = {
+			fixed_main_weapon_slot = medium_bomb_bay
+			engine_type_slot = engine_1_2x
+			special_type_slot_1 = lmg_defense_turret_2x
+		}
+		icon = "GFX_GER_medium_plane_1_medium"
+	}
+
+	create_equipment_variant = { #Note: There is a copy of this variant in Finnish Scripted Effects file (FIN_purchase_german_equipment_for_cw). Any changes here should also be applied there
+		name = "He 51" #also covers Ar 68
+		type = small_plane_airframe_0
+		modules = {
+			fixed_main_weapon_slot = light_mg_2x
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Hs 123"
+		type = small_plane_cas_airframe_0
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_1_1x
+			special_type_slot_1 = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Bf 109 D"
+		type = small_plane_airframe_1
+		design_team = mio:TIX_messerschmitt_organization
+		modules = {
+			fixed_main_weapon_slot = light_mg_4x
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = empty
+		}
+		icon = "GFX_GER_fighter1_medium"
+	}
+	create_equipment_variant = {
+		name = "Ju 87"
+		type = small_plane_cas_airframe_1
+		design_team = mio:TIX_junkers_organization
+		modules = {
+			fixed_main_weapon_slot = bomb_locks
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = lmg_defense_turret
+			special_type_slot_2 = dive_brakes_small
+		}
+		icon = "GFX_GER_CAS1_medium"
+	}
+	create_equipment_variant = {
+		name = "Do 22"
+		type = small_plane_naval_bomber_airframe_1
+		design_team = mio:TIX_dornier_organization
+		modules = {
+			fixed_main_weapon_slot = torpedo_mounting
+			engine_type_slot = engine_2_1x
+			special_type_slot_1 = lmg_defense_turret
+			special_type_slot_2 = floats
+		}
+		icon = "GFX_GER_naval_bomber1_medium"
+	}
+}
 

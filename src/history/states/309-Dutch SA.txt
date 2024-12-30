@@ -11,6 +11,7 @@ state={
 	state_category = rural
 
 	history={
+		
 		owner = SR1
 		victory_points = {
 			10906 1

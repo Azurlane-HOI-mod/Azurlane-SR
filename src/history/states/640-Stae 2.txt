@@ -9,6 +9,7 @@ state={
 		tungsten = 120 
 	}
 	history={
+		
 		owner = SR3
 		buildings = {
 			infrastructure = 2

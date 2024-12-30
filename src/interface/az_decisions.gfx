@@ -12,6 +12,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/yuwdaxuan.png"
 	}
 	spriteType = {
+		name = "GFX_decision_dh1decision"
+		texturefile = "gfx/interface/decisions/dh1decision.png"
+	}
+	spriteType = {
 		name = "GFX_decision_saddecision"
 		texturefile = "gfx/interface/decisions/saddecision.png"
 	}
@@ -164,7 +168,7 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/decision_lansegantan.png"
 	}
 	spriteType = {
-		name = "GFX_decision_yujin" 
+		name = "GFX_decision_yujin"
 		texturefile = "gfx/interface/decisions/decision_yujin.png"
 	}
 }

@@ -8,6 +8,8 @@ state = {
 	history = {
 
 		owner = SR1
+		
+		
 
 		buildings = {
 			infrastructure = 2

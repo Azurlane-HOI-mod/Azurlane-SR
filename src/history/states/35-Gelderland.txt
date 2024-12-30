@@ -4,6 +4,7 @@ state={
 
 	history={
 		owner = SIR
+		
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 5

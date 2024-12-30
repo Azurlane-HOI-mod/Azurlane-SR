@@ -26,6 +26,7 @@ state={
 				naval_base = 5
 			}
 		}
+		
 	}
 
 	provinces={

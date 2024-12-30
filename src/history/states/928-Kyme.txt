@@ -8,6 +8,7 @@ state = {
 	
 	history = {
 		owner = SIR
+		
 
 		victory_points = { #Kotka
 			3061 2

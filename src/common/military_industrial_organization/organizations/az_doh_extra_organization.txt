@@ -17,8 +17,10 @@ az_DOH_railway_organization = {
 		doh_civ_equipment
 		convoy
 	}
-	research_bonus = 0.30
+	research_bonus = 0.40
 	research_categories = {
+		industry
+		synth_resources
 		train_tech
 	}
 	tree_header_text = {
@@ -426,7 +428,7 @@ az_DOH_railway_organization = {
 		}
 		available = {
 			DOH = {
-				has_tech = jet_engines
+				has_tech = modern_large_airframe
 				has_completed_focus = DOH_guangronghemengxiangdeyuanzheng
 			}
 		}
@@ -448,7 +450,7 @@ az_DOH_railway_organization = {
 		}
 		available = {
 			DOH = {
-				has_tech = jet_engines
+				has_tech = modern_large_airframe
 				has_completed_focus = DOH_guangronghemengxiangdeyuanzheng
 			}
 		}

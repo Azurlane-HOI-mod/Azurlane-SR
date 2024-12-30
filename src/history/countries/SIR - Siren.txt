@@ -16,6 +16,19 @@ recruit_character = SR1_guanchazhe_sci
 recruit_character = SIR_ceshizhe_sci
 recruit_character = SIR_jinghuazhe_sci
 
+add_breakthrough_progress = {
+	specialization = specialization_land
+	value = 2.1
+}
+add_breakthrough_progress = {
+	specialization = specialization_naval
+	value = 2.1
+}
+add_breakthrough_progress = {
+	specialization = specialization_air
+	value = 2.1
+}
+
 
 
 

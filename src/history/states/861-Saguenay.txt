@@ -5,7 +5,15 @@ state = {
 	state_category = pastoral
 	
 	history = {
+
 		owner = SIR
+		
+		
+
+		buildings = {
+			infrastructure = 1
+		}
+
 	}
 	
 	provinces = {

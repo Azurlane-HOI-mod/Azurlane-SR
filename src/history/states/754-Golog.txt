@@ -9,6 +9,9 @@ state = {
 	state_category = rural
 	history = {
 		owner = SR3
+		
+		
+		
 
 		victory_points = {
 			12732 10 #Was 3 when it was Lanzhou, but should be Xining, the capital of Xibei 

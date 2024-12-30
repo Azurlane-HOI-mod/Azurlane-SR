@@ -26,6 +26,7 @@ state={
 				naval_base = 8
 			}
 		}
+		
 		if = {
 			limit = { has_dlc = "Battle for the Bosporus"}
 			set_demilitarized_zone = yes

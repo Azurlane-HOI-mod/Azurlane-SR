@@ -9,6 +9,7 @@ state = {
 	history = {
 
 		owner = SR1
+		
 
 		buildings = {
 			infrastructure = 2 #was: 5, then 3

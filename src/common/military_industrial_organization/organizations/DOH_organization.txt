@@ -77,6 +77,23 @@ DOH_shanghai_tank = {
 	}
 }
 
+DOH_tongyonghangkong_organization = {
+	include = generic_helicopter_organization
+	icon = GFX_idea_CHI_camco
+	allowed = {
+		tag = DOH
+	}
+	available = {
+		owner = {
+			has_completed_focus = DOH_tieyuan
+		}
+	}
+	equipment_type = {
+		helicopter_equipment
+		motorbike_equipment
+	}
+}
+
 DOH_baotoudiyijixiechang_organization = {
 	include = generic_tank_refurbishment_plant_organization
 	icon = GFX_idea_generic_tank_manufacturer_3
@@ -88,7 +105,7 @@ DOH_baotoudiyijixiechang_organization = {
 			controls_state = 621
 			OR = {
 				has_completed_focus = DOH_xindonghuang
-				has_completed_focus = DOH_yixianwansui
+				has_completed_focus = DOH_donghuangdeyewang
 			}
 			has_completed_focus = DOH_donghuanggongyetixi
 		}
@@ -259,7 +276,10 @@ DOH_dalianzaochuan_organization = {
 		}
 		available = {
 			FROM = {
-				num_of_naval_factories > 85
+				OR = {
+					num_of_naval_factories > 85
+					has_completed_focus = DOH_dalianlvshun
+				}
 				has_tech = keyantech_daodan
 			}
 		}
@@ -270,6 +290,7 @@ DOH_dalianzaochuan_organization = {
 			surface_visibility = -0.1
 			night_penalty = -0.3
 			reliability = 0.15
+			armor_value = 0.1
 		}
 		on_complete = {
 			ROOT = {
@@ -279,15 +300,15 @@ DOH_dalianzaochuan_organization = {
 	}
 	available = {
 		owner = {
-			AND = {
-				num_of_factories > 225
-				num_of_naval_factories > 60
-				has_completed_focus = DOH_zaochuanjishugexin
-			}
+			# AND = {
+			# 	num_of_factories > 225
+			# 	num_of_naval_factories > 60
+			has_completed_focus = DOH_zaochuanjishugexin
+			#  }
 			controls_state = 745
 			OR = {
 				has_completed_focus = DOH_xindonghuang
-				has_completed_focus = DOH_yixianwansui
+				has_completed_focus = DOH_donghuangdeyewang
 			}
 		}
 	}
@@ -457,7 +478,7 @@ DOH_hudong_organization = {
 			controls_state = 613
 			OR = {
 				has_completed_focus = DOH_xindonghuang
-				has_completed_focus = DOH_yixianwansui
+				has_completed_focus = DOH_donghuangdeyewang
 			}
 		}
 	}
@@ -466,7 +487,7 @@ DOH_hudong_organization = {
 ## 武昌造船厂
 DOH_wuchangzaochuanchang_organization = {
 	include = generic_submarine_organization
-	icon = GFX_idea_generic_sea_focused_navy
+	icon = GFX_idea_generic_navy_submarines
 	allowed = {
 		tag = DOH
 	}
@@ -575,7 +596,6 @@ DOH_wuchangzaochuanchang_organization = {
 			reliability = 0.15
 			max_strength = 0.25
 			maximum_speed = 0.1
-			sub_visibility = -0.15
 			naval_torpedo_hit_chance_factor = 0.15
 			torpedo_attack = 0.15
 		}
@@ -605,7 +625,7 @@ DOH_wuchangzaochuanchang_organization = {
 		equipment_bonus = {
 			maximum_speed = 0.15
 			reliability = 0.15
-			surface_visibility = -0.15
+			surface_visibility = -0.10
 			build_cost_ic = 0.05
 			naval_torpedo_hit_chance_factor = 0.15
 			torpedo_attack = 0.15
@@ -626,7 +646,7 @@ DOH_wuchangzaochuanchang_organization = {
 			controls_state = 620
 			OR = {
 				has_completed_focus = DOH_xindonghuang
-				has_completed_focus = DOH_yixianwansui
+				has_completed_focus = DOH_donghuangdeyewang
 			}
 		}
 	}
@@ -942,7 +962,7 @@ DOH_dagu_shipyard_organization = {
 		owner = {
 			OR = {
 				has_completed_focus = DOH_xindonghuang
-				has_completed_focus = DOH_yixianwansui
+				has_completed_focus = DOH_donghuangdeyewang
 			}
 		}
 	}
@@ -956,7 +976,7 @@ DOH_dagu_shipyard_organization = {
 #    ### #  # #  # ### ##  
 ###########################
 DOH_camco_medium_organization = {
-	include = generic_medium_aircraft_organization
+	include = generic_multi_role_aircraft_organization
 	icon = GFX_idea_CHI_camco
 	allowed = {
 		tag = DOH
@@ -965,7 +985,7 @@ DOH_camco_medium_organization = {
 		owner = {
 			OR = {
 				has_completed_focus = DOH_xindonghuang
-				has_completed_focus = DOH_yixianwansui
+				has_completed_focus = DOH_donghuangdeyewang
 			}
 			has_completed_focus = DOH_duidizhiyuan
 		}
@@ -973,7 +993,7 @@ DOH_camco_medium_organization = {
 }
 
 DOH_camco_fighter_organization = {
-	include = generic_light_aircraft_organization
+	include = generic_high_agility_fighter_aircraft_organization
 	icon = GFX_idea_CHI_camco
 	allowed = {
 		tag = DOH
@@ -982,7 +1002,7 @@ DOH_camco_fighter_organization = {
 		owner = {
 			OR = {
 				has_completed_focus = DOH_xindonghuang
-				has_completed_focus = DOH_yixianwansui
+				has_completed_focus = DOH_donghuangdeyewang
 			}
 			has_completed_focus = DOH_tieyuan
 		}
@@ -999,7 +1019,7 @@ DOH_camco_cas_organization = {
 		owner = {
 			OR = {
 				has_completed_focus = DOH_xindonghuang
-				has_completed_focus = DOH_yixianwansui
+				has_completed_focus = DOH_donghuangdeyewang
 			}
 			has_completed_focus = DOH_duidizhiyuan
 		}
@@ -1016,7 +1036,7 @@ DOH_camco_heavy_organization = {
 		owner = {
 			OR = {
 				has_completed_focus = DOH_xindonghuang
-				has_completed_focus = DOH_yixianwansui
+				has_completed_focus = DOH_donghuangdeyewang
 			}
 			has_completed_focus = DOH_duidizhiyuan
 			OR = {
@@ -1039,12 +1059,20 @@ DOH_taiyuan_arsenal_organization = {
 	allowed = {
 		tag = DOH
 	}
+	equipment_type = {
+		artillery_equipment
+		anti_air_equipment
+		anti_tank_equipment
+		rocket_artillery_equipment
+		self_propelled_super_heavy_artillery_equipment
+		super_heavy_artillery_equipment
+	}
 	available = {
 		owner = {
 			controls_state = 615
 			OR = {
 				has_completed_focus = DOH_xindonghuang
-				has_completed_focus = DOH_yixianwansui
+				has_completed_focus = DOH_donghuangdeyewang
 			}
 		}
 	}
@@ -1179,7 +1207,7 @@ DOH_liaoning_arsenal_organization = {
 			controls_state = 715
 			OR = {
 				has_completed_focus = DOH_xindonghuang
-				has_completed_focus = DOH_yixianwansui
+				has_completed_focus = DOH_donghuangdeyewang
 			}
 		}
 	}
@@ -1224,7 +1252,7 @@ DOH_hanyan_arsenal_organization = {
 			controls_state = 620
 			OR = {
 				has_completed_focus = DOH_xindonghuang
-				has_completed_focus = DOH_yixianwansui
+				has_completed_focus = DOH_donghuangdeyewang
 			}
 		}
 	}
@@ -1329,7 +1357,7 @@ DOH_mukden_arsenal_organization = {
 			controls_state = 716
 			OR = {
 				has_completed_focus = DOH_xindonghuang
-				has_completed_focus = DOH_yixianwansui
+				has_completed_focus = DOH_donghuangdeyewang
 			}
 		}
 	}

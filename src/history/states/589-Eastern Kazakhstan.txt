@@ -4,11 +4,13 @@ state={
 
 	history={
 		owner = SR3
+		
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 
 		}
+		
 		1939.1.1 = {
 			buildings = {
 				industrial_complex = 1

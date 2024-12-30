@@ -22,6 +22,8 @@ state = {
 			infrastructure = 3 #was: 5
 		}
 
+		
+		
 	}
 
 	provinces = {

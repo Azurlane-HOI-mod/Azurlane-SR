@@ -10,6 +10,8 @@ state={
 
 	history= {
 		owner = SR2
+		
+		
 		victory_points = {
 			12029 1
 		}
@@ -18,7 +20,8 @@ state={
 		}
 
 		1938.9.30 = {
-		owner = SR2
+			owner = SR2
+			controller = TUR
 		}
 	}
 

@@ -1510,7 +1510,7 @@ tianjiang_aizuobi = {
 		available = {
 			tag = CHY
 			is_ai = yes
-			date > 1936.2.1
+			date > 1942.6.1
 			is_special_project_completed = sp:sp_naval_super_heavy_battleship
 		}
 		visible = {
@@ -1545,131 +1545,120 @@ tianjiang_aizuobi = {
 					rear_2_custom_slot = dp_ship_secondaries_4
 				}
 			}
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_super_heavy_1
-					creator = CHY
-					version_name = "超重型战列舰"
-				}
-				name = "大和"
-				requested_factories = 1
-				progress = 1
-				amount = 1
-			}
 		}
 	}
-	zuobi_chy_2 = {
-		available = {
-			tag = CHY
-			is_ai = yes
-			date > 1937.1.1
-		}
-		visible = {
-			tag = CHY
-			is_ai = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		complete_effect = {
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_super_heavy_1
-					creator = CHY
-					version_name = "超重型战列舰"
-				}
-				name = "长门"
-				requested_factories = 1
-				progress = 1
-				amount = 1
-			}
-		}
-	}
-	zuobi_chy_3 = {
-		available = {
-			tag = CHY
-			is_ai = yes
-			date > 1938.7.1
-		}
-		visible = {
-			tag = CHY
-			is_ai = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		complete_effect = {
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_super_heavy_1
-					creator = CHY
-					version_name = "超重型战列舰"
-				}
-				name = "天城"
-				requested_factories = 1
-				progress = 1
-				amount = 1
-			}
-		}
-	}
-	zuobi_chy_4 = {
-		available = {
-			tag = CHY
-			is_ai = yes
-			date > 1940.1.1
-		}
-		visible = {
-			tag = CHY
-			is_ai = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		complete_effect = {
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_super_heavy_1
-					creator = CHY
-					version_name = "超重型战列舰"
-				}
-				name = "出云"
-				requested_factories = 1
-				progress = 1
-				amount = 1
-			}
-		}
-	}
-	zuobi_chy_5 = {
-		available = {
-			tag = CHY
-			is_ai = yes
-			date > 1941.1.1
-		}
-		visible = {
-			tag = CHY
-			is_ai = yes
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = no
-		days_re_enable = 365
-		complete_effect = {
-			add_equipment_production = {
-				equipment = {
-					type = ship_hull_super_heavy_1
-					creator = CHY
-					version_name = "超重型战列舰"
-				}
-				requested_factories = 1
-				progress = 1
-				amount = 1
-			}
-		}
-	}
+	#zuobi_chy_2 = {
+	#	available = {
+	#		tag = CHY
+	#		is_ai = yes
+	#		date > 1937.1.1
+	#	}
+	#	visible = {
+	#		tag = CHY
+	#		is_ai = yes
+	#	}
+	#	ai_will_do = {
+	#		factor = 100
+	#	}
+	#	fire_only_once = yes
+	#	complete_effect = {
+	#		add_equipment_production = {
+	#			equipment = {
+	#				type = ship_hull_super_heavy_1
+	#				creator = CHY
+	#				version_name = "超重型战列舰"
+	#			}
+	#			name = "长门"
+	#			requested_factories = 1
+	#			progress = 1
+	#			amount = 1
+	#		}
+	#	}
+	#}
+	#zuobi_chy_3 = {
+	#	available = {
+	#		tag = CHY
+	#		is_ai = yes
+	#		date > 1938.7.1
+	#	}
+	#	visible = {
+	#		tag = CHY
+	#		is_ai = yes
+	#	}
+	#	ai_will_do = {
+	#		factor = 100
+	#	}
+	#	fire_only_once = yes
+	#	complete_effect = {
+	#		add_equipment_production = {
+	#			equipment = {
+	#				type = ship_hull_super_heavy_1
+	#				creator = CHY
+	#				version_name = "超重型战列舰"
+	#			}
+	#			name = "天城"
+	#			requested_factories = 1
+	#			progress = 1
+	#			amount = 1
+	#		}
+	#	}
+	#}
+	#zuobi_chy_4 = {
+	#	available = {
+	#		tag = CHY
+	#		is_ai = yes
+	#		date > 1940.1.1
+	#	}
+	#	visible = {
+	#		tag = CHY
+	#		is_ai = yes
+	#	}
+	#	ai_will_do = {
+	#		factor = 100
+	#	}
+	#	fire_only_once = yes
+	#	complete_effect = {
+	#		add_equipment_production = {
+	#			equipment = {
+	#				type = ship_hull_super_heavy_1
+	#				creator = CHY
+	#				version_name = "超重型战列舰"
+	#			}
+	#			name = "出云"
+	#			requested_factories = 1
+	#			progress = 1
+	#			amount = 1
+	#		}
+	#	}
+	#}
+	#zuobi_chy_5 = {
+	#	available = {
+	#		tag = CHY
+	#		is_ai = yes
+	#		date > 1941.1.1
+	#	}
+	#	visible = {
+	#		tag = CHY
+	#		is_ai = yes
+	#	}
+	#	ai_will_do = {
+	#		factor = 100
+	#	}
+	#	fire_only_once = no
+	#	days_re_enable = 365
+	#	complete_effect = {
+	#		add_equipment_production = {
+	#			equipment = {
+	#				type = ship_hull_super_heavy_1
+	#				creator = CHY
+	#				version_name = "超重型战列舰"
+	#			}
+	#			requested_factories = 1
+	#			progress = 1
+	#			amount = 1
+	#		}
+	#	}
+	#}
 	zuobi_chy_6 = {
 		available = {
 			tag = CHY
@@ -1700,6 +1689,202 @@ tianjiang_aizuobi = {
 		days_re_enable = 180
 		complete_effect = {
 			load_oob = CHY_lqtk
+		}
+	}
+	zuobi_doh_division_template_loop = {
+		available = {
+			tag = DOH
+			is_ai = yes
+			date > 1938.1.1
+		}
+		visible = {
+			tag = DOH
+			is_ai = yes
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = no
+		days_re_enable = 180
+		complete_effect = {
+			if = { 
+			limit = { NOT = { has_idea = TY_dingzhenai } }
+			division_template = {
+					name = "东煌装甲师" 			
+					division_names_group = DOH_ARM_01							
+					regiments = {
+						medium_armor = { x = 0 y = 0 }
+						medium_armor = { x = 0 y = 1 }
+						medium_armor = { x = 0 y = 2 }
+						medium_armor = { x = 0 y = 3 }
+						medium_armor = { x = 1 y = 0 }
+						medium_armor = { x = 1 y = 1 }
+						medium_armor = { x = 1 y = 2 }
+						medium_tank_destroyer_brigade = { x = 2 y = 0 }
+						medium_sp_anti_air_brigade = { x = 2 y = 1 }
+						infantry = { x = 3 y = 0 }
+						infantry = { x = 3 y = 1 }
+						infantry = { x = 3 y = 2 }
+						infantry = { x = 3 y = 3 }
+						infantry = { x = 3 y = 4 }
+						infantry = { x = 4 y = 0 }
+						infantry = { x = 4 y = 1 }
+						infantry = { x = 4 y = 2 }
+						infantry = { x = 4 y = 3 }
+						infantry = { x = 4 y = 4 }
+					}
+					support = {
+					medium_flame_tank = { x = 0 y = 0 }
+					helicopter_transport = { x = 0 y = 1 }
+					}
+					}
+					division_template = {
+						name = "东煌小型步兵师" 			
+						division_names_group = DOH_INF_01							
+						regiments = {
+							infantry = { x = 0 y = 0 }
+							infantry = { x = 0 y = 1 }
+							infantry = { x = 0 y = 2 }
+							infantry = { x = 0 y = 3 }
+							infantry = { x = 1 y = 0 }
+							infantry = { x = 1 y = 1 }
+							infantry = { x = 1 y = 2 }
+							infantry = { x = 1 y = 3 }
+							infantry = { x = 2 y = 0 }
+							infantry = { x = 2 y = 1 }
+							infantry = { x = 2 y = 2 }
+						}
+						support = {
+							engineer = { x = 0 y = 0 }
+							artillery = { x = 0 y = 1 }
+							}
+						}
+}
+		}
+	}
+	zuobi_chy_division_template_loop = {
+		available = {
+			tag = CHY
+			is_ai = yes
+			date > 1938.1.1
+		}
+		visible = {
+			tag = CHY
+			is_ai = yes
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		fire_only_once = no
+		days_re_enable = 180
+		complete_effect = {
+			if = { 
+			limit = { NOT = { has_idea = TY_dingzhenai } }
+			division_template = {
+				name = "重樱机械化装甲师" 			
+				division_names_group = CHY_ARM_01					
+				regiments = {
+					medium_armor = { x = 0 y = 0 }
+					medium_armor = { x = 0 y = 1 }
+					medium_armor = { x = 0 y = 2 }
+					medium_armor = { x = 0 y = 3 }
+					medium_armor = { x = 1 y = 0 }
+					medium_armor = { x = 1 y = 1 }
+					medium_armor = { x = 1 y = 2 }
+					medium_armor = { x = 1 y = 3 }
+					medium_tank_destroyer_brigade = { x = 2 y = 0 }
+					medium_sp_anti_air_brigade = { x = 2 y = 1 }
+					mechanized = { x = 3 y = 0 }
+					mechanized = { x = 3 y = 1 }
+					mechanized = { x = 3 y = 2 }
+					mechanized = { x = 3 y = 3 }
+					mechanized = { x = 4 y = 0 }
+					mechanized = { x = 4 y = 1 }
+					mechanized = { x = 4 y = 2 }
+					mechanized = { x = 4 y = 3 }
+				}
+				support = {
+				medium_flame_tank = { x = 0 y = 0 }
+				helicopter_transport = { x = 0 y = 1 }
+				}
+			}
+			division_template = {
+				name = "重樱装甲师" 			
+				division_names_group = CHY_ARM_01					
+				regiments = {
+					medium_armor = { x = 0 y = 0 }
+					medium_armor = { x = 0 y = 1 }
+					medium_armor = { x = 0 y = 2 }
+					medium_armor = { x = 0 y = 3 }
+					medium_armor = { x = 1 y = 0 }
+					medium_armor = { x = 1 y = 1 }
+					medium_armor = { x = 1 y = 2 }
+					medium_armor = { x = 1 y = 3 }
+					medium_tank_destroyer_brigade = { x = 2 y = 0 }
+					medium_sp_anti_air_brigade = { x = 2 y = 1 }
+					infantry = { x = 3 y = 0 }
+					infantry = { x = 3 y = 1 }
+					infantry = { x = 3 y = 2 }
+					infantry = { x = 3 y = 3 }
+					infantry = { x = 4 y = 0 }
+					infantry = { x = 4 y = 1 }
+					infantry = { x = 4 y = 2 }
+					infantry = { x = 4 y = 3 }
+				}
+				support = {
+				medium_flame_tank = { x = 0 y = 0 }
+				helicopter_transport = { x = 0 y = 1 }
+				}
+			}
+			division_template = {
+				name = "重樱两栖装甲师" 			
+				division_names_group = CHY_MAR_01					
+				regiments = {
+					amphibious_medium_armor = { x = 0 y = 0 }
+					amphibious_medium_armor = { x = 0 y = 1 }
+					amphibious_medium_armor = { x = 0 y = 2 }
+					amphibious_medium_armor = { x = 0 y = 3 }
+					amphibious_medium_armor = { x = 1 y = 0 }
+					amphibious_medium_armor = { x = 1 y = 1 }
+					amphibious_medium_armor = { x = 1 y = 2 }
+					amphibious_medium_armor = { x = 1 y = 3 }
+					medium_tank_destroyer_brigade = { x = 2 y = 0 }
+					medium_sp_anti_air_brigade = { x = 2 y = 1 }
+					marine = { x = 3 y = 0 }
+					marine = { x = 3 y = 1 }
+					marine = { x = 3 y = 2 }
+					marine = { x = 3 y = 3 }
+					marine = { x = 4 y = 0 }
+					marine = { x = 4 y = 1 }
+					marine = { x = 4 y = 2 }
+					marine = { x = 4 y = 3 }
+				}
+				support = {
+				armored_engineer = { x = 0 y = 0 }
+				medium_flame_tank = { x = 0 y = 1 }
+				helicopter_transport = { x = 0 y = 2 }
+				}
+			}
+			division_template = {
+					name = "重樱小型步兵师" 			
+					division_names_group = CHY_INF_01							
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+						infantry = { x = 2 y = 2 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+						}
+					}
+		}
 		}
 	}
 }

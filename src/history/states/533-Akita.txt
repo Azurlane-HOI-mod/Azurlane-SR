@@ -10,6 +10,7 @@ state={
 
 	history={
 		owner = SR3
+		
 		buildings = {
 		
 			arms_factory = 1

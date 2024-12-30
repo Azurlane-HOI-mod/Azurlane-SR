@@ -10,6 +10,7 @@ state={
 			2096 1 
 		}
 		owner = SR2
+		
 		buildings = {
 			infrastructure = 2
 

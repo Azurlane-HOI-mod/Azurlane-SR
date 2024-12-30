@@ -12,6 +12,7 @@ state={
 		}
 
 		owner = SR2
+		
 		buildings = {
 			infrastructure = 1
 			12857 = {

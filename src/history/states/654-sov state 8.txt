@@ -11,6 +11,8 @@ state={
 		buildings = {
 			infrastructure = 1
 		}
+		
+		
 		victory_points = {
 			4800 1 #Oyrot-Tura/Gorno-Altaysk
 		}

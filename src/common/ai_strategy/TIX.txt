@@ -880,7 +880,7 @@ TIX_make_sure_poland_is_ganked_before_we_move = {
         has_completed_focus = TIX_sudetiaoyue
 		has_war_with = POL
 		POL = { has_capitulated = no }
-		date < 1940.2.1
+		date < 1939.11.1
 	}
 	abort = {
 		OR = {
@@ -888,7 +888,8 @@ TIX_make_sure_poland_is_ganked_before_we_move = {
 				has_capitulated = yes
                 days_since_capitulated > 8
 			}
-			date > 1940.2.1
+			not = { country_exists = POL }
+			date > 1939.11.1
 		}
 	}
 	
@@ -1019,218 +1020,6 @@ TIX_war_YUW_no_ai = {
 	}
 }
 
-TIX_war_maginot_line = {
-    allowed = {
-		original_tag = TIX
-	}
-	enable = {
-		if = {
-			limit = {
-				has_completed_focus = TIX_yihuigaige
-			}
-			has_war_with = YUW
-			OR = {
-				POL = { has_capitulated = yes }
-				NOT = { country_exists = POL }
-		}			
-		}
-	}
-	abort = { 
-		OR = {
-			has_completed_focus = TIX_didigongshi 
-			has_war_with = HOL
-			has_war_with = LUX
-			has_war_with = BEL
-		}
-	} 
-	ai_strategy = {
-		type = front_unit_request
-		tag = YUW			
-		value = 300
-	}
-	ai_strategy = {
-		type = prepare_for_war
-		id = "BEL"
-		value = 2000
-	}
-	ai_strategy = {
-		type = prepare_for_war
-		id = "HOL"
-		value = 2000
-	}
-	ai_strategy = {
-		type = prepare_for_war
-		id = "LUX"
-		value = 2000
-	}
-	ai_strategy = {
-		type = conquer		
-		id = "BEL"			
-		value = 100
-	}
-	ai_strategy = {
-		type = conquer		
-		id = "HOL"			
-		value = 100
-	}
-	ai_strategy = {
-		type = conquer		
-		id = "LUX"			
-		value = 100
-	}
-    ai_strategy = {
-		type = declare_war
-		id = "HOL"			
-		value = 2000 
-	}
-	ai_strategy = {
-		type = declare_war
-		id = "BEL"
-		value = 2000 
-	}
-	ai_strategy = {
-		type = declare_war
-		id = "LUX"
-		value = 2000 
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = HOL			
-		value = 3000
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = BEL			
-		value = 3000
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = LUX			
-		value = 3000
-	}
-	ai_strategy = {
-		type = front_control
-
-		state = 28 # close up maginot line
-
-		ratio = 0.25
-
-		priority = 300
-		ordertype = front
-		execution_type = careful
-	}
-}
-
-TIX_war_Low_Countries = {
-    allowed = {
-		original_tag = TIX
-	}
-	enable = {
-		OR = {
-		has_war_with = BEL
-		has_war_with = HOL
-		has_war_with = LUX
-		}
-	}
-	abort_when_not_enabled = yes
-	ai_strategy = {
-		type = prepare_for_war
-		id = "BEL"
-		value = 200
-	}
-	ai_strategy = {
-		type = prepare_for_war
-		id = "HOL"
-		value = 200
-	}
-	ai_strategy = {
-		type = prepare_for_war
-		id = "LUX"
-		value = 200
-	}
-	ai_strategy = {
-		type = conquer		
-		id = "BEL"			
-		value = 100
-	}
-	ai_strategy = {
-		type = conquer		
-		id = "HOL"			
-		value = 100
-	}
-	ai_strategy = {
-		type = conquer		
-		id = "LUX"			
-		value = 100
-	}
-    ai_strategy = {
-		type = declare_war
-		id = "HOL"			
-		value = 2000 
-	}
-	ai_strategy = {
-		type = declare_war
-		id = "BEL"
-		value = 2000 
-	}
-	ai_strategy = {
-		type = declare_war
-		id = "LUX"
-		value = 2000 
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = HOL	
-		value = 200
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = BEL		
-		value = 200
-	}
-	ai_strategy = {
-		type = front_unit_request
-		tag = LUX		
-		value = 200
-	}	
-	ai_strategy = {
-		type = front_control
-
-		tag = HOL
-
-		ratio = 0.25
-
-		priority = 100
-		ordertype = front
-		execution_type = rush
-		execute_order = yes
-	}
-
-	ai_strategy = {
-		type = front_control
-
-		tag = BEL
-
-		ratio = 0.25
-
-		priority = 100
-		ordertype = front
-		execution_type = rush
-		execute_order = yes
-	}
-	ai_strategy = {
-		type = front_control
-
-		tag = LUX
-
-		ratio = 0.25
-
-		priority = 100
-		ordertype = front
-		execution_type = rush
-		execute_order = yes
-	}
-}
 
 TIX_invade_HUJ = {
     allowed = {
@@ -3051,4 +2840,71 @@ TIX_TEMP_avoid_sweden = {
 		id = SWE
 		value = -999
 	}
+}
+
+# Prevent Nationalist Spain to join any faction on historical mode
+AZ_nationalist_spain_allies_nobody_on_historical = {
+	allowed = {
+		tag = SPR
+	}
+	enable = {
+		has_global_flag = scw_over
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = SPR_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = SPR_AI_RANDOM_NATIONALIST_HISTORICAL
+			has_game_rule = {
+				rule = SPR_ai_behavior
+				option = NATIONALIST_HISTORICAL
+			}
+		}
+	}
+	abort = {
+		OR = {
+			TIX = {
+				AND = {
+					is_historical_focus_on = yes
+					date > 1944.1.1
+					OR = { 
+						NOT = { has_war_with = BFL } 
+						BFL = { has_capitulated = yes }
+					}
+				}
+			}
+			SPR = { has_war = yes }
+			SPR = { is_in_faction = yes }
+			TIX = { NOT = { has_government = fascism } }
+			HUJ = { NOT = { has_government = democratic } }
+		}
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = TIX
+		value = -500
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = HUJ
+		value = -500
+	}
+	
+	ai_strategy = {
+		type = alliance
+		id = BFL
+		value = -500
+	}
+
+	ai_strategy = {
+		type = alliance
+		id = CHY
+		value = -500
+	}
+	
 }

@@ -35,6 +35,13 @@ state = {
 		}
 		
 		owner = SR2
+		
+		
+
+		1936.6.1 = {
+			owner = SR2
+			controller = ITA
+		}
 	}
 
 	provinces = {

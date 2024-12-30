@@ -6,7 +6,7 @@ state={
 	}
 	history={
 		owner = SR1
-		#add_core_of = SR1
+		
 	}
 	manpower=21987
 	impassable = yes

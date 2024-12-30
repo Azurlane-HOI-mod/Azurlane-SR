@@ -1304,26 +1304,27 @@ TIX_jihua = {
 }
 
 TIX_neiwu = {
-	TIX_lbxjhua = {
-		icon = hongsegantan
-		available = {
-			has_completed_focus = TIX_chenglihansijituan
-			custom_trigger_tooltip = {
-				tooltip = hansizhaiquan_rengzaiyunzuo
-				OR = {
-					has_idea = TIX_hszq
-					has_idea = TIX_hszq_ex
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 100
-		}
-		fire_only_once = yes
-		complete_effect = {
-			country_event = az_tianjiang.50
-		}
-	}
+	#奖励转移至核心圈国策中
+	#TIX_lbxjhua = {
+	#	icon = hongsegantan
+	#	available = {
+	#		has_completed_focus = TIX_chenglihansijituan
+	#		custom_trigger_tooltip = {
+	#			tooltip = hansizhaiquan_rengzaiyunzuo
+	#			OR = {
+	#				has_idea = TIX_hszq
+	#				has_idea = TIX_hszq_ex
+	#			}
+	#		}
+	#	}
+	#	ai_will_do = {
+	#		factor = 100
+	#	}
+	#	fire_only_once = yes
+	#	complete_effect = {
+	#		country_event = az_tianjiang.50
+	#	}
+	#}
 	TIX_z23mz = {
 		icon = hongsegantan
 		available = {
@@ -1337,30 +1338,6 @@ TIX_neiwu = {
 		fire_only_once = yes
 		complete_effect = {
 			country_event = az_tianjiang.51
-		}
-	}
-	TIX_cliss = {
-		icon = generic_military
-		cost = 50
-		available = {
-			OR = {
-				has_completed_focus = TIX_tiewanyuanshou
-				has_government = neutrality
-			}
-			OR = {
-				has_country_leader = {
-					name = "俾斯麦"
-					ruling_only = yes
-				}
-				has_completed_focus = TIX_chongxinqiyongbisimai
-			}
-		}
-		ai_will_do = {
-			factor = 10000
-		}
-		fire_only_once = yes
-		complete_effect = {
-			add_ideas = TIX_ss
 		}
 	}
 	TIX_jzmzphd = {
@@ -1382,27 +1359,6 @@ TIX_neiwu = {
 		fire_only_once = yes
 		modifier = {
 			fascism_drift = 1
-		}
-	}
-	TIX_mimijingcha = {
-		cost = 50
-		icon = generic_police_action
-		available = {
-			OR = {
-				has_completed_focus = TIX_guojiayuanshoufa
-				has_completed_focus = TIX_chongxinqiyongbisimai
-			}
-			OR = {
-				has_government = fascism
-				has_government = neutrality
-			}
-		}
-		ai_will_do = {
-			factor = 10000
-		}
-		fire_only_once = yes
-		complete_effect = {
-			add_ideas = TIX_gaishitaibao
 		}
 	}
 	TIX_gongyekuozhangjueyi = {
@@ -1583,7 +1539,7 @@ TIX_neiwu = {
 				is_major = yes
 			}
 			or = {
-			has_government = fascism
+			has_completed_focus = TIX_lbx_quanmianzhanzhengyanjiang
 			has_completed_focus = TIX_laibixijihua
 			}
 			has_offensive_war = yes
@@ -1616,7 +1572,10 @@ TIX_neiwu = {
 				has_war_with = TIX
 				is_major = yes
 			}
-			has_government = fascism
+			or = {
+			has_completed_focus = TIX_lbx_quanmianzhanzhengyanjiang
+			has_completed_focus = TIX_laibixijihua
+			}
 			has_offensive_war = yes
 			threat > 0.5
 			OR = {
@@ -2869,6 +2828,12 @@ TIX_zhanhou = {
 			factor = 0
 			modifier = {
 				has_war = no
+				is_historical_focus_on = no
+				add = 100
+			}
+			modifier = {
+				is_historical_focus_on = yes
+				not = { country_exists = BFL }
 				add = 100
 			}
 		}
@@ -3211,12 +3176,53 @@ TIX_zongduxiaqujueyi = {
 		available = {
 			is_puppet = no
 			has_government = fascism
-			controls_state = 110
-			controls_state = 142
-			controls_state = 143
-			controls_state = 144
-			controls_state = 99
-			controls_state = 37
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				110 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				142 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				143 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				144 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				920 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				921 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				922 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				923 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				924 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				925 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 110
+				state = 142
+				state = 143
+				state = 144
+				state = 920
+				state = 921
+				state = 922
+				state = 923
+				state = 924
+				state = 925
+			}
 		}
 		fire_only_once = yes
 		cost = 0
@@ -3241,82 +3247,93 @@ TIX_zongduxiaqujueyi = {
 			has_government = fascism
 		}
 		complete_effect = {
-			if = {
-				limit = {
-					country_exists = NOR
-					NOT = {
-						NOR = {
-							has_government = fascism
-						}
-					}
-				}
-				hidden_effect = {
-					NOR = {
-						set_state_controller = 110
-						set_state_controller = 142
-						set_state_controller = 143
-						set_state_controller = 144
-					}
-				}
-				NOR = {
-					start_civil_war = {
-						ideology = fascism
-						size = 1
-						add_state_core = 99
-						add_state_core = 37
-						transfer_state = 110
-						transfer_state = 142
-						transfer_state = 143
-						transfer_state = 144
-						transfer_state = 99
-						transfer_state = 37
-						TIX = {
-							puppet = PREV
-							set_autonomy = {
-								target = PREV
-								autonomy_state = autonomy_integrated_puppet
-							}
-						}
-						load_focus_tree = tix_zdxq_focus
-						set_cosmetic_tag = BEIOU_reichskommissariat
-						create_country_leader = {
-							name = "Josef Terboven"
-							desc = "POLITICS_JOSEF_TERBOVEN_DESC"
-							picture = GFX_portrait_Josef_Terboven
-							expire = "1965.1.1"
-							ideology = nazism
-							traits = {
+			110 = {
+				IF = {
+					limit = {
+						OWNER = {
+							NOT = {
+								original_tag = TIX
 							}
 						}
 					}
+					OWNER = {
+						set_country_flag = GER_RK_capital_state_trasferred_RKG_victim_flag
+						set_country_flag = GER_reichskommissariats_puppet_flag
+					}
+				}
+				transfer_state_to = RKG
+				set_state_flag = GER_RK_capital_state_trasferred_RKG_flag
+				add_compliance = 25
+			}
+
+			custom_effect_tooltip = GER_reichskommissariat_norwegen_effect_tt
+
+			set_autonomy = { 
+				target = RKG 
+				autonomy_state = autonomy_integrated_puppet 
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = {
+						is_core_of = NOR
+						NOT = {
+							state = 110
+						}
+						OR = {
+							is_owned_by = ROOT
+							owner = { is_subject_of = ROOT }
+						}
+					}
+					transfer_state_to = RKG
+					add_compliance = 25
+				}
+				every_state = {	
+					limit = {
+						is_core_of = NOR
+						NOT = {
+							state = 110
+						}
+						NOT = {
+							OR = {
+								is_owned_by = ROOT
+								any_country = {
+									is_subject_of = ROOT
+									owns_state = PREV
+								}
+							}
+						}
+					}
+					add_contested_owner = RKG
+					set_state_controller_to = RKG
+					add_claim_by = RKG
+					add_compliance = 25
+				}
+
+				RKG = {
+					load_focus_tree = tix_zdxq_focus
+					add_manpower = 50000
+					add_equipment_to_stockpile = { 
+						type = infantry_equipment
+						amount = 5000
+						producer = TIX
+					}	
+					add_equipment_to_stockpile = { 
+						type = support_equipment
+						amount = 500
+						producer = TIX
+					}	
+					inherit_technology = TIX
+					add_offsite_building = { type = arms_factory level = 3 }
+					load_oob = "RK_OOB"
 				}
 			}
-			else = {
-				NOR = {
-					transfer_state = 110
-					transfer_state = 142
-					transfer_state = 143
-					transfer_state = 144
-					transfer_state = 99
-					transfer_state = 37
-					add_state_core = 99
-					add_state_core = 37
-					set_cosmetic_tag = BEIOU_reichskommissariat
-					load_focus_tree = tix_zdxq_focus
-					create_country_leader = {
-						name = "Josef Terboven"
-						desc = "POLITICS_JOSEF_TERBOVEN_DESC"
-						picture = GFX_portrait_Josef_Terboven
-						expire = "1965.1.1"
-						ideology = nazism
-						traits = {
-						}
-					}
-				}
-				set_autonomy = {
-					target = NOR
-					autonomy_state = autonomy_integrated_puppet
-				}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			country_event = {
+				id = wuw_GER_reichskommissariats.3
+				hours = 0
 			}
 		}
 	}
@@ -3324,16 +3341,46 @@ TIX_zongduxiaqujueyi = {
 		icon = ger_reichskommissariats
 		available = {
 			is_puppet = no
-			has_completed_focus = TIX_zujianzongduxiaqu
 			has_government = fascism
-			controls_state = 7
-			controls_state = 35
-			controls_state = 36
-			controls_state = 6
-			controls_state = 29
-			controls_state = 34
-			controls_state = 977
-			controls_state = 980
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				7 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				35 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				36 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				6 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				29 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				34 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				977 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				980 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 7
+				state = 35
+				state = 36
+				state = 6
+				state = 29
+				state = 34
+				state = 977
+				state = 980
+			}
 		}
 		cost = 0
 		fire_only_once = yes
@@ -3359,123 +3406,131 @@ TIX_zongduxiaqujueyi = {
 			is_puppet = no
 		}
 		complete_effect = {
-			if = {
-				limit = {
-					country_exists = HOL
-					NOT = {
-						HOL = {
-							has_government = fascism
-						}
-					}
-				}
-				hidden_effect = {
-					HOL = {
-						transfer_state = 7
-						transfer_state = 35
-						transfer_state = 36
-						transfer_state = 6
-						transfer_state = 29
-						transfer_state = 34
-						transfer_state = 977
-						transfer_state = 980
-						add_state_core = 6
-						add_state_core = 29
-						add_state_core = 34
-						add_state_core = 977
-						add_state_core = 980
-					}
-				}
-				HOL = {
-					start_civil_war = {
-						ideology = fascism
-						size = 1
-					}
-				}
-				random_country = {
+			7 = {
+				IF = {
 					limit = {
-						original_tag = HOL
-						has_government = fascism
+						OWNER = {
+							NOT = {
+								original_tag = TIX
+							}
+						}
 					}
-					transfer_state = 7
-					transfer_state = 35
-					transfer_state = 36
-					transfer_state = 6
-					transfer_state = 29
-					transfer_state = 34
-					transfer_state = 977
-					transfer_state = 980
-					add_state_core = 6
-					add_state_core = 29
-					add_state_core = 34
-					add_state_core = 977
-					add_state_core = 980
-					set_cosmetic_tag = NDL_reichskommissariat
+					OWNER = {
+						set_country_flag = GER_RK_capital_state_trasferred_RKN_victim_flag
+						set_country_flag = GER_reichskommissariats_puppet_flag
+					}
+				}
+				transfer_state_to = RKN
+				set_state_flag = GER_RK_capital_state_trasferred_RKN_flag
+				add_compliance = 25
+			}
+
+			custom_effect_tooltip = GER_reichskommissariat_niederlande_effect_tt
+
+			set_autonomy = { 
+				target = RKN 
+				autonomy_state = autonomy_integrated_puppet 
+			}
+
+			hidden_effect = {
+				every_state = {
+					limit = {
+						or = {
+						is_core_of = HOL
+						is_core_of = BEL
+						state = 29
+						}
+						NOT = {
+							state = 7
+						}
+						OR = {
+							is_owned_by = ROOT
+							owner = { is_subject_of = ROOT }
+						}
+					}
+					transfer_state_to = RKN
+					add_compliance = 25
+				}
+				every_state = {	
+					limit = {
+						or = {
+						is_core_of = HOL
+						is_core_of = BEL
+						state = 29
+						}
+						NOT = {
+							state = 7
+						}
+						NOT = {
+							OR = {
+								is_owned_by = ROOT
+								any_country = {
+									is_subject_of = ROOT
+									owns_state = PREV
+								}
+							}
+						}
+					}
+					add_contested_owner = RKN
+					set_state_controller_to = RKN
+					add_claim_by = RKN
+					add_compliance = 25
+				}
+				RKN = {
 					load_focus_tree = tix_zdxq_focus
-					TIX = {
-						puppet = PREV
-						set_autonomy = {
-							target = PREV
-							autonomy_state = autonomy_integrated_puppet
-						}
-					}
-					create_country_leader = {
-						name = "Arthur Seyss-Inquart"
-						desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
-						picture = GFX_portrait_Arthur_Seyss_Inquart
-						expire = "1965.1.1"
-						ideology = nazism
-						traits = {
-						}
-					}
+					add_manpower = 50000
+					add_equipment_to_stockpile = { 
+						type = infantry_equipment
+						amount = 5000
+						producer = TIX
+					}	
+					add_equipment_to_stockpile = { 
+						type = support_equipment
+						amount = 500
+						producer = TIX
+					}	
+					inherit_technology = TIX
+					add_offsite_building = { type = arms_factory level = 3 }
+					load_oob = "RK_OOB"
 				}
 			}
-			else = {
-				HOL = {
-					transfer_state = 7
-					transfer_state = 35
-					transfer_state = 36
-					transfer_state = 6
-					transfer_state = 29
-					transfer_state = 34
-					transfer_state = 977
-					transfer_state = 980
-					add_state_core = 6
-					add_state_core = 29
-					add_state_core = 34
-					add_state_core = 977
-					add_state_core = 980
-					set_cosmetic_tag = NDL_reichskommissariat
-					load_focus_tree = tix_zdxq_focus
-					create_country_leader = {
-						name = "Arthur Seyss-Inquart"
-						desc = "POLITICS_ARTHUR_SEYSS_INQUART_DESC"
-						picture = GFX_portrait_Arthur_Seyss_Inquart
-						expire = "1965.1.1"
-						ideology = nazism
-						traits = {
-						}
-					}
-				}
-				set_autonomy = {
-					target = HOL
-					autonomy_state = autonomy_integrated_puppet
-				}
-			}
+
+			custom_effect_tooltip = generic_skip_one_line_tt
+
+			country_event = {
+				id = wuw_GER_reichskommissariats.2
+				hours = 0
+			}	
 		}
 	}
 	TIX_reichskommissariat_poland = {
 		icon = ger_reichskommissariats
 		available = {
 			is_puppet = no
-			has_completed_focus = TIX_zujianzongduxiaqu
 			has_government = fascism
-			controls_state = 88
-			controls_state = 90
-			controls_state = 92
-			#controls_state = 87
-			controls_state = 10
-			#controls_state = 98
-			#controls_state = 97
+			custom_trigger_tooltip = {
+				tooltip = GER_reichskommissariat_highlighted_required_states
+				88 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				90 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				92 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+				10 = {
+					is_controlled_by_ROOT_or_subject = yes
+				}
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 10 # Warsaw
+				state = 90 # Kielce
+				state = 92 # Lublin
+				state = 88 # Krakow
+			}
 		}
 		fire_only_once = yes
 		cost = 0
@@ -10915,11 +10970,14 @@ TIX_quanlipingheng = {
 		icon = eng_propaganda_campaigns
 		cost = 0
 		visible = {
-		is_ai = yes
+			is_ai = yes
 		}
 		available = {
-		is_ai = yes
-		has_idea = TIX_fkAIbuff
+			or = {
+			date > 1942.6.1
+			has_idea = TY_fengkuangai
+			}
+			is_ai = yes
 		}
 		fire_only_once = yes
 		ai_will_do = {
@@ -11160,6 +11218,18 @@ AZ_fkAIplayerjiaqiang = {
 				uses = 8
 				ahead_reduction = 10
 				category = naval_equipment
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_land
+				value = 2.0
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_naval
+				value = 2.0
+			}
+			add_breakthrough_progress = {
+				specialization = specialization_air
+				value = 2.0
 			}
 			}
 			if = {

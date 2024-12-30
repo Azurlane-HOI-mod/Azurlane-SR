@@ -20,6 +20,8 @@ state = {
 			air_base = 10
 
 		}
+		
+		
 		1939.1.1 = {
 			buildings = {
 				arms_factory = 7

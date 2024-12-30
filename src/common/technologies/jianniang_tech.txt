@@ -513,7 +513,6 @@ technologies = {
         }
 
 		enable_equipments = {
-			jizaijianniang_plane
 			jizaijianniang_fighter
 			jizaijianniang_cas
 			jizaijianniang_nb
@@ -1516,6 +1515,24 @@ technologies = {
 		enable_subunits = {
 			jupao_he
 			jupao_ap
+		}
+	}
+	keyantech_juxinghangmu = {     
+        enable_equipments = {
+			ship_hull_carrier_chy_heavy
+		}
+		enable_subunits = {
+		
+		}
+	}
+	keyantech_feitingtoudanqi = {    
+		enable_equipment_modules = {
+			az_feitingtoudanqi
+		}
+	}
+	keyantech_hedonglifeijiyinqing = {    
+		enable_equipment_modules = {
+			az_hedonglifeijiyinqing
 		}
 	}
 	#国家特色战术

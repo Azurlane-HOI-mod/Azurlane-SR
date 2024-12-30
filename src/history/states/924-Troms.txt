@@ -14,12 +14,9 @@ state = {
 			11050 1
 		}
 		owner = SIR
-		add_core_of = SMI
-		if = {
-			limit = {
-				has_dlc = "Arms Against Tyranny"
-			}
-		}
+		
+		
+		
 		buildings = {
 			infrastructure = 1
 			air_base = 1
