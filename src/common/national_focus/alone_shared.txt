@@ -49,8 +49,8 @@
 			}
 		}
 		offset = {
-			x = 64
-			y = 0
+			x = 10
+			y = 16
 			trigger = {
 				TAG = YUW				
 			}

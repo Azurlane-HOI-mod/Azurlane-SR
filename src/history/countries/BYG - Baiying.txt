@@ -178,17 +178,11 @@ set_popularities = {
 
 add_ideas = {
 	BYG_ziyoudengta1
-	BYG_jjwjhyz
 	BYG_CHY_Pacific
 	free_trade
 	disarmed_nation
-	undisturbed_isolation
 }
 
-set_autonomy = {
-	target = PHI
-	autonomous_state =  autonomy_puppet
-}
 
 recruit_character = BYG_qiye
 recruit_character = BYG_alabama
